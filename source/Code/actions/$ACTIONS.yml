@@ -1,0 +1,498 @@
+---
+class: 4
+flags: 0x0000
+unid: OF4A0402CFA13B9917-ON0060F8628525665D
+items:
+  - name: $$ScriptName
+    type: text
+    data: $ACTIONS
+    signed: true
+    nonsummary: true
+  - name: $DesignerVersion
+    type: text
+    data: "6.5"
+    signed: true
+  - name: $Flags
+    type: text
+    data: Cy34Q
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $TITLE
+    type: text
+    data: $ACTIONS
+  - name: $ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 195
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x00000000
+        HeightSpc: 0
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000011
+        dwFlags: 0x00000000
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 4
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: New Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 17
+        Type: 1
+        data: |
+          REM {resp. documents only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          UAAHABoAFAByZXNwLiBkb2N1bWVudHMgb25seQcACgADAAkxUwAAAB4AAgDoAwAAAAAAAAEACABSZXNw
+          b25zZe0CAwAHAAwABQAJMFI0UwA=
+        title: New Response To Main
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+      - type: 0xffbe
+        Flags: 0x0001408b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 7
+        Type: 1
+        data: "@Command([EditDocument])"
+        data_opaque: IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+        title: Edit Document
+      - type: 0xffbe
+        Flags: 0x00014093
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 8
+        Type: 1
+        data: |
+          @If(@IsValid;
+          @Do(@Command([FileSave]); @Command([FileCloseWindow])); "")
+        data_opaque: |
+          SAAAADYA5ACvACwAIAACAMYLAAAAAAAA7QECAPwRAAAAAAAA7QGzAq4ADAABAAAArgAEALUDAwAHABAA
+          CQAJNFIxMVMxN1MA
+        title: Save & Close
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 44
+        IconIndex: 0
+        ShareId: 10
+        Type: 1
+        data: |
+          FIELD Scope := "Private";
+          @Command([ViewRefreshFields])
+        data_opaque: |
+          RgADABoABQBTY29wZQABAAcAUHJpdmF0ZQADAAcADgAHAAkxUzJTM1MAAAASAAIAixMAAAAAAADtAQMA
+          BwAKAAMACTBSAA==
+        hidewhen: "Scope = \"Private\""
+        hidewhen_opaque: LAAAAB4ABQAFAFNjb3BlAAEABwBQcml2YXRlAAoCAwAHAAwABQAJMVMyUwA=
+        title: Mark Private
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 42
+        IconIndex: 0
+        ShareId: 11
+        Type: 1
+        data: |
+          FIELD Scope := "Public";
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          RAADABgABQBTY29wZQABAAYAUHVibGljAwAHAA4ABwAJMVMyUzNTAAAAEgACAF4bAAAAAAAA7QEDAAcA
+          CgADAAkwUgA=
+        hidewhen: "Scope = \"Public\""
+        hidewhen_opaque: KgAAABwABQAFAFNjb3BlAAEABgBQdWJsaWMKAgMABwAMAAUACTFTMlMA
+        title: Mark Public
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 9
+        Type: 1
+        data: |
+          FIELD SaveOptions := 0;
+          @Command([FileCloseWindow])
+        data_opaque: |
+          SgADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHAA4ABwAJMVMyUzNTAAAAEgACAPwRAAAAAAAA
+          7QEDAAcACgADAAkwUgA=
+        title: Cancel
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 16
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: "New\\Document"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 12
+        Type: 1
+        data: "@Command([Compose]; \"1-2-3Workbook Document\")"
+        data_opaque: OAAAACwAAgDoAwAAAAAAAAEAFgAxLTItM1dvcmtib29rIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 13
+        Type: 1
+        data: "@Command([Compose]; \"Paintbrush Document\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAEwBQYWludGJydXNoIERvY3VtZW50AO0CAwAHAAoAAwAJNFMA
+        title: "New Lotus SmartSuite Document\\Paintbrush Picture"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 14
+        Type: 1
+        data: "@Command([Compose]; \"Freelance Document\")"
+        data_opaque: NAAAACgAAgDoAwAAAAAAAAEAEgBGcmVlbGFuY2UgRG9jdW1lbnTtAgMABwAKAAMACTRTAA==
+        title: "New Lotus SmartSuite Document\\Freelance Presentation"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 15
+        Type: 1
+        data: "@Command([Compose]; \"WordPro Document\")"
+        data_opaque: MgAAACYAAgDoAwAAAAAAAAEAEABXb3JkUHJvIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\Word Pro Document"
+  - name: $Body
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x0794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+      - type: 0x0083
+        PABID: 1
+      - type: 0xff85
+        FontID: 0xa000001
+  - name: $Info
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+  - name: $V5ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 195
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x00000000
+        HeightSpc: 0
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000011
+        dwFlags: 0x00000000
+      - type: 0xff79
+        BackColor:
+          Flags: 0x0001
+          rgb: 0x0f0000
+        BtnBorderDisplay: 0
+        BtnTextJustify: 0
+        BtnWidthStyle: 0
+        ButtonColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        FontColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        LineColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        Spare:
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+        barFontID: 0x00000000
+        barHeight:
+          Flags: 0x0000
+          Length:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+          Reserved: 0
+          Units: 0
+        dwFlags: 0x00000003
+        wAppletHeight: 31
+        wBarBackgroundRepeat: 0
+        wBtnInternalMargin: 0
+        wBtnWidthAbsolute: 0
+        wSpare: 0x0000
+        wThemeSetting: 0
+      - type: 0xfffc
+        BorderFlags: 0
+        BorderStyle: 0
+        BorderWidthBottom: 1
+        BorderWidthLeft: 0
+        BorderWidthRight: 0
+        BorderWidthTop: 0
+        Color:
+          Flags: 0x0001
+          rgb: 0x000000
+        DropShadowWidth: 0
+        Flags: 0x00000000
+        InnerWidthBottom: 0
+        InnerWidthLeft: 0
+        InnerWidthRight: 0
+        InnerWidthTop: 0
+        OuterWidthBottom: 0
+        OuterWidthLeft: 0
+        OuterWidthRight: 0
+        OuterWidthTop: 0
+        dwSpare: 0x00000000
+        wSpares:
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 4
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: New Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 17
+        Type: 1
+        data: |
+          REM {resp. documents only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          UAAHABoAFAByZXNwLiBkb2N1bWVudHMgb25seQcACgADAAkxUwAAAB4AAgDoAwAAAAAAAAEACABSZXNw
+          b25zZe0CAwAHAAwABQAJMFI0UwA=
+        title: New Response To Main
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+      - type: 0xffbe
+        Flags: 0x0001408b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 7
+        Type: 1
+        data: "@Command([EditDocument])"
+        data_opaque: IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+        title: Edit Document
+      - type: 0xffbe
+        Flags: 0x00014093
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 8
+        Type: 1
+        data: |
+          @If(@IsValid;
+          @Do(@Command([FileSave]); @Command([FileCloseWindow])); "")
+        data_opaque: |
+          SAAAADYA5ACvACwAIAACAMYLAAAAAAAA7QECAPwRAAAAAAAA7QGzAq4ADAABAAAArgAEALUDAwAHABAA
+          CQAJNFIxMVMxN1MA
+        title: Save & Close
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 44
+        IconIndex: 0
+        ShareId: 10
+        Type: 1
+        data: |
+          FIELD Scope := "Private";
+          @Command([ViewRefreshFields])
+        data_opaque: |
+          RgADABoABQBTY29wZQABAAcAUHJpdmF0ZQADAAcADgAHAAkxUzJTM1MAAAASAAIAixMAAAAAAADtAQMA
+          BwAKAAMACTBSAA==
+        hidewhen: "Scope = \"Private\""
+        hidewhen_opaque: LAAAAB4ABQAFAFNjb3BlAAEABwBQcml2YXRlAAoCAwAHAAwABQAJMVMyUwA=
+        title: Mark Private
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 42
+        IconIndex: 0
+        ShareId: 11
+        Type: 1
+        data: |
+          FIELD Scope := "Public";
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          RAADABgABQBTY29wZQABAAYAUHVibGljAwAHAA4ABwAJMVMyUzNTAAAAEgACAF4bAAAAAAAA7QEDAAcA
+          CgADAAkwUgA=
+        hidewhen: "Scope = \"Public\""
+        hidewhen_opaque: KgAAABwABQAFAFNjb3BlAAEABgBQdWJsaWMKAgMABwAMAAUACTFTMlMA
+        title: Mark Public
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 9
+        Type: 1
+        data: |
+          FIELD SaveOptions := 0;
+          @Command([FileCloseWindow])
+        data_opaque: |
+          SgADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHAA4ABwAJMVMyUzNTAAAAEgACAPwRAAAAAAAA
+          7QEDAAcACgADAAkwUgA=
+        title: Cancel
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 16
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: "New\\Document"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 12
+        Type: 1
+        data: "@Command([Compose]; \"1-2-3Workbook Document\")"
+        data_opaque: OAAAACwAAgDoAwAAAAAAAAEAFgAxLTItM1dvcmtib29rIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 13
+        Type: 1
+        data: "@Command([Compose]; \"Paintbrush Document\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAEwBQYWludGJydXNoIERvY3VtZW50AO0CAwAHAAoAAwAJNFMA
+        title: "New Lotus SmartSuite Document\\Paintbrush Picture"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 14
+        Type: 1
+        data: "@Command([Compose]; \"Freelance Document\")"
+        data_opaque: NAAAACgAAgDoAwAAAAAAAAEAEgBGcmVlbGFuY2UgRG9jdW1lbnTtAgMABwAKAAMACTRTAA==
+        title: "New Lotus SmartSuite Document\\Freelance Presentation"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 15
+        Type: 1
+        data: "@Command([Compose]; \"WordPro Document\")"
+        data_opaque: MgAAACYAAgDoAwAAAAAAAAEAEABXb3JkUHJvIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\Word Pro Document"
+remaining: []

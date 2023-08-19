@@ -1,0 +1,259 @@
+---
+class: 512
+flags: 0x0000
+unid: OFA5BC061F76D12378-ON00677BD405256283
+items:
+  - name: $AssistAction
+    type: action
+    code_type: 65413
+    data: |
+      '++LotusScript Development Environment:2:5:(Options):0:74
+      Option Public
+      Option Declare
+      '++LotusScript Development Environment:2:5:(Forward):0:1
+      Declare Sub Initialize
+      Declare Sub SetSharedVariables
+      Declare Sub RenderExpireDate(doc As notesdocument)
+      Declare Function CheckArchiveProtection As Integer
+      Declare Sub Terminate
+      
+      '++LotusScript Development Environment:2:5:(Declarations):0:10
+      Dim UIwork As NotesUIWorkspace
+      Dim UIview As NotesUIView
+      Dim Session As NotesSession
+      
+      Dim db As notesdatabase
+      Dim doc As notesdocument
+      
+      Dim UIdoc As notesuidocument
+      
+      Dim collection As NotesDocumentCollection
+      
+      Dim i As Integer 
+      Dim PFA As Variant
+      Dim FormItem As Variant
+      Dim ExDate As Variant
+      Dim ExQues As Variant
+      Dim Subj As Variant
+      
+      'The following variables are available to be translated
+      Const Msg1 ="This "
+      Const Msg2 =" cannot be marked as expired."
+      Const Msg3 = " is already Marked Expired.  Do you wish to remove the expiration flag?"
+      Const Msg4 = "The requested action has been completed.  The document must be saved for the changes to take effect."
+      Const Msg5 = "You must first select a document.  Note:  highlight bar cannot be on a category."
+      Const msg6 = "Document has not yet been saved"
+      Const msg7 = "Cannot mark document(s) as expired because archiving has not yet been set up for this database.  To set up archiving, select File--Database--Archive or click Archive Settings in the Database Properties infobox."
+      Const BoxTitle ="Already Marked Expired"
+      Const BoxTitle2 ="Expire Not Permitted"
+      'End translatable variables
+      
+      
+      
+      
+      
+      '++LotusScript Development Environment:2:2:Initialize:1:10
+      Sub Initialize
+      	Set UIwork = New notesuiworkspace	
+      	Set uiview = uiwork.currentview
+      	
+      	Set session = New NotesSession
+      	
+      	Set db = session.CurrentDatabase
+      	Set collection = db.UnprocessedDocuments
+      	Set UIdoc = UIwork.currentdocument
+      	
+      	Dim archProfile As notesdocument	
+      	Set archProfile = db.getprofiledocument("Archive Profile")
+      	If Not archProfile.hasitem("Enabled") Then
+      		Msgbox Msg7
+      		Exit Sub		
+      	End If
+      	
+      	If collection.Count < 1 Then
+      		Msgbox Msg5
+      		Exit Sub
+      	End If
+      	
+      	If uidoc Is Nothing Then
+      		Goto continue
+      	Elseif uidoc.isnewdoc And uiview Is Nothing Then
+      		Msgbox Msg6
+      		Exit Sub		
+      	End If
+      	
+      continue:
+      	If Not UIdoc Is Nothing And UIview Is Nothing Then
+      		Set doc = uidoc.document
+      		Call SetSharedVariables
+      		If Not(CheckArchiveProtection) Then
+      			UIWork.editdocument(True)
+      			Call RenderExpireDate(doc)
+      			ExQues = doc.GetItemvalue("ExpireQuestion")
+      			UIdoc.refresh
+      		End If
+      	Else
+      		For i = 1 To collection.Count
+      			Set doc = collection.GetNthDocument( i )
+      			Call SetSharedVariables
+      			
+      			If Not(CheckArchiveProtection) Then
+      				Call RenderExpireDate(doc)
+      				Call doc.save(True, True, True)    
+      			End If
+      		Next		
+      	End If
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:SetSharedVariables:1:8
+      Sub SetSharedVariables
+      	FormItem=doc.GetItemValue("Form")
+      	ExDate=doc.GetItemValue("ExpireDate")
+      	PFA = doc.HasItem( "PROTECTFROMARCHIVE" )
+      	Subj=doc.GetitemValue("Subject")
+      End Sub
+      '++LotusScript Development Environment:2:2:RenderExpireDate:1:8
+      Sub RenderExpireDate(doc As notesdocument)
+      	Dim UIwork As New notesuiworkspace
+      	
+      	If Not ExDate(0) =""  Then
+      		ExQues = Messagebox (Subj(0) & Msg3, 4 + 32 + 0 , BoxTitle)		
+      		
+      		Select Case ExQues
+      		Case 	Is = 2
+      			Exit Sub
+      		Case Is = 6
+      			Call doc.ReplaceItemvalue("ExpireDate", "")	
+      			If Not UIdoc Is Nothing Then
+      				Print Msg4
+      			End If
+      		Case Is = 7
+      			Exit Sub
+      		End Select
+      		
+      	Else
+      		Call doc.ReplaceItemValue ( "ExpireDate", Now)
+      		If Not UIdoc Is Nothing Then
+      			Print Msg4
+      		End If
+      		
+      	End If
+      	
+      End Sub
+      '++LotusScript Development Environment:2:1:CheckArchiveProtection:1:8
+      Function CheckArchiveProtection As Integer
+      	If PFA Then
+      		Messagebox Msg1 & FormItem(0) & Msg2 , 0 + 64, BoxTitle2
+      		
+      	End If
+      	CheckArchiveProtection = PFA
+      End Function
+      '++LotusScript Development Environment:2:2:Terminate:1:10
+      Sub Terminate
+      	
+      End Sub
+    dwFlags: 0x00000000
+    signed: true
+    nonsummary: true
+  - name: $AssistDocCount
+    type: number
+    data: 0
+    signed: true
+  - name: $AssistFlags
+    type: text
+    data: E
+    signed: true
+  - name: $AssistInfo
+    type_num: 17
+    type: opaque
+    opaque: |
+      AQAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    signed: true
+    nonsummary: true
+  - name: $AssistLastRun
+    type: time
+    signed: true
+  - name: $AssistQuery
+    type_num: 15
+    type: opaque
+    opaque: gQYAAAAA
+    signed: true
+    nonsummary: true
+  - name: $AssistRunInfo
+    type: object
+    obj_type: 0x0008
+    obj_class: 0x0200
+    obj_privs: 0x0000
+    opaque: |
+      AAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      x9MRAEBoJYioVFcAOWglhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqq
+  - name: $AssistTrigger
+    type: text
+    data: "4"
+    signed: true
+  - name: $AssistType
+    type: number
+    data: 65413
+    signed: true
+  - name: $DesignerVersion
+    type: text
+    data: "5"
+    signed: true
+  - name: $Flags
+    type: text
+    data: fL3
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $LeftToDo
+    type: object
+    obj_type: 0x0003
+    obj_class: 0x0200
+    obj_privs: 0x0000
+    opaque: |
+      BAAAAAAAAAABAHjgYgBtYyWFcqRiAG1jJYXNo2IAbWMlhUdPTEF44GIAbWMlhSIBAABTdGFydGVkIHJ1
+      bm5pbmcgYWdlbnQgJ01hcmsvVW5tYXJrIERvY3VtZW50IEFzIEV4cGlyZWQnIG9uIDA3LzIwLzk2IDAy
+      OjAzOjMyIFBNDQpSdW5uaW5nIG9uIHNlbGVjdGVkIGRvY3VtZW50czogMSB0b3RhbA0KRm91bmQgMSBk
+      b2N1bWVudChzKSB0aGF0IG1hdGNoIHNlYXJjaCBjcml0ZXJpYQ0KMSBkb2N1bWVudChzKSB3ZXJlIG1v
+      ZGlmaWVkIGJ5IGZvcm11bGENCkRvbmUgcnVubmluZyBhZ2VudCAnTWFyay9Vbm1hcmsgRG9jdW1lbnQg
+      QXMgRXhwaXJlZCcgb24gMDcvMjAvOTYgMDI6MDM6MzkgUE0NCgANCqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqo=
+  - name: $TITLE
+    type: text
+    data: Mark/Unmark Document As Expired
+    signed: true
+remaining: []

@@ -1,0 +1,55 @@
+---
+class: 4
+flags: 0x0000
+unid: OF7DBB14269FFD5566-ON0067EF4E88256A1D
+items:
+  - name: $Comment
+    type: text
+    data: Outline page graphic
+    signed: true
+  - name: $DesignerVersion
+    type: text
+    data: "6"
+    signed: true
+  - name: $Flags
+    type: text
+    data: 34CiQ
+  - name: $FlagsExt
+    type: text
+    data: D
+    signed: true
+  - name: $ImageNames
+    type: text
+    data: DocOutline.gif
+    signed: true
+  - name: $ImagesColorize
+    type: number
+    data: 0
+    signed: true
+  - name: $ImagesHigh
+    type: number
+    data: 1
+    signed: true
+  - name: $ImagesWide
+    type: number
+    data: 1
+    signed: true
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $MimeType
+    type: text
+    data: image/gif
+    signed: true
+  - name: $TITLE
+    type: text
+    data:
+      - Outline Page.gif
+      - OutlinePage.gif
+    signed: true
+  - name: $ImageData
+    type: composite
+    signed: true
+    nonsummary: true
+remaining: []

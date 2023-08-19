@@ -1,0 +1,700 @@
+---
+class: 32770
+flags: 0x0000
+unid: OF98D9F4376F5754C5-ON004F878985256207
+items:
+  - name: $ClientEventTag
+    type_num: 769
+    type: opaque
+    opaque: |
+      FwAAAAAAAOAAoG9BAAAAQACAb0EAAABAAGBvQQAAAEAAQG9BAAAAQAAgb0EAAABAAABvQQAAAEAA4G5B
+      AAAAQADAbkEAAABAAKBuQQAAAAAAgG5BAAAAQABgbkEAAABAAEBuQQAAAEAAAG5BAAAAQADgbUEAAABA
+      AMBtQQAAAEAAIGpBAAAAQAAAakEAAABAAOBpQQAAAEAAwGlBAAAAQACgaUEAAABAAIBpQQAAAEAAYGlB
+      AAAAQABAaUE=
+    signed: true
+    nonsummary: true
+  - name: $DesignerVersion
+    type: text
+    data: 8.5.3
+    signed: true
+  - name: $Flags
+    type: text
+    data: ""
+  - name: $Revisions
+    type: time
+    data: "2010-01-21T07:52:46.63-05:00"
+  - name: OriginalModTime
+    type: time
+    dst: true
+    data: "2005-09-14T11:58:59.19-07:00"
+    signed: true
+  - name: $Body
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 1
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 1
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xffad
+        Version: 0
+      - type: 0xffad
+        opaque: rf8sAAIAHAAAACAAIAAAABIAAgD8EQAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+        data: Close this document to view the database
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00ae
+        opaque: rgI=
+      - type: 0x00de
+        Signature: 0x00ae
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 1
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 3
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 2
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 2
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x18e20101
+        data: About Lotus SmartSuite Millennium Edition Document Library
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x806210
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 2
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9080105
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x800000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0099
+        opaque: mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA==
+      - type: 0x0095
+        opaque: lQAmAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAIAAEACAABAAABAQA=
+      - type: 0x0096
+        opaque: |
+          lgADAwAAAAAAAAAAAAAgAPECQAQAz/8DB6QHzv/M/wEHwqTDAM7/yf8CB6TCAAWkB/+kAMIHwqQBB8n/
+          xv/CBwSkAKQHxP8BpMUAAaTJ/8T/AwekAMKkxP8CB6TCAMKkBf8HAKQHw6TF/8L/wgfCpMT/AQfCpMIA
+          AqQHw/8BpMIAAaTDAMX/wv8BB8X/AwekAMKkxf8BpMIAwqQCB//CAMX/wgfF/wEHwqTF/8KkAQDCpMX/
+          A6QApMT/wqTE/wEHxv8CpADCpMj/A6QApMT/BP8ApP/CB8X/wgcBpMv/AQfCAMT/B/8HpAf/AAfM/wMH
+          pAfD/wEHwgDE/8L/BQAH/6QAwv8BpMb/AQfCpAQApP8Hw//CAAEHw//C/wmkAAf/AKT/pADD/wMHpADC
+          pAL/B8Kkw/8DpACkw//C/wakAAf/pADC/wIAB8L/Awek/8IHwgABpMT/AaTCAMP/wv8KpACk/6QApP8H
+          AMT/AaTCAAGkw/8BB8L/AQfCAAEHwv/C/wEHwgDCB8IABP8HAAfC/wEHwqQDB/8Hw6TD/wOkAKTC/8P/
+          wgACB//CAML/wgDG/wGkwgABpMT/A6QApML/w/8BpMIAAf/CAAWk/6QAB8P/BAekAKTG/wEHwgDC/8P/
+          AQfCAAL/pMIABP+kAKTD/wOkAAfE/wEHw/8EpAAH/8P/AQfCAMIHwgACB6TCAMP/AQfD/wEHwgABB8P/
+          BAcApP/E/wSkAKT/wgACpP/CAAEHxf8BpMIAAQfF/wOkAP/E/wGkwgAC/6TCAAT/pACkxP8DpACkx/8D
+          BwAHxP8BB8IAAqQHwgAC/6TCAMP/A6QAB8n/wqTF/8MAAQfCAMIHwgDD/wEHy/8CB6TF/wGkwgABpMMA
+          AQfCAAGkzP/DpAEHxv/DAAGkwgDCpMIAx/8BB8SkwgfC/8b/AqQAwgfDAAGkwgABpMT/BQekAKQHxv/K
+          /wGkwgABpMMAwv8CpADCpMn/yv8FBwCk/6TCAASkAKQHy//O/wEHwwABB83/z//CpM//
+      - type: 0x0097
+        opaque: |
+          lwAGAwAAAAAAgAAAAIAAgIAAAACAgACAAICAwMDAwNzApsrwQCAAYCAAgCAAoCAAwCAA4CAAAEAAIEAA
+          QEAAYEAAgEAAoEAAwEAA4EAAAGAAIGAAQGAAYGAAgGAAoGAAwGAA4GAAAIAAIIAAQIAAYIAAgIAAoIAA
+          wIAA4IAAAKAAIKAAQKAAYKAAgKAAoKAAwKAA4KAAAMAAIMAAQMAAYMAAgMAAoMAAwMAA4MAAAOAAIOAA
+          QOAAYOAAgOAAoOAAwOAA4OAAAABAIABAQABAYABAgABAoABAwABA4ABAACBAICBAQCBAYCBAgCBAoCBA
+          wCBA4CBAAEBAIEBAQEBAYEBAgEBAoEBAwEBA4EBAAGBAIGBAQGBAYGBAgGBAoGBAwGBA4GBAAIBAIIBA
+          QIBAYIBAgIBAoIBAwIBA4IBAAKBAIKBAQKBAYKBAgKBAoKBAwKBA4KBAAMBAIMBAQMBAYMBAgMBAoMBA
+          wMBA4MBAAOBAIOBAQOBAYOBAgOBAoOBAwOBA4OBAAACAIACAQACAYACAgACAoACAwACA4ACAACCAICCA
+          QCCAYCCAgCCAoCCAwCCA4CCAAECAIECAQECAYECAgECAoECAwECA4ECAAGCAIGCAQGCAYGCAgGCAoGCA
+          wGCA4GCAAICAIICAQICAYICAgICAoICAwICA4ICAAKCAIKCAQKCAYKCAgKCAoKCAwKCA4KCAAMCAIMCA
+          QMCAYMCAgMCAoMCAwMCA4MCAAOCAIOCAQOCAYOCAgOCAoOCAwOCA4OCAAADAIADAQADAYADAgADAoADA
+          wADA4ADAACDAICDAQCDAYCDAgCDAoCDAwCDA4CDAAEDAIEDAQEDAYEDAgEDAoEDAwEDA4EDAAGDAIGDA
+          QGDAYGDAgGDAoGDAwGDA4GDAAIDAIIDAQIDAYIDAgIDAoIDAwIDA4IDAAKDAIKDAQKDAYKDAgKDAoKDA
+          wKDA4KDAAMDAIMDAQMDAYMDAgMDAoMDA//vwoKCkgICA/wAAAP8A//8AAAD//wD/AP//////
+      - type: 0x0098
+        opaque: mAAeAAAA//////////8Ddt3dA3bd3QN23d0Ddt3d
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 3
+        LeftMargin: 3240
+        LineSpacing: 0
+        PABID: 3
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 3240
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 1
+        data:
+          - 3240
+          - 24
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 3
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9080101
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x800000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8094
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 4
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 1440
+          - 2160
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 2
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 11520
+          - 86
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "** This template is not intended for Web (browser) use and is not supported on the Macintosh."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 5
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000101
+        data: What does this database do?
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "This database gives Notes users the ability to seamlessly create and save documents using Lotus SmartSuite Word Pro, 1-2-3, Freelance, or Paintbrush, without leaving Notes.  In addition, the library serves as an electronic filing cabinet for these documents, making it easy for all members of a workgroup to locate, update, and print desired documents.  The database might contain anything from environmental impact statements for a group of engineers using Word Pro to financial statements for a group of loan officers using 1-2-3."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "Besides being a repository and point of interaction for documents created with Lotus application software, the document library includes other important document management features.  These features include archiving and review cycle capabilities."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Who will use this database?
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0xa080101
+        data: "**"
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x800000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 6
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1800
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 6
+      - type: 0xff85
+        FontID: 0x9000001
+        data: Anyone who wishes to create a record of a document or review available documents may use this database.
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 4
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 7
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Important Features
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "- "
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Review Cycle:"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: " Used to route a document to a series of recipients."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "- "
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Document Archiving:"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: " Used to move expired documents to an archive database."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "- "
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "OLE/ActiveX:"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: " Notes launches Lotus SmartSuite applications in-place active instead of in a separate window.  This gives the user the feeling of being in the OLE application while still being in Notes."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Suggestions for Modifications
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "- "
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Full text search: "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "If you wish to use Notes' full text search capabilities for a database created with this template, select menu File, Database, Properties, go to the Full Text panel and then select Create Index... to create the full text index."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Where to find more information?
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "-  More information can be found in the "
+      - type: 0xff85
+        FontID: 0x9000401
+        data: Using This Database
+      - type: 0xff85
+        FontID: 0x9000001
+        data: " document."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Access Control
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "-  "
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Very Important:  "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "Access level should be "
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Author
+      - type: 0xff85
+        FontID: 0x9000001
+        data: " for all users of this database.  This will prevent unauthorized editing of documents within the database.  The Author fields within the forms govern who will be able to edit/review particular documents.   Errors will occur if someone with Editor access attempts to review a document when they are not an authorized reviewer of that document."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Important Note
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "- The Lotus SmartSuite Library template should only be used to create new applications. Upgrading existing Document Library applications with this template is not supported."
+  - name: $Fonts
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: i/8oAAEABRZUaW1lcyBOZXcgUm9tYW4AAAAAAAAAAAAAAAAAAAAAAA==
+  - name: $HTMLCode
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+  - name: $Info
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+remaining: []

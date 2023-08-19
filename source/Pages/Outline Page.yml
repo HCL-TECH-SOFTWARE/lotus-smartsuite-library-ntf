@@ -1,0 +1,177 @@
+---
+class: 4
+flags: 0x0000
+unid: OFE0929915392F2020-ON005C7A968525665D
+items:
+  - name: $$ScriptName
+    type: text
+    data: OutlinePage
+    signed: true
+    nonsummary: true
+  - name: $DesignerVersion
+    type: text
+    data: "6"
+    signed: true
+  - name: $Flags
+    type: text
+    data: C34WQw
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $TITLE
+    type: text
+    data:
+      - Outline Page
+      - OutlinePage
+  - name: $BackgroundR5
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: |
+      3QYBAJkAmQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAH0AHAAAAAEAEwEgAwAAAAAAAAAAAAAAAAAA
+      AAD2/0UAAAAAAAMAEwAjAAAAAAAAAAAAAAAAAAAAAAAAAAAARG9jbGliT3V0bGluZS5naWZ8RG9jbGli
+      T3V0bGluZS5naWYA3gYBAJkA
+  - name: $Body
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x0794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+      - type: 0x0083
+        PABID: 1
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1080
+        Flags: 0x0100
+        Flags2: 0x0494
+        JustifyMode: 0
+        LeftMargin: 1080
+        LineSpacing: 0
+        PABID: 2
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1080
+          - 10
+          - 1080
+          - 10
+          - 0
+          - 0
+      - type: 0x0083
+        PABID: 2
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x00dd
+        Signature: 0xffad
+        Version: 0
+      - type: 0xffad
+        opaque: rf8kABsACAAAABgARG9jbGliU21hcnRTdWl0ZU91dGxpbmUA
+      - type: 0xffea
+        opaque: |
+          6v8+ABsAAYQAAGQACAcBAAAJAAAAAAAAAAABAAAKAQAACgAABQD///8AAQAAAAAAAAAAAAAAAAAAAAAA
+          AAA=
+      - type: 0xffec
+        opaque: |
+          7P8cASAGAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAgAQAAIAEAAA0AAAABAAAKAQAACgEA
+          AAoBAAAKAQAACgEAAAoAAAAAAAAAALABIAEAAAMAAAAFAP///wAFAP///wAFAP///wAFAP///wAFAP//
+          /wABANTJugAFAP///wAFAP///wABANTJugAFAP///wABAAAAAAABAAAAAAABAAAAAAAAAAAAAAAAAAAA
+          AAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAAAAAQAAAP8A
+          AQAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAZG9jbGlib3V0bGluZQA=
+      - type: 0x00ae
+        opaque: rgI=
+      - type: 0x00de
+        Signature: 0x00ae
+        Version: 0
+      - type: 0xff85
+        FontID: 0xa000001
+  - name: $Fonts
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+  - name: $HTMLCode
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+  - name: $HTMLDocumentStyles
+    signed: true
+    type: opaque
+    type_num: 1
+    opaque: 0ggBAAAA/wDSCAEA/wAAANIIAQCAAIAA
+  - name: $Info
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: hhgBAIAAAAAAAAAAAQABAP///wAAAAAA
+remaining: []

@@ -1,0 +1,27 @@
+---
+class: 4
+flags: 0x0000
+unid: OF8D454A9BF865F3E1-ON005EC4F085258615
+items:
+  - name: $DesignerVersion
+    type: text
+    data: 8.5.3
+    signed: true
+  - name: $FileNames
+    type: text
+    data: xspdesign.properties
+    signed: true
+  - name: $Flags
+    type: text
+    data: ~C4g
+  - name: $Revisions
+    type: time
+    data: "2020-11-03T12:15:08.04-05:00"
+  - name: $TITLE
+    type: text
+    data: AppProperties/xspdesign.properties
+  - name: $FileData
+    type: composite
+    signed: true
+    nonsummary: true
+remaining: []

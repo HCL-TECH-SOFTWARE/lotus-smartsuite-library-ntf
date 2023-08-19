@@ -1,0 +1,99 @@
+---
+class: 4
+flags: 0x0000
+unid: OF5F23DFDE3BC61F5B-ON007E8B1C88256A1B
+items:
+  - name: $DesignerVersion
+    type: text
+    data: "6"
+    signed: true
+  - name: $Flags
+    type: text
+    data: 34CiQv
+  - name: $FlagsExt
+    type: text
+    data: D
+    signed: true
+  - name: $ImageNames
+    type: text
+    data: docActionButton.gif
+    signed: true
+  - name: $ImagesColorize
+    type: number
+    data: 0
+    signed: true
+  - name: $ImagesHigh
+    type: number
+    data: 1
+    signed: true
+  - name: $ImagesWide
+    type: number
+    data: 2
+    signed: true
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $MimeType
+    type: text
+    data: image/gif
+    signed: true
+  - name: $TITLE
+    type: text
+    data: ActionButton.gif
+    signed: true
+  - name: $WebBrowserCompatible
+    type: number
+    data: 1
+    signed: true
+  - name: $ImageData
+    type: composite
+    signed: true
+    nonsummary: true
+  - name: $ImageData0000
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: |
+      mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAEAAAAAAJ8DAAABAAAAAAAAAAAAAAB8AKkD
+      AACfA6ADR0lGODlhXgASAOcCAJygroiNmsDAwOPe1vHt6QAAAAAAAAAAAP7//v/6/93d+v/d3SgAAABo
+      D/7/RDpcNi4wXG5vdGVzXHNpZ25vdXRcZG9jbGJzNi5udGYAAP7/+v/d3fr/3d0wAAAAZg/+/xyAggBz
+      aCWIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFv7/+v/d3fr/3d04AAAAGgv+/0xvdHVz
+      IFNtYXJ0U3VpdGUgTGlicmFyeSAoUjYpIC0gRGVzaWduIC0gSW1hZ2VzAP7//v/6/93d+v/d3RwAAABA
+      BP7/AAVNYWluRnJhbWVzZXQgTm90ZXMA//7/+v/d3fr/3d0oAAAAaA/+/0Q6XDYuMFxub3Rlc1xzaWdu
+      b3V0XGRvY2xiczYubnRmAHP+//r/3d36/93dMAAAAGYP/v8cgIIAc2gliAAAAAAAAAAAAAAAAAAAAAAA
+      AAAAAAAAAAAAAAAAAAAAAFX+//r/3d36/93dNAAAAAo2/v+9ABIAAQD/AAAACADZAgAAAQAAAAAAAAC9
+      ABIAZAAAAAIAAAAAAAAA9OVZB/7/3d36/93d+v/d3QwAAABbGP7/wMDA4/7/AAD6/93dLhbd3cREBwA4
+      AAAANAAAAMREBwAsAAAARDpcNi4wXG5vdGVzXGRvY2xidzYubnRmAGL+//r/3d36/93dFAAAAEAE/v8A
+      BUJvcmRlckZyYW1lAP7/+v/d3S4W3d0oRQcAKAAAAAAAAAADAAcAAAAAAAAAAAAAAAAAAAD+//r/3d36
+      /93dMAAAAGYP/v8cgIIAc2gliBa/gjUSq9796jVPAAdiJYWNn+G4VVoOP8o8fwAbaiWIAAD+//r/3d0u
+      Ft3d/EwHADQAAABEOlw2LjBcbm90ZXNcc2lnbm91dFxkb2NsYnM2Lm50ZgAA/v/6/93d+v/d3TAEAAAa
+      DP7/QBMAwgABBUADAMMAAiAiQCQAxgBABAACAAxADwABBUADAMMAAj4xQCQAxgBAEwDCAAEFQAMAwwAC
+      IiBAJADGACH5BAEAAAIALAAAAABeABIAQAh8AAUICECwoMGDCBMqXMiwoUOHAgMMmEixosWLGDNq3Mix
+      o8cBAQQA+EiypMmTGwEMRMmypcuNBF/KnMkyJs2bOGFKzMmzJ8idPoPOtCm0aMuQQI0q/Yh0qVOSRJ9K
+      zRh1qlWKVa9azapVKteuTr+CVRpy4MOzaNOqPSswIAA7AA==
+  - name: $ImageData0001
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: |
+      mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAH0AHAAAAAEAAAAAAJ8DAAABAAAAAAAAAAAAAAB8AKkD
+      AACfA6ADR0lGODlhXgASAOcCAJygroiNmsDAwOPe1vHt6QAAAAAAAAAAAP7//v/6/93d+v/d3SgAAABo
+      D/7/RDpcNi4wXG5vdGVzXHNpZ25vdXRcZG9jbGJzNi5udGYAAP7/+v/d3fr/3d0wAAAAZg/+/xyAggBz
+      aCWIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFv7/+v/d3fr/3d04AAAAGgv+/0xvdHVz
+      IFNtYXJ0U3VpdGUgTGlicmFyeSAoUjYpIC0gRGVzaWduIC0gSW1hZ2VzAP7//v/6/93d+v/d3RwAAABA
+      BP7/AAVNYWluRnJhbWVzZXQgTm90ZXMA//7/+v/d3fr/3d0oAAAAaA/+/0Q6XDYuMFxub3Rlc1xzaWdu
+      b3V0XGRvY2xiczYubnRmAHP+//r/3d36/93dMAAAAGYP/v8cgIIAc2gliAAAAAAAAAAAAAAAAAAAAAAA
+      AAAAAAAAAAAAAAAAAAAAAFX+//r/3d36/93dNAAAAAo2/v+9ABIAAQD/AAAACADZAgAAAQAAAAAAAAC9
+      ABIAZAAAAAIAAAAAAAAA9OVZB/7/3d36/93dLhbd3cREBwBQAAAAwMDA4/7/AAD6/93dLhbd3cREBwA4
+      AAAANAAAAMREBwAsAAAARDpcNi4wXG5vdGVzXGRvY2xidzYubnRmAGL+//r/3d36/93dFAAAAEAE/v8A
+      BUJvcmRlckZyYW1lAP7/+v/d3S4W3d0oRQcAKAAAAAAAAAADAAcAAAAAAAAAAAAAAAAAAAD+//r/3d36
+      /93dMAAAAGYP/v8cgIIAc2gliBa/gjUSq9796jVPAAdiJYWNn+G4VVoOP8o8fwAbaiWIAAD+//r/3d0u
+      Ft3d/EwHADQAAABEOlw2LjBcbm90ZXNcc2lnbm91dFxkb2NsYnM2Lm50ZgAA/v/6/93d+v/d3TAEAAAa
+      DP7/QBMAwgABBUADAMMAAiAiQCQAxgBABAACAAxADwABBUADAMMAAj4xQCQAxgBAEwDCAAEFQAMAwwAC
+      IiBAJADGACH5BAEAAAIALAAAAABeABIAQAh8AAUICECwoMGDCBMqXMiwoUOHAgMQmEixosWLGDNq3Mix
+      o0cCAQQA+EiypMmTGwEMRMmypcuNBF/KnMkyJs2bOGFKzMmzJ8idPoPOtCm0aMuQQI0q/Yh0qVOSRJ9K
+      zRh1qlWKVa9azapVKteuTr+CVRpy4MOzaNOqPSswIAA7bQ==
+remaining: []

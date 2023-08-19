@@ -1,0 +1,1535 @@
+---
+class: 33024
+flags: 0x0000
+unid: OF50C0CE2416E55892-ON004F7EAD85256207
+items:
+  - name: $ClientEventTag
+    type_num: 769
+    type: opaque
+    opaque: |
+      FwAAAAAAAOAAoG9BAAAAQACAb0EAAABAAGBvQQAAAEAAQG9BAAAAQAAgb0EAAABAAABvQQAAAEAA4G5B
+      AAAAQADAbkEAAABAAKBuQQAAAAAAgG5BAAAAQABgbkEAAABAAEBuQQAAAEAAAG5BAAAAQADgbUEAAABA
+      AMBtQQAAAEAAIGpBAAAAQAAAakEAAABAAOBpQQAAAEAAwGlBAAAAQACgaUEAAABAAIBpQQAAAEAAYGlB
+      AAAAQABAaUE=
+    signed: true
+    nonsummary: true
+  - name: $DesignerVersion
+    type: text
+    data: "7"
+    signed: true
+  - name: $Flags
+    type: text
+    data: R
+  - name: OriginalModTime
+    type: time
+    dst: true
+    data: "2005-06-01T12:13:01.67-07:00"
+    signed: true
+  - name: $Body
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0xff82
+        FirstLineLeftMargin: 2577
+        Flags: 0x0000
+        Flags2: 0x0094
+        JustifyMode: 0
+        LeftMargin: 2880
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 11107
+        Tab:
+          - 302
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data: []
+      - type: 0x00a6
+        Flags: 0x00000000
+        PABID: 1
+        StyleName: bullet
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 2
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 1
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 2
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xffad
+        Version: 0
+      - type: 0xffad
+        opaque: rf8sAAIAHAAAACAAIAAAABIAAgD8EQAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+        data: Close this document to view the database
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00ae
+        opaque: rgI=
+      - type: 0x00de
+        Signature: 0x00ae
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 2
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9040401
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x0000ff
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 3
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 3
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 3
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x18e20101
+        data: Using Lotus SmartSuite Millennium Edition Document Library
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0x806210
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 3
+      - type: 0xff85
+        FontID: 0xa000101
+      - type: 0x0099
+        opaque: mQAcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA==
+      - type: 0x0095
+        opaque: lQAmAAAAAAAAAAAAAAAAAAAAAAAAACAAIAAIAAEACAABAAABAQA=
+      - type: 0x0096
+        opaque: |
+          lgADAwAAAAAAAAAAAAAgAPECQAQAz/8DB6QHzv/M/wEHwqTDAM7/yf8CB6TCAAWkB/+kAMIHwqQBB8n/
+          xv/CBwSkAKQHxP8BpMUAAaTJ/8T/AwekAMKkxP8CB6TCAMKkBf8HAKQHw6TF/8L/wgfCpMT/AQfCpMIA
+          AqQHw/8BpMIAAaTDAMX/wv8BB8X/AwekAMKkxf8BpMIAwqQCB//CAMX/wgfF/wEHwqTF/8KkAQDCpMX/
+          A6QApMT/wqTE/wEHxv8CpADCpMj/A6QApMT/BP8ApP/CB8X/wgcBpMv/AQfCAMT/B/8HpAf/AAfM/wMH
+          pAfD/wEHwgDE/8L/BQAH/6QAwv8BpMb/AQfCpAQApP8Hw//CAAEHw//C/wmkAAf/AKT/pADD/wMHpADC
+          pAL/B8Kkw/8DpACkw//C/wakAAf/pADC/wIAB8L/Awek/8IHwgABpMT/AaTCAMP/wv8KpACk/6QApP8H
+          AMT/AaTCAAGkw/8BB8L/AQfCAAEHwv/C/wEHwgDCB8IABP8HAAfC/wEHwqQDB/8Hw6TD/wOkAKTC/8P/
+          wgACB//CAML/wgDG/wGkwgABpMT/A6QApML/w/8BpMIAAf/CAAWk/6QAB8P/BAekAKTG/wEHwgDC/8P/
+          AQfCAAL/pMIABP+kAKTD/wOkAAfE/wEHw/8EpAAH/8P/AQfCAMIHwgACB6TCAMP/AQfD/wEHwgABB8P/
+          BAcApP/E/wSkAKT/wgACpP/CAAEHxf8BpMIAAQfF/wOkAP/E/wGkwgAC/6TCAAT/pACkxP8DpACkx/8D
+          BwAHxP8BB8IAAqQHwgAC/6TCAMP/A6QAB8n/wqTF/8MAAQfCAMIHwgDD/wEHy/8CB6TF/wGkwgABpMMA
+          AQfCAAGkzP/DpAEHxv/DAAGkwgDCpMIAx/8BB8SkwgfC/8b/AqQAwgfDAAGkwgABpMT/BQekAKQHxv/K
+          /wGkwgABpMMAwv8CpADCpMn/yv8FBwCk/6TCAASkAKQHy//O/wEHwwABB83/z//CpM//
+      - type: 0x0097
+        opaque: |
+          lwAGAwAAAAAAgAAAAIAAgIAAAACAgACAAICAwMDAwNzApsrwQCAAYCAAgCAAoCAAwCAA4CAAAEAAIEAA
+          QEAAYEAAgEAAoEAAwEAA4EAAAGAAIGAAQGAAYGAAgGAAoGAAwGAA4GAAAIAAIIAAQIAAYIAAgIAAoIAA
+          wIAA4IAAAKAAIKAAQKAAYKAAgKAAoKAAwKAA4KAAAMAAIMAAQMAAYMAAgMAAoMAAwMAA4MAAAOAAIOAA
+          QOAAYOAAgOAAoOAAwOAA4OAAAABAIABAQABAYABAgABAoABAwABA4ABAACBAICBAQCBAYCBAgCBAoCBA
+          wCBA4CBAAEBAIEBAQEBAYEBAgEBAoEBAwEBA4EBAAGBAIGBAQGBAYGBAgGBAoGBAwGBA4GBAAIBAIIBA
+          QIBAYIBAgIBAoIBAwIBA4IBAAKBAIKBAQKBAYKBAgKBAoKBAwKBA4KBAAMBAIMBAQMBAYMBAgMBAoMBA
+          wMBA4MBAAOBAIOBAQOBAYOBAgOBAoOBAwOBA4OBAAACAIACAQACAYACAgACAoACAwACA4ACAACCAICCA
+          QCCAYCCAgCCAoCCAwCCA4CCAAECAIECAQECAYECAgECAoECAwECA4ECAAGCAIGCAQGCAYGCAgGCAoGCA
+          wGCA4GCAAICAIICAQICAYICAgICAoICAwICA4ICAAKCAIKCAQKCAYKCAgKCAoKCAwKCA4KCAAMCAIMCA
+          QMCAYMCAgMCAoMCAwMCA4MCAAOCAIOCAQOCAYOCAgOCAoOCAwOCA4OCAAADAIADAQADAYADAgADAoADA
+          wADA4ADAACDAICDAQCDAYCDAgCDAoCDAwCDA4CDAAEDAIEDAQEDAYEDAgEDAoEDAwEDA4EDAAGDAIGDA
+          QGDAYGDAgGDAoGDAwGDA4GDAAIDAIIDAQIDAYIDAgIDAoIDAwIDA4IDAAKDAIKDAQKDAYKDAgKDAoKDA
+          wKDA4KDAAMDAIMDAQMDAYMDAgMDAoMDA//vwoKCkgICA/wAAAP8A//8AAAD//wD/AP//////
+      - type: 0x0098
+        opaque: mAAeAAAA//////////8Ddt3dA3bd3QN23d0Ddt3d
+      - type: 0xff85
+        FontID: 0xa000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 3
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8094
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 4
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 1440
+          - 2160
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 2
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 11520
+          - 86
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "**This template is not intended for Web (browser) use and is not supported on the Macintosh"
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 5
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x8000001
+        data: This database allows you to capture and track information about documents.
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 4
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 6
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 6
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 6
+      - type: 0xff85
+        FontID: 0xa000501
+        data: "Functions of the Database:"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x8000101
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 7
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x8000101
+        data: To add a document to this database
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1800
+        LineSpacing: 0
+        PABID: 8
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1800
+          - 14
+          - 1800
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000001
+        data: Click the New Document action from any of the views.
+      - type: 0xff85
+        FontID: 0x8000001
+        data: "  You can enter document information in several ways: by typing it using the Notes editor, by scanning in hard copy, or by importing or attaching an electronic file. "
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 9
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 14
+          - 1440
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 9
+      - type: 0xff85
+        FontID: 0x8000101
+        data: To create a document using Lotus SmartSuite applications
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+        data: "Select Create--Lotus SmartSuite "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "or select the New Lotus SmartSuite document action bar,"
+      - type: 0xff85
+        FontID: 0x8000001
+        data: " and then select one of the following choices: 1-2-3 Workbook; Freelance Presentation; Paintbrush Picture; Word Pro Document).  In order for these documents to get created properly you will need to have these applications installed (Lotus SmartSuite 9 applications or above are supported)."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x8000101
+        data: To respond to a document
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+        data: "Highlight that document in a view, then select Create, Response."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x8000101
+        data: To respond to a response
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+        data: "Highlight the response you wish to respond to, then select Create, Response to Response."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: To flag a document as Private
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1857
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1800
+        LineSpacing: 0
+        PABID: 10
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 302
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1800
+          - 14
+          - 1857
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 10
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "You can use the \"Mark Private\" and"
+      - type: 0xff85
+        FontID: 0x9000101
+        data: " "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "\"Mark Public\" actions in the template to control whether anyone other than yourself can read a specific document.  For example, if you have not completed the writing of a particular document, you can click the \"Mark Private\" action and others will not be able to see the document.  When you complete the document, you can click the"
+      - type: 0xff85
+        FontID: 0x9000101
+        data: " "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "\"Mark Public\""
+      - type: 0xff85
+        FontID: 0x9000101
+        data: " "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "action to make it available for others to read.  If a document is marked private after it has been submitted for review, the document author and the reviewers will be able to read the document."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 10
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1497
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 11
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 302
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 14
+          - 1497
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 11
+      - type: 0xff85
+        FontID: 0x9000101
+        data: ACL Settings
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 10
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "This application was designed with the intention that all users, except the Manager, should have Author access.  If they have Editor access, the review cycle may not function properly.  Anonymous access is not permitted."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 6
+      - type: 0xff85
+        FontID: 0xa000501
+        data: Features
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x8000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Document Review Cycle
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "The author of a document has the option of setting up a document review cycle for that document. To do so simply click on the Setup Review Cycle action button and fill in the necessary information.  "
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 2160
+        LineSpacing: 0
+        PABID: 12
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 2160
+          - 16
+          - 1800
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 12
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Note:  "
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "Do not use "
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "@Domain"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: " when entering approver names.  Any domain added will be stripped off and may cause complications when attempting to route a request.  Also, only enter Person-names as approvers.  Group names are not supported."
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1800
+        LineSpacing: 0
+        PABID: 13
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1800
+          - 14
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 13
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 13
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Clearing a Review Cycle
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1800
+        LineSpacing: 0
+        PABID: 14
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1800
+          - 14
+          - 1800
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 14
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "This database provides an action button to \"Clear Review Cycle\".  This is accessible only by the document's originator.  You can either use the action prior to submitting a document for review, or after submittal.  Below are the guidelines:"
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 2160
+        LineSpacing: 0
+        PABID: 15
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 1
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 2160
+          - 16
+          - 1800
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 15
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tClearing a review cycle prior to submitting for review:  Select this if you, as originator, wish to change the review cycle settings before your reviewers receive notification."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 15
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tClearing a review cycle after submittal:  If reviewers have already begun or completed their document review, their work will be preserved.  If reviewers were notified to review a document and they have not yet begun the review, they will receive a courtesy notice that they are no longer required to conduct a review."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 15
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8094
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 16
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 10800
+          - 80
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 16
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Lotus SmartSuite Library Review Styles
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8094
+        JustifyMode: 0
+        LeftMargin: 1800
+        LineSpacing: 0
+        PABID: 17
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 1
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1800
+          - 14
+          - 1800
+          - 14
+          - 10800
+          - 80
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 17
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Serial Review:"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "  Documents are routed for review one at a time, in sequence to the reviewers chosen by the author."
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1800
+        Flags: 0x0100
+        Flags2: 0x8094
+        JustifyMode: 0
+        LeftMargin: 2160
+        LineSpacing: 0
+        PABID: 18
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 2160
+          - 16
+          - 1800
+          - 14
+          - 10800
+          - 80
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tAll edits are made within the same document, but an unedited copy of the original document is also saved."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 17
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Serial Review (keep all revisions):"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "  Documents are routed for review one at a time, in sequence to the reviewers chosen by the author."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tEdits are made within a copy of the original, which also includes all comments from previous reviewers"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tAll old versions become response documents (as well as a copy of the original)"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 17
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Document Reservations:"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "  Requests for document review are routed in parallel (that is, all at the same time).  When one reviewer opens the document, a \"file locking\" occurs at the server which warns any other user who happens to edit the document that a review is in progress.  "
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tReview comments or edits are made into a copy of the original document"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tAs with the others, a clean copy of the original is always kept"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 17
+      - type: 0xff85
+        FontID: 0x9000201
+        data: "Response Review:"
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "  Same as Document Reservations (but with no file locking)."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tReview comments or edits are saved as response documents to the original document.  "
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 18
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "o\tAs with the others, a clean copy of the original is always kept"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Processing Late Reviews
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 19
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 720
+          - 1440
+          - 2160
+          - 2880
+          - 3600
+          - 4320
+          - 5040
+          - 5760
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 8
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 19
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "If the Process Late Reviews agent is enabled, it selects those documents which are in review and have due dates which have passed.  Based upon the review style of the document, it then either moves it along to the next reviewer, marks it as complete, or simply notifies the current reviewer(s) that their review is overdue."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 19
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 20
+        ParagraphSpacingAfter: 1
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 720
+          - 1440
+          - 2160
+          - 2880
+          - 3600
+          - 4320
+          - 5040
+          - 5760
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 8
+        data:
+          - 1440
+          - 11
+          - 1440
+          - 11
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 20
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Unlock Document
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 19
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "Occasionally a document is accidentally left in a locked state.  The Unlock Document action can be accessed by designers and managers from the Review Status view's Action menu to unlock the document."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 9
+      - type: 0xff85
+        FontID: 0x9000101
+        data: Archiving
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "To set up Archiving for the Lotus SmartSuite Library, click the Archive button on the second tab of the File-Database-Properties infobox.  Fill out the information and click the OK button.  Set up the Archiving task is to run on the server.  An archive database will be set up automatically."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000401
+        data: "Marking documents as \"Expired\"  "
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000001
+        data: The Archive feature can act upon documents that have been marked as Expired.  Select a document in the view and choose Mark/Unmark Expired from the Actions menu.
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 8
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "Categorize multiple documents  "
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "You can categorize several document by selecting each document and then select Actions, Categorize.  Then you can select a category or add a new one and press OK when finished.  Now your selected documents will be categorized."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x8000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000101
+        data: OLE/ActiveX
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "This template is designed to work with Lotus SmartSuite Millennium Edition r9 or later (earlier versions of SmartSuite are not supported since most of these applications did not support DocObjects.  This template takes advantage of the OLE concept of DocObjects (aka ActiveX) which basically involves the OLE/ActiveX object going in-place active and taking over the entire document window.  The affect is that it appears as if the object's server is running as a stand-alone application."
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0x9000001
+        data: Please see the Troubleshooting section in the Notes Client release notes for information regarding any known issues with this template.
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1497
+        Flags: 0x0100
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 21
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 302
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 14
+          - 1497
+          - 14
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 21
+      - type: 0xff85
+        FontID: 0x9000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 21
+      - type: 0xff85
+        FontID: 0x9000101
+        data: "For Administrators:"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 21
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 21
+      - type: 0xff85
+        FontID: 0x9000001
+        data: "This database was designed around the notion that the end-user will be spending the majority of their time in the Notes environment. This template will not work if a user tries to use the \"Save to Lotus Notes\" feature that Lotus 1-2-3 r9, Lotus Freelance r9, and Lotus Word Pro r9 include. If someone saves a document to this database in that manner, the user will receive and error if the try to open the document from Notes, not from within the SmartSuite product. We suggest that you have your users either 1) create and open documents from within Notes or 2) create and open documents from within the SmartSuite application."
+  - name: $Fonts
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: i/8oAAEABRZUaW1lcyBOZXcgUm9tYW4AAAAAAAAAAAAAAAAAAAAAAA==
+  - name: $HTMLCode
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+  - name: $Info
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+remaining: []

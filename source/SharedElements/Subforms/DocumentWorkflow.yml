@@ -1,0 +1,1080 @@
+---
+class: 4
+flags: 0x0000
+unid: OF240C095D16D88F76-ON006372D285256231
+items:
+  - name: $$FormScript
+    type: text
+    data: |
+      '++LotusScript Development Environment:2:5:(Options):0:66
+      
+      '++LotusScript Development Environment:2:5:(Forward):0:1
+      Declare Sub Queryopen(Source As Notesuidocument, Mode As Integer, Isnewdoc As Variant, Continue As Variant)
+      Declare Sub Postopen(Source As Notesuidocument)
+      Declare Sub Querymodechange(Source As Notesuidocument, Continue As Variant)
+      Declare Sub Postmodechange(Source As Notesuidocument)
+      Declare Sub Querysave(Source As Notesuidocument, Continue As Variant)
+      Declare Sub Queryclose(Source As Notesuidocument, Continue As Variant)
+      
+      '++LotusScript Development Environment:2:5:(Declarations):0:2
+      
+      '++LotusScript Development Environment:2:2:BindEvents:1:129
+      Private Sub BindEvents(Byval Objectname_ As String)
+           Static Source As NOTESUIDOCUMENT
+           Set Source = Bind(Objectname_)
+           On Event Queryopen From Source Call Queryopen
+           On Event Postopen From Source Call Postopen
+           On Event Querymodechange From Source Call Querymodechange
+           On Event Postmodechange From Source Call Postmodechange
+           On Event Querysave From Source Call Querysave
+           On Event Queryclose From Source Call Queryclose
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:Queryopen:1:12
+      Sub Queryopen(Source As Notesuidocument, Mode As Integer, Isnewdoc As Variant, Continue As Variant)
+           Call DocQueryOpen(source, mode, isnewdoc, continue)
+      End Sub
+      '++LotusScript Development Environment:2:2:Postopen:1:12
+      Sub Postopen(Source As Notesuidocument)
+           Call DocPostOpen(source)
+      End Sub
+      '++LotusScript Development Environment:2:2:Querymodechange:1:12
+      Sub Querymodechange(Source As Notesuidocument, Continue As Variant)
+           If Not(source.InPreviewPane) Then 
+                Call DocQueryModeChange(source, continue)
+           Else
+                continue = False
+           End If
+      End Sub
+      '++LotusScript Development Environment:2:2:Postmodechange:1:12
+      Sub Postmodechange(Source As Notesuidocument)
+           Call DocPostModeChange(source)
+      End Sub
+      '++LotusScript Development Environment:2:2:Querysave:1:12
+      Sub Querysave(Source As Notesuidocument, Continue As Variant)
+           If Not(source.InPreviewPane) Then Call DocQuerySave(source, continue)
+      End Sub
+      '++LotusScript Development Environment:2:2:Queryclose:1:12
+      Sub Queryclose(Source As Notesuidocument, Continue As Variant)
+           If Not(source.InPreviewPane) Then Call DocQueryClose(source, continue)
+      End Sub
+    signed: true
+    nonsummary: true
+  - name: $$ScriptName
+    type: text
+    data: DocumentWorkflow
+    signed: true
+    nonsummary: true
+  - name: $DesignerVersion
+    type: text
+    data: "7"
+    signed: true
+  - name: $Fields
+    type: text
+    data:
+      - $OLEObjRichTextField
+      - $OLEObjField
+      - LastEditor
+      - DocumentReaders
+      - DocumentAuthors
+  - name: $Flags
+    type: text
+    data: CUA3wx
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $OLEObjField
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: $OLEObjRichTextField
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: $Script
+    type: text
+    data: |
+      '++LotusScript Development Environment:2:5:(Options):0:74
+      Option Public
+      Use "OLERoutines"
+      '++LotusScript Development Environment:2:5:(Forward):0:1
+      
+      '++LotusScript Development Environment:2:5:(Declarations):0:2
+    signed: true
+    nonsummary: true
+  - name: $TITLE
+    type: text
+    data: DocumentWorkflow
+  - name: DocumentAuthors
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: DocumentReaders
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: LastEditor
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: $ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 0
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x00000000
+        HeightSpc: 0
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x00000000
+      - type: 0xffbe
+        Flags: 0x0001408b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 7
+        Type: 1
+        data: "@Command([EditDocument])"
+        data_opaque: IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+        title: Edit Document
+      - type: 0xffbe
+        Flags: 0x00014093
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 8
+        Type: 1
+        data: |
+          @If(@IsValid;
+          @Do(@Command([FileSave]); @Command([FileCloseWindow])); "")
+        data_opaque: |
+          SAAAADYA5ACvACwAIAACAMYLAAAAAAAA7QECAPwRAAAAAAAA7QGzAq4ADAABAAAArgAEALUDAwAHABAA
+          CQAJNFIxMVMxN1MA
+        title: Save & Close
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 44
+        IconIndex: 0
+        ShareId: 10
+        Type: 1
+        data: |
+          FIELD Scope := "Private";
+          @Command([ViewRefreshFields])
+        data_opaque: |
+          RgADABoABQBTY29wZQABAAcAUHJpdmF0ZQADAAcADgAHAAkxUzJTM1MAAAASAAIAixMAAAAAAADtAQMA
+          BwAKAAMACTBSAA==
+        hidewhen: "Scope = \"Private\""
+        hidewhen_opaque: LAAAAB4ABQAFAFNjb3BlAAEABwBQcml2YXRlAAoCAwAHAAwABQAJMVMyUwA=
+        title: Mark Private
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 42
+        IconIndex: 0
+        ShareId: 11
+        Type: 1
+        data: |
+          FIELD Scope := "Public";
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          RAADABgABQBTY29wZQABAAYAUHVibGljAwAHAA4ABwAJMVMyUzNTAAAAEgACAF4bAAAAAAAA7QEDAAcA
+          CgADAAkwUgA=
+        hidewhen: "Scope = \"Public\""
+        hidewhen_opaque: KgAAABwABQAFAFNjb3BlAAEABgBQdWJsaWMKAgMABwAMAAUACTFTMlMA
+        title: Mark Public
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 62
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          FIELD Reviewers := @Trim(Reviewers);
+          
+          @If(@Elements(Reviewers) = 0; @Return(@Prompt([Ok]; "Document Library"; "Please indicate who should review this document.")); "");
+          
+          @If(@Contains(@LowerCase(Reviewers); @LowerCase(From)); @Return(@Prompt([Ok]; "Document Library"; "The Originator cannot be on the reviewer list.")); "");
+          
+          FIELD tmpAction := "Submit";
+          FIELD SaveOptions := "1";
+          
+          @PostedCommand([ViewRefreshFields]);
+          REM {GoToField causes any active embedded objects to de-activate};
+          @PostedCommand([EditGotoField]; Body);
+          @If(@PostedCommand([FileSave]); @PostedCommand([FileCloseWindow]); "")
+        data_opaque: |
+          oAIDACIACQBSZXZpZXdlcnMABQAJAFJldmlld2VycwBeAQMABwAOAAcACTFTMlMzUwAIAIwABQAJAFJl
+          dmlld2VycwBqAQAAAAAAAAAAAAAKAq8AaABcAAIADQAAAAAAAAABABAARG9jdW1lbnQgTGlicmFyeQEA
+          MABQbGVhc2UgaW5kaWNhdGUgd2hvIHNob3VsZCByZXZpZXcgdGhpcyBkb2N1bWVudC6wA8IBrgAMAAEA
+          AACuAAQAtQMDAAcAGgATAAkwUlI2UzdTOVMxNVMxN1MyMVMACACKAAUACQBSZXZpZXdlcnMAYQEFAAQA
+          RnJvbWEBRwKvAGYAWgACAA0AAAAAAAAAAQAQAERvY3VtZW50IExpYnJhcnkBAC4AVGhlIE9yaWdpbmF0
+          b3IgY2Fubm90IGJlIG9uIHRoZSByZXZpZXdlciBsaXN0LrADwgGuAAwAAQAAAK4ABAC1AwMABwAYABIA
+          CTBSUjlTMTVTMjFTMjNTMjdTAwAcAAkAdG1wQWN0aW9uAAEABgBTdWJtaXQDAAcAEAAKAAkwUlIxUzJT
+          M1MDABoACwBTYXZlT3B0aW9ucwABAAEAMQADAAcAEAAJAAkwUjFTMlMzUwAIABIAAgCLEwAAAAAAALEB
+          AwAHAAoABAAJMFJSBwBCADsAR29Ub0ZpZWxkIGNhdXNlcyBhbnkgYWN0aXZlIGVtYmVkZGVkIG9iamVj
+          dHMgdG8gZGUtYWN0aXZhdGUABwAMAAUACTBSMVMACAAaAAIABggAAAAAAAAFAAQAQm9kebECAwAHAAwA
+          BQAJMFI0UwAAADIAAgDGCwAAAAAAALEBrwAeABIAAgD8EQAAAAAAALEBrgAMAAEAAACuAAQAtQMDAAcA
+          DgAIAAkwUjdTMTJT
+        hidewhen: (@Member(Status; StatusList) != 2)
+        hidewhen_opaque: |
+          PgAAAC4ABQAGAFN0YXR1cwUACgBTdGF0dXNMaXN0dgIAAAAAAAAAAABACwIEAAMABwAOAAcACTVTN1M4
+          UwA=
+        title: Submit for Review
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 114
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          GetReviewCycle := @If(Status = @Subset(StatusList; 1); @Environment("ReviewCycle"); @Implode(ReviewStyle : ReviewWindow : @Text(ReviewTime) : NotifyAfter : SaveChoices; "~"));
+          
+          ReviewCycle := @If(GetReviewCycle = ""; ""; @Explode(GetReviewCycle; "~"));
+          
+          FIELD ReviewStyle := @If(@Length(ReviewCycle) = 0; "Serial.NoVersions"; @Subset(ReviewCycle; 1));
+          FIELD ReviewWindow := @If(@Length(ReviewCycle) = 0; "NoLimit"; @Subset(@Subset(ReviewCycle; 2); -1));
+          FIELD ReviewTime := @If(@Length(ReviewCycle) = 0; " "; @Subset(@Subset(ReviewCycle; 3); -1));
+          FIELD NotifyAfter := @If(@Length(ReviewCycle) = 0; "Final"; @Subset(@Subset(ReviewCycle; 4); -1));
+          FIELD SaveChoices := @If(@Elements(ReviewCycle) < 5; ""; @Subset(ReviewCycle; -1));
+          
+          @If(@DialogBox("ReviewOptions";[AutoVertFit]:[AutoHorzFit] : [SizeToTable]; "Review Cycle") = @False; @Return(@False); "");
+          
+          FIELD Status := @Subset(@Subset(StatusList; 2); -1);
+          ENVIRONMENT ReviewCycle := @If(SaveChoices = ""; @DeleteField; @Implode(ReviewStyle : ReviewWindow : ReviewTime : NotifyAfter : SaveChoices; "~"));
+          
+          FIELD ReviewTime := @If(ReviewWindow = "NoLimit"; " "; @Integer(@TextToNumber(ReviewTime)));
+          FIELD tmpReviewUnits := @If(ReviewWindow = "NoLimit"; ""; "day(s)");
+          
+          @Command([RefreshHideFormulas]);
+          
+          @If(@IsAvailable($OLEObjProgID) ; @DialogBox("(DocProperties)";[AutoHorzFit]:[AutoVertFit] : [SizeToTable];"Review Options");"")
+        data_opaque: |
+          XgcBAL4ADgBHZXRSZXZpZXdDeWNsZQUABgBTdGF0dXMFAAoAU3RhdHVzTGlzdAAAAAAAAAAA8D9rAgoC
+          rwCAABgAAQALAFJldmlld0N5Y2xlAHwBrgBoAAUACwBSZXZpZXdTdHlsZQAFAAwAUmV2aWV3V2luZG93
+          HwIFAAoAUmV2aWV3VGltZVYBHwIFAAsATm90aWZ5QWZ0ZXIAHwIFAAsAU2F2ZUNob2ljZXMAHwIBAAEA
+          fgCFAq4ABAC1AwMABwA0AC0ACTFTMlM1UzZTMTBTMTNTMThTMjFTMjJTMjNTMjRTMjhTMjlTMzBTMzFT
+          MzNTAAEAWgALAFJldmlld0N5Y2xlAAUADgBHZXRSZXZpZXdDeWNsZQEAAAAKAq8ALAAKAAEAAACuACIA
+          BQAOAEdldFJldmlld0N5Y2xlAQABAH4AhgKuAAQAtQMDAAcAGgAUAAkwUlIxUzJTNVM2UzhTMTBTMTRT
+          AwB0AAsAUmV2aWV3U3R5bGUABQALAFJldmlld0N5Y2xlAKYBAAAAAAAAAAAAAAoCrwBAABwAAQARAFNl
+          cmlhbC5Ob1ZlcnNpb25zAK4AJAAFAAsAUmV2aWV3Q3ljbGUAAAAAAAAAAADwP2sCrgAEALUDAwAHAB4A
+          GAAJMFJSMVMyUzNTOVMxMFMxMlMxNFMxOFMDAHgADABSZXZpZXdXaW5kb3cFAAsAUmV2aWV3Q3ljbGUA
+          pgEAAAAAAAAAAAAACgKvAEQAEgABAAcATm9MaW1pdACuADIABQALAFJldmlld0N5Y2xlAAAAAAAAAAAA
+          AEBrAgAAAAAAAAAA8D8QAWsCrgAEALUDAwAHACAAGgAJMFIxUzJTM1M5UzEwUzEyUzE0UzIwUzIzUwMA
+          cAAKAFJldmlld1RpbWUFAAsAUmV2aWV3Q3ljbGUApgEAAAAAAAAAAAAACgKvAD4ADAABAAEAIACuADIA
+          BQALAFJldmlld0N5Y2xlAAAAAAAAAAAACEBrAgAAAAAAAAAA8D8QAWsCrgAEALUDAwAHACAAGgAJMFIx
+          UzJTM1M5UzEwUzEyUzE0UzIwUzIzUwMAdgALAE5vdGlmeUFmdGVyAAUACwBSZXZpZXdDeWNsZQCmAQAA
+          AAAAAAAAAAAKAq8AQgAQAAEABQBGaW5hbACuADIABQALAFJldmlld0N5Y2xlAAAAAAAAAAAAEEBrAgAA
+          AAAAAAAA8D8QAWsCrgAEALUDAwAHACAAGgAJMFIxUzJTM1M5UzEwUzEyUzE0UzIwUzIzUwMAZAALAFNh
+          dmVDaG9pY2VzAAUACwBSZXZpZXdDeWNsZQBqAQAAAAAAAAAAFEAOAq8AMAAKAAEAAACuACYABQALAFJl
+          dmlld0N5Y2xlAAAAAAAAAAAA8D8QAWsCrgAEALUDAwAHAB4AFwAJMFIxUzJTM1M5UzEwUzEyUzE0UzE4
+          UwAIAGgAAQANAFJldmlld09wdGlvbnMAAgB4AAAAAAAAAAIAeQAAAAAAAAAfAgIAuQAAAAAAAAAfAgEA
+          DABSZXZpZXcgQ3ljbGXfAyoACgKvABYACgAqAMIBrgAMAAEAAACuAAQAtQMDAAcAHgAYAAkwUlI5UzEw
+          UzEyUzE0UzE1UzE3UzIyUwMANgAGAFN0YXR1cwUACgBTdGF0dXNMaXN0AAAAAAAAAAAAQGsCAAAAAAAA
+          AADwPxABawIDAAcAFgAPAAkwUlIxUzJTM1M5UzEyUwAGAJoACwBSZXZpZXdDeWNsZQAFAAsAU2F2ZUNo
+          b2ljZXMAAQAAAAoCrwBuAAgAvgCuAGYABQALAFJldmlld1N0eWxlAAUADABSZXZpZXdXaW5kb3cfAgUA
+          CgBSZXZpZXdUaW1lHwIFAAsATm90aWZ5QWZ0ZXIAHwIFAAsAU2F2ZUNob2ljZXMAHwIBAAEAfgCFAq4A
+          BAC1AwMABwA0AC0ACTBSMVMyUzNTNlM3UzlTMTFTMTRTMTVTMTZTMTdTMThTMTlTMjBTMjFTMjNTAAMA
+          WAAKAFJldmlld1RpbWUFAAwAUmV2aWV3V2luZG93AQAHAE5vTGltaXQACgKvACYADAABAAEAIACuABoA
+          BQAKAFJldmlld1RpbWVYAacBrgAEALUDAwAHABoAEwAJMFJSMVMyUzNTNlM3UzlTMTFTAAMAUgAOAHRt
+          cFJldmlld1VuaXRzBQAMAFJldmlld1dpbmRvdwEABwBOb0xpbWl0AAoCrwAcAAoAAQAAAK4AEgABAAYA
+          ZGF5KHMprgAEALUDAwAHABgAEgAJMFIxUzJTM1M2UzdTOVMxMVMIABIAAgBeGwAAAAAAAO0BAwAHAAoA
+          BAAJMFJSAAB4AAUADQAkT0xFT2JqUHJvZ0lEAGgBrwBcAFAAAQAPAChEb2NQcm9wZXJ0aWVzKQACAHkA
+          AAAAAAAAAgB4AAAAAAAAAB8CAgC5AAAAAAAAAB8CAQAOAFJldmlldyBPcHRpb25z3wOuAAwAAQAAAK4A
+          BAC1AwMABwAUAA4ACTBSUjZTN1MxNFMxNVM=
+        hidewhen: "tmpCurrentUser != @Name([CN]; From) | @Member(Status; StatusList) = 3"
+        hidewhen_opaque: |
+          cgAAAFYABQAOAHRtcEN1cnJlbnRVc2VyAgAGAAAAAAAAAAUABABGcm9ttAILAgUABgBTdGF0dXMFAAoA
+          U3RhdHVzTGlzdHYCAAAAAAAAAAAIQAoCHQIDAAcAGgAUAAkxUzJTNlM4UzlTMTNTMTVTMTZT
+        title: Setup Review Cycle
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 142
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          InReview := @If(@Member(Status; StatusList) = 3; 1; 0);
+          ReviewerList := @If(InReview; CurrentReviewers; "");
+          
+          FIELD Status := @Subset(StatusList; 1);
+          FIELD ReviewSequence := "All Reviewers simultaneously";
+          FIELD Versioning := "Edit Original Document";
+          FIELD NotifyAfter := "Notify Originator after each Reviewer";
+          FIELD Reviewers := "";
+          FIELD PreviousReviewers := "";
+          FIELD CurrentReviewers := "";
+          FIELD FutureReviewers := "";
+          FIELD $VersionOpt := @DeleteField;
+          
+          @If(InReview; @MailSend(ReviewerList; ""; ""; "Review of document:  " + Subject; ""; "I no longer require you to review this document.  Thank you for your efforts." + @Repeat(@NewLine; 2) + tmpCurrentUser + @Repeat(@NewLine; 2) + Subject + ":  "; [Sign] : [IncludeDoclink]); "");
+          @Prompt([Ok];"Document Library";"The Review Cycle has been cleared.");
+          
+          @If(@IsNewDoc; ""; @Command([FileSave]));
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          xAQBAFoACABJblJldmlldwUABgBTdGF0dXMFAAoAU3RhdHVzTGlzdHYCAAAAAAAAAAAIQAoCrwAiABAA
+          AAAAAAAAAADwP64AEgAAAAAAAAAAAAAArgAEALUDAwAHABoAEwAJMVMyUzhTMTBTMTFTMTNTMTVTAAEA
+          SAAMAFJldmlld2VyTGlzdAUACABJblJldmlld68AJgAaAAUAEABDdXJyZW50UmV2aWV3ZXJzrgAMAAEA
+          AACuAAQAtQMDAAcAEgALAAkwUjFTMlM2UzhTAAMAKAAGAFN0YXR1cwUACgBTdGF0dXNMaXN0AAAAAAAA
+          AADwP2sCAwAHABIADAAJMFJSMVMyUzNTN1MDADYADgBSZXZpZXdTZXF1ZW5jZQEAHABBbGwgUmV2aWV3
+          ZXJzIHNpbXVsdGFuZW91c2x5AwAHABAACQAJMFIxUzJTM1MAAwAsAAoAVmVyc2lvbmluZwEAFgBFZGl0
+          IE9yaWdpbmFsIERvY3VtZW50AwAHABAACQAJMFIxUzJTM1MAAwA+AAsATm90aWZ5QWZ0ZXIAAQAlAE5v
+          dGlmeSBPcmlnaW5hdG9yIGFmdGVyIGVhY2ggUmV2aWV3ZXIAAwAHABAACQAJMFIxUzJTM1MAAwAWAAkA
+          UmV2aWV3ZXJzAAEAAAADAAcAEAAJAAkwUjFTMlMzUwADAB4AEQBQcmV2aW91c1Jldmlld2VycwABAAAA
+          AwAHABAACQAJMFIxUzJTM1MAAwAcABAAQ3VycmVudFJldmlld2VycwEAAAADAAcAEAAJAAkwUjFTMlMz
+          UwADABwADwBGdXR1cmVSZXZpZXdlcnMAAQAAAAMABwAQAAkACTBSMVMyUzNTAAMAFgALACRWZXJzaW9u
+          T3B0AL4AAwAHABAACQAJMFIxUzJTM1MACAAgAQUACABJblJldmlld68ADAEAAQUADABSZXZpZXdlckxp
+          c3QBAAAAAQAAAAEAFQBSZXZpZXcgb2YgZG9jdW1lbnQ6ICAABQAHAFN1YmplY3QAIgIBAAAAAQBNAEkg
+          bm8gbG9uZ2VyIHJlcXVpcmUgeW91IHRvIHJldmlldyB0aGlzIGRvY3VtZW50LiAgVGhhbmsgeW91IGZv
+          ciB5b3VyIGVmZm9ydHMuAIoAAAAAAAAAAAAAQGQCIgIFAA4AdG1wQ3VycmVudFVzZXIiAooAAAAAAAAA
+          AAAAQGQCIgIFAAcAU3ViamVjdAAiAgEAAwA6ICAAIgICAB8AAAAAAAAAAgAnAAAAAAAAAB8CsgeuAAwA
+          AQAAAK4ABAC1AwMABwBQAEoACTBSUjRTOFMxMFMxMlMxM1MxNFMxNlMxOFMxOVMyMFMyNFMyNlMyN1My
+          OFMyOVMzM1MzNVMzNlMzN1MzOFM0MFM0MVM0MlM0NVMIAEwAAgANAAAAAAAAAAEAEABEb2N1bWVudCBM
+          aWJyYXJ5AQAiAFRoZSBSZXZpZXcgQ3ljbGUgaGFzIGJlZW4gY2xlYXJlZC6wAwMABwAKAAMACTBSAAgA
+          KACJAK8AHgAKAAEAAACuABQAAgDGCwAAAAAAAO0BrgAEALUDAwAHAA4ACAAJMFJSNFM2UwAAEgACAF4b
+          AAAAAAAA7QEDAAcACgADAAkwUgA=
+        hidewhen: "tmpCurrentUser != @Name([CN]; From) | @Member(Status; StatusList) = 1 : 4 | @IsResponseDoc"
+        hidewhen_opaque: |
+          jgAAAGYABQAOAHRtcEN1cnJlbnRVc2VyAgAGAAAAAAAAAAUABABGcm9ttAILAgUABgBTdGF0dXMFAAoA
+          U3RhdHVzTGlzdHYCAAAAAAAAAADwPwAAAAAAAAAAEEAfAgoCHQJsAB0CAwAHACYAIAAJMVMyUzZTOFM5
+          UzEzUzE1UzE2UzE3UzE4UzE5UzIwUw==
+        title: Clear Review Cycle
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 52
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          FIELD tmpAction := "Complete";
+          FIELD SaveOptions := "1";
+          
+          REM {GoToField causes any active embedded objects to de-activate};
+          @PostedCommand([EditGotoField]; Body);
+          @If(@PostedCommand([FileSave]); @PostedCommand([FileCloseWindow]); "")
+        data_opaque: |
+          DAEDAB4ACQB0bXBBY3Rpb24AAQAIAENvbXBsZXRlAwAHAA4ABwAJMVMyUzNTAAMAGgALAFNhdmVPcHRp
+          b25zAAEAAQAxAAMABwAQAAkACTBSMVMyUzNTAAcAQgA7AEdvVG9GaWVsZCBjYXVzZXMgYW55IGFjdGl2
+          ZSBlbWJlZGRlZCBvYmplY3RzIHRvIGRlLWFjdGl2YXRlAAcADAAGAAkwUlIxUwgAGgACAAYIAAAAAAAA
+          BQAEAEJvZHmxAgMABwAMAAUACTBSNFMAAAAyAAIAxgsAAAAAAACxAa8AHgASAAIA/BEAAAAAAACxAa4A
+          DAABAAAArgAEALUDAwAHAA4ACAAJMFI3UzEyUw==
+        hidewhen: "@IsNotMember(tmpCurrentUser; InProcess)"
+        hidewhen_opaque: NAAAACgABQAOAHRtcEN1cnJlbnRVc2VyBQAJAEluUHJvY2VzcwB1AgMABwAKAAMACTRTAA==
+        title: My Review is Complete
+      - type: 0xffbe
+        Flags: 0x0010001b
+        FormulaLen: 70
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: "@DialogBox(\"OLEChgSubject\";[AutoHorzFit]:[AutoVertFit] : [SizeToTable])"
+        data_opaque: |
+          SgAAADwAAQANAE9MRUNoZ1N1YmplY3QAAgB5AAAAAAAAAAIAeAAAAAAAAAAfAgIAuQAAAAAAAAAfAt8C
+          AwAHAAwABQAJN1M4UwA=
+        hidewhen: " tmpUseOle  != \"1\" | @IsUnavailable($OLEVersion)"
+        hidewhen_opaque: |
+          RgAAADAABQAJAHRtcFVzZU9sZQABAAEAMQALAgUACwAkT0xFVmVyc2lvbgBZAR0CAwAHABQADQAJMFMx
+          UzJFMlMzUzRTAA==
+        title: Properties...
+      - type: 0xffbe
+        Flags: 0x0010009b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          FIELD SaveOptions := 0;
+          @Command([FileCloseWindow])
+        data_opaque: |
+          SgADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHAA4ABwAJMVMyUzNTAAAAEgACAPwRAAAAAAAA
+          7QEDAAcACgADAAkwUgA=
+        title: Cancel
+  - name: $Body
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x6330
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 10
+          - 1440
+          - 10
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 1
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020101
+        data: DocumentWorkflow Subform
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020001
+        data: ":  This Subform includes the LotusScript, Actions, and hidden fields which are used in all versions of the Document form."
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 1
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020001
+        data: "Hidden Fields:-------------------------------------------------------------------"
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x6330
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1530
+        LineSpacing: 0
+        PABID: 2
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1530
+          - 10
+          - 1440
+          - 10
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 2
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xffb0
+        opaque: sP8UAAAABAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv9wAI0BAQUGMAIAAAAAAAACAQACCTwAAAAAAAAADwAAAAAAPAAAAC4AiQCvACQACAD0AK4AHAAFAA8A
+          RG9jdW1lbnRBdXRob3JzAK4ABAC1AwMABwAMAAUACTRTNlMARG9jdW1lbnRBdXRob3JzAA==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xffb0
+        opaque: sP8UAAAABAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv+UAJwBAQUGMAIAAAAAAAACAQACCWAAAAAAAAAADwAAAAAAYAAAAEoABQAFAFNjb3BlAAEABwBQcml2
+          YXRlAAoCrwAqAB4ABQAEAEZyb20FAAkAUmV2aWV3ZXJzAB8CrgAMAAEAAACuAAQAtQMDAAcAFAAOAAkz
+          UzRTNlM3UzhTMTBTRG9jdW1lbnRSZWFkZXJzAA==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0xa020001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv9OAIgBAAUAMAIAAAAAAAACAQACCSAAAAAAAAAACgAAAAAAIAAAABQAAgAGAAAAAAAAAPQAtAIDAAcA
+          CgADAAk0UwBMYXN0RWRpdG9y
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv/WAIABAAUAAAIAAAAAAAACAQACCagAAAAAAAAACQAAAAAAqAAAAJIABQAEAGZvcm0BAAgARG9jdW1l
+          bnQBABMAUGFpbnRicnVzaCBEb2N1bWVudAAfAgoCrwBaAAoAAQAAAK4AUAACAAYAAAAAAAAA9AC0AmEB
+          AgAGAAAAAAAAAAUADwBEb2N1bWVudEF1dGhvcnMAtAJhAXQCrwAYAAwAAQABADEArgAMAAEAAACuAAQA
+          tQUDAAcAFAAOAAkzUzRTN1M4UzlTMTBTdG1wVXNlT0xFAA==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv9AAIoAAAUAMAIAAAAAAAACAQACCRAAAAAAAAAADAAAAAAAEAAAAA4AAQAEAEJvZHkDACRPTEVPYmpG
+          aWVsZA==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv9MAIoAAAUAMAIAAAAAAAACAQACCRQAAAAAAAAAFAAAAAAAFAAAABIAAQAHAE9MRUJvZHkAAwAkT0xF
+          T2JqUmljaFRleHRGaWVsZA==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xff85
+        FontID: 0xa000001
+  - name: $HTMLCode
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: X/8QAAIADwAHAAAAAAAAAA==
+  - name: $Info
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+  - name: $V5ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 0
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x00000000
+        HeightSpc: 0
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x00000000
+      - type: 0xff79
+        BackColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        BtnBorderDisplay: 0
+        BtnTextJustify: 0
+        BtnWidthStyle: 0
+        ButtonColor:
+          Flags: 0x0001
+          rgb: 0xc0c0c0
+        FontColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        LineColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        Spare:
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+        barFontID: 0x00000000
+        barHeight:
+          Flags: 0x0000
+          Length:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+          Reserved: 0
+          Units: 0
+        dwFlags: 0x00000003
+        wAppletHeight: 31
+        wBarBackgroundRepeat: 0
+        wBtnInternalMargin: 0
+        wBtnWidthAbsolute: 0
+        wSpare: 0x0000
+        wThemeSetting: 0
+      - type: 0xfffc
+        BorderFlags: 0
+        BorderStyle: 0
+        BorderWidthBottom: 1
+        BorderWidthLeft: 0
+        BorderWidthRight: 0
+        BorderWidthTop: 0
+        Color:
+          Flags: 0x0001
+          rgb: 0x000000
+        DropShadowWidth: 0
+        Flags: 0x00000000
+        InnerWidthBottom: 0
+        InnerWidthLeft: 0
+        InnerWidthRight: 0
+        InnerWidthTop: 0
+        OuterWidthBottom: 0
+        OuterWidthLeft: 0
+        OuterWidthRight: 0
+        OuterWidthTop: 0
+        dwSpare: 0x00000000
+        wSpares:
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+      - type: 0xffbe
+        Flags: 0x0001408b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 7
+        Type: 1
+        data: "@Command([EditDocument])"
+        data_opaque: IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+        title: Edit Document
+      - type: 0xffbe
+        Flags: 0x00014093
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 8
+        Type: 1
+        data: |
+          @If(@IsValid;
+          @Do(@Command([FileSave]); @Command([FileCloseWindow])); "")
+        data_opaque: |
+          SAAAADYA5ACvACwAIAACAMYLAAAAAAAA7QECAPwRAAAAAAAA7QGzAq4ADAABAAAArgAEALUDAwAHABAA
+          CQAJNFIxMVMxN1MA
+        title: Save & Close
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 44
+        IconIndex: 0
+        ShareId: 10
+        Type: 1
+        data: |
+          FIELD Scope := "Private";
+          @Command([ViewRefreshFields])
+        data_opaque: |
+          RgADABoABQBTY29wZQABAAcAUHJpdmF0ZQADAAcADgAHAAkxUzJTM1MAAAASAAIAixMAAAAAAADtAQMA
+          BwAKAAMACTBSAA==
+        hidewhen: "Scope = \"Private\""
+        hidewhen_opaque: LAAAAB4ABQAFAFNjb3BlAAEABwBQcml2YXRlAAoCAwAHAAwABQAJMVMyUwA=
+        title: Mark Private
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 42
+        IconIndex: 0
+        ShareId: 11
+        Type: 1
+        data: |
+          FIELD Scope := "Public";
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          RAADABgABQBTY29wZQABAAYAUHVibGljAwAHAA4ABwAJMVMyUzNTAAAAEgACAF4bAAAAAAAA7QEDAAcA
+          CgADAAkwUgA=
+        hidewhen: "Scope = \"Public\""
+        hidewhen_opaque: KgAAABwABQAFAFNjb3BlAAEABgBQdWJsaWMKAgMABwAMAAUACTFTMlMA
+        title: Mark Public
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 62
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          FIELD Reviewers := @Trim(Reviewers);
+          
+          @If(@Elements(Reviewers) = 0; @Return(@Prompt([Ok]; "Document Library"; "Please indicate who should review this document.")); "");
+          
+          @If(@Contains(@LowerCase(Reviewers); @LowerCase(From)); @Return(@Prompt([Ok]; "Document Library"; "The Originator cannot be on the reviewer list.")); "");
+          
+          FIELD tmpAction := "Submit";
+          FIELD SaveOptions := "1";
+          
+          @PostedCommand([ViewRefreshFields]);
+          REM {GoToField causes any active embedded objects to de-activate};
+          @PostedCommand([EditGotoField]; Body);
+          @If(@PostedCommand([FileSave]); @PostedCommand([FileCloseWindow]); "")
+        data_opaque: |
+          oAIDACIACQBSZXZpZXdlcnMABQAJAFJldmlld2VycwBeAQMABwAOAAcACTFTMlMzUwAIAIwABQAJAFJl
+          dmlld2VycwBqAQAAAAAAAAAAAAAKAq8AaABcAAIADQAAAAAAAAABABAARG9jdW1lbnQgTGlicmFyeQEA
+          MABQbGVhc2UgaW5kaWNhdGUgd2hvIHNob3VsZCByZXZpZXcgdGhpcyBkb2N1bWVudC6wA8IBrgAMAAEA
+          AACuAAQAtQMDAAcAGgATAAkwUlI2UzdTOVMxNVMxN1MyMVMACACKAAUACQBSZXZpZXdlcnMAYQEFAAQA
+          RnJvbWEBRwKvAGYAWgACAA0AAAAAAAAAAQAQAERvY3VtZW50IExpYnJhcnkBAC4AVGhlIE9yaWdpbmF0
+          b3IgY2Fubm90IGJlIG9uIHRoZSByZXZpZXdlciBsaXN0LrADwgGuAAwAAQAAAK4ABAC1AwMABwAYABIA
+          CTBSUjlTMTVTMjFTMjNTMjdTAwAcAAkAdG1wQWN0aW9uAAEABgBTdWJtaXQDAAcAEAAKAAkwUlIxUzJT
+          M1MDABoACwBTYXZlT3B0aW9ucwABAAEAMQADAAcAEAAJAAkwUjFTMlMzUwAIABIAAgCLEwAAAAAAALEB
+          AwAHAAoABAAJMFJSBwBCADsAR29Ub0ZpZWxkIGNhdXNlcyBhbnkgYWN0aXZlIGVtYmVkZGVkIG9iamVj
+          dHMgdG8gZGUtYWN0aXZhdGUABwAMAAUACTBSMVMACAAaAAIABggAAAAAAAAFAAQAQm9kebECAwAHAAwA
+          BQAJMFI0UwAAADIAAgDGCwAAAAAAALEBrwAeABIAAgD8EQAAAAAAALEBrgAMAAEAAACuAAQAtQMDAAcA
+          DgAIAAkwUjdTMTJT
+        hidewhen: (@Member(Status; StatusList) != 2)
+        hidewhen_opaque: |
+          PgAAAC4ABQAGAFN0YXR1cwUACgBTdGF0dXNMaXN0dgIAAAAAAAAAAABACwIEAAMABwAOAAcACTVTN1M4
+          UwA=
+        title: Submit for Review
+      - type: 0xfff6
+        opaque: |
+          9v9JAAAAAAADABMAJwAAAAAAAAAAAAAAAAAAAAAAAAAAAFN1Ym1pdEZvclJldmlldy5naWZ8U3VibWl0
+          Rm9yUmV2aWV3LmdpZg==
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 114
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          GetReviewCycle := @If(Status = @Subset(StatusList; 1); @Environment("ReviewCycle"); @Implode(ReviewStyle : ReviewWindow : @Text(ReviewTime) : NotifyAfter : SaveChoices; "~"));
+          
+          ReviewCycle := @If(GetReviewCycle = ""; ""; @Explode(GetReviewCycle; "~"));
+          
+          FIELD ReviewStyle := @If(@Length(ReviewCycle) = 0; "Serial.NoVersions"; @Subset(ReviewCycle; 1));
+          FIELD ReviewWindow := @If(@Length(ReviewCycle) = 0; "NoLimit"; @Subset(@Subset(ReviewCycle; 2); -1));
+          FIELD ReviewTime := @If(@Length(ReviewCycle) = 0; " "; @Subset(@Subset(ReviewCycle; 3); -1));
+          FIELD NotifyAfter := @If(@Length(ReviewCycle) = 0; "Final"; @Subset(@Subset(ReviewCycle; 4); -1));
+          FIELD SaveChoices := @If(@Elements(ReviewCycle) < 5; ""; @Subset(ReviewCycle; -1));
+          
+          @If(@DialogBox("ReviewOptions";[AutoVertFit]:[AutoHorzFit] : [SizeToTable]; "Review Cycle") = @False; @Return(@False); "");
+          
+          FIELD Status := @Subset(@Subset(StatusList; 2); -1);
+          ENVIRONMENT ReviewCycle := @If(SaveChoices = ""; @DeleteField; @Implode(ReviewStyle : ReviewWindow : ReviewTime : NotifyAfter : SaveChoices; "~"));
+          
+          FIELD ReviewTime := @If(ReviewWindow = "NoLimit"; " "; @Integer(@TextToNumber(ReviewTime)));
+          FIELD tmpReviewUnits := @If(ReviewWindow = "NoLimit"; ""; "day(s)");
+          
+          @Command([RefreshHideFormulas]);
+          
+          @If(@IsAvailable($OLEObjProgID) ; @DialogBox("(DocProperties)";[AutoHorzFit]:[AutoVertFit] : [SizeToTable];"Review Options");"")
+        data_opaque: |
+          XgcBAL4ADgBHZXRSZXZpZXdDeWNsZQUABgBTdGF0dXMFAAoAU3RhdHVzTGlzdAAAAAAAAAAA8D9rAgoC
+          rwCAABgAAQALAFJldmlld0N5Y2xlAHwBrgBoAAUACwBSZXZpZXdTdHlsZQAFAAwAUmV2aWV3V2luZG93
+          HwIFAAoAUmV2aWV3VGltZVYBHwIFAAsATm90aWZ5QWZ0ZXIAHwIFAAsAU2F2ZUNob2ljZXMAHwIBAAEA
+          fgCFAq4ABAC1AwMABwA0AC0ACTFTMlM1UzZTMTBTMTNTMThTMjFTMjJTMjNTMjRTMjhTMjlTMzBTMzFT
+          MzNTAAEAWgALAFJldmlld0N5Y2xlAAUADgBHZXRSZXZpZXdDeWNsZQEAAAAKAq8ALAAKAAEAAACuACIA
+          BQAOAEdldFJldmlld0N5Y2xlAQABAH4AhgKuAAQAtQMDAAcAGgAUAAkwUlIxUzJTNVM2UzhTMTBTMTRT
+          AwB0AAsAUmV2aWV3U3R5bGUABQALAFJldmlld0N5Y2xlAKYBAAAAAAAAAAAAAAoCrwBAABwAAQARAFNl
+          cmlhbC5Ob1ZlcnNpb25zAK4AJAAFAAsAUmV2aWV3Q3ljbGUAAAAAAAAAAADwP2sCrgAEALUDAwAHAB4A
+          GAAJMFJSMVMyUzNTOVMxMFMxMlMxNFMxOFMDAHgADABSZXZpZXdXaW5kb3cFAAsAUmV2aWV3Q3ljbGUA
+          pgEAAAAAAAAAAAAACgKvAEQAEgABAAcATm9MaW1pdACuADIABQALAFJldmlld0N5Y2xlAAAAAAAAAAAA
+          AEBrAgAAAAAAAAAA8D8QAWsCrgAEALUDAwAHACAAGgAJMFIxUzJTM1M5UzEwUzEyUzE0UzIwUzIzUwMA
+          cAAKAFJldmlld1RpbWUFAAsAUmV2aWV3Q3ljbGUApgEAAAAAAAAAAAAACgKvAD4ADAABAAEAIACuADIA
+          BQALAFJldmlld0N5Y2xlAAAAAAAAAAAACEBrAgAAAAAAAAAA8D8QAWsCrgAEALUDAwAHACAAGgAJMFIx
+          UzJTM1M5UzEwUzEyUzE0UzIwUzIzUwMAdgALAE5vdGlmeUFmdGVyAAUACwBSZXZpZXdDeWNsZQCmAQAA
+          AAAAAAAAAAAKAq8AQgAQAAEABQBGaW5hbACuADIABQALAFJldmlld0N5Y2xlAAAAAAAAAAAAEEBrAgAA
+          AAAAAAAA8D8QAWsCrgAEALUDAwAHACAAGgAJMFIxUzJTM1M5UzEwUzEyUzE0UzIwUzIzUwMAZAALAFNh
+          dmVDaG9pY2VzAAUACwBSZXZpZXdDeWNsZQBqAQAAAAAAAAAAFEAOAq8AMAAKAAEAAACuACYABQALAFJl
+          dmlld0N5Y2xlAAAAAAAAAAAA8D8QAWsCrgAEALUDAwAHAB4AFwAJMFIxUzJTM1M5UzEwUzEyUzE0UzE4
+          UwAIAGgAAQANAFJldmlld09wdGlvbnMAAgB4AAAAAAAAAAIAeQAAAAAAAAAfAgIAuQAAAAAAAAAfAgEA
+          DABSZXZpZXcgQ3ljbGXfAyoACgKvABYACgAqAMIBrgAMAAEAAACuAAQAtQMDAAcAHgAYAAkwUlI5UzEw
+          UzEyUzE0UzE1UzE3UzIyUwMANgAGAFN0YXR1cwUACgBTdGF0dXNMaXN0AAAAAAAAAAAAQGsCAAAAAAAA
+          AADwPxABawIDAAcAFgAPAAkwUlIxUzJTM1M5UzEyUwAGAJoACwBSZXZpZXdDeWNsZQAFAAsAU2F2ZUNo
+          b2ljZXMAAQAAAAoCrwBuAAgAvgCuAGYABQALAFJldmlld1N0eWxlAAUADABSZXZpZXdXaW5kb3cfAgUA
+          CgBSZXZpZXdUaW1lHwIFAAsATm90aWZ5QWZ0ZXIAHwIFAAsAU2F2ZUNob2ljZXMAHwIBAAEAfgCFAq4A
+          BAC1AwMABwA0AC0ACTBSMVMyUzNTNlM3UzlTMTFTMTRTMTVTMTZTMTdTMThTMTlTMjBTMjFTMjNTAAMA
+          WAAKAFJldmlld1RpbWUFAAwAUmV2aWV3V2luZG93AQAHAE5vTGltaXQACgKvACYADAABAAEAIACuABoA
+          BQAKAFJldmlld1RpbWVYAacBrgAEALUDAwAHABoAEwAJMFJSMVMyUzNTNlM3UzlTMTFTAAMAUgAOAHRt
+          cFJldmlld1VuaXRzBQAMAFJldmlld1dpbmRvdwEABwBOb0xpbWl0AAoCrwAcAAoAAQAAAK4AEgABAAYA
+          ZGF5KHMprgAEALUDAwAHABgAEgAJMFIxUzJTM1M2UzdTOVMxMVMIABIAAgBeGwAAAAAAAO0BAwAHAAoA
+          BAAJMFJSAAB4AAUADQAkT0xFT2JqUHJvZ0lEAGgBrwBcAFAAAQAPAChEb2NQcm9wZXJ0aWVzKQACAHkA
+          AAAAAAAAAgB4AAAAAAAAAB8CAgC5AAAAAAAAAB8CAQAOAFJldmlldyBPcHRpb25z3wOuAAwAAQAAAK4A
+          BAC1AwMABwAUAA4ACTBSUjZTN1MxNFMxNVM=
+        hidewhen: "tmpCurrentUser != @Name([CN]; From) | @Member(Status; StatusList) = 3"
+        hidewhen_opaque: |
+          cgAAAFYABQAOAHRtcEN1cnJlbnRVc2VyAgAGAAAAAAAAAAUABABGcm9ttAILAgUABgBTdGF0dXMFAAoA
+          U3RhdHVzTGlzdHYCAAAAAAAAAAAIQAoCHQIDAAcAGgAUAAkxUzJTNlM4UzlTMTNTMTVTMTZT
+        title: Setup Review Cycle
+      - type: 0xfff6
+        opaque: |
+          9v9LAAAAAAADABMAKQAAAAAAAAAAAAAAAAAAAAAAAAAAAFNldHVwUmV2aWV3Q3ljbGUuZ2lmfFNldHVw
+          UmV2aWV3Q3ljbGUuZ2lm
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 142
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          InReview := @If(@Member(Status; StatusList) = 3; 1; 0);
+          ReviewerList := @If(InReview; CurrentReviewers; "");
+          
+          FIELD Status := @Subset(StatusList; 1);
+          FIELD ReviewSequence := "All Reviewers simultaneously";
+          FIELD Versioning := "Edit Original Document";
+          FIELD NotifyAfter := "Notify Originator after each Reviewer";
+          FIELD Reviewers := "";
+          FIELD PreviousReviewers := "";
+          FIELD CurrentReviewers := "";
+          FIELD FutureReviewers := "";
+          FIELD $VersionOpt := @DeleteField;
+          
+          @If(InReview; @MailSend(ReviewerList; ""; ""; "Review of document:  " + Subject; ""; "I no longer require you to review this document.  Thank you for your efforts." + @Repeat(@NewLine; 2) + tmpCurrentUser + @Repeat(@NewLine; 2) + Subject + ":  "; [Sign] : [IncludeDoclink]); "");
+          @Prompt([Ok];"Document Library";"The Review Cycle has been cleared.");
+          
+          @If(@IsNewDoc; ""; @Command([FileSave]));
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          xAQBAFoACABJblJldmlldwUABgBTdGF0dXMFAAoAU3RhdHVzTGlzdHYCAAAAAAAAAAAIQAoCrwAiABAA
+          AAAAAAAAAADwP64AEgAAAAAAAAAAAAAArgAEALUDAwAHABoAEwAJMVMyUzhTMTBTMTFTMTNTMTVTAAEA
+          SAAMAFJldmlld2VyTGlzdAUACABJblJldmlld68AJgAaAAUAEABDdXJyZW50UmV2aWV3ZXJzrgAMAAEA
+          AACuAAQAtQMDAAcAEgALAAkwUjFTMlM2UzhTAAMAKAAGAFN0YXR1cwUACgBTdGF0dXNMaXN0AAAAAAAA
+          AADwP2sCAwAHABIADAAJMFJSMVMyUzNTN1MDADYADgBSZXZpZXdTZXF1ZW5jZQEAHABBbGwgUmV2aWV3
+          ZXJzIHNpbXVsdGFuZW91c2x5AwAHABAACQAJMFIxUzJTM1MAAwAsAAoAVmVyc2lvbmluZwEAFgBFZGl0
+          IE9yaWdpbmFsIERvY3VtZW50AwAHABAACQAJMFIxUzJTM1MAAwA+AAsATm90aWZ5QWZ0ZXIAAQAlAE5v
+          dGlmeSBPcmlnaW5hdG9yIGFmdGVyIGVhY2ggUmV2aWV3ZXIAAwAHABAACQAJMFIxUzJTM1MAAwAWAAkA
+          UmV2aWV3ZXJzAAEAAAADAAcAEAAJAAkwUjFTMlMzUwADAB4AEQBQcmV2aW91c1Jldmlld2VycwABAAAA
+          AwAHABAACQAJMFIxUzJTM1MAAwAcABAAQ3VycmVudFJldmlld2VycwEAAAADAAcAEAAJAAkwUjFTMlMz
+          UwADABwADwBGdXR1cmVSZXZpZXdlcnMAAQAAAAMABwAQAAkACTBSMVMyUzNTAAMAFgALACRWZXJzaW9u
+          T3B0AL4AAwAHABAACQAJMFIxUzJTM1MACAAgAQUACABJblJldmlld68ADAEAAQUADABSZXZpZXdlckxp
+          c3QBAAAAAQAAAAEAFQBSZXZpZXcgb2YgZG9jdW1lbnQ6ICAABQAHAFN1YmplY3QAIgIBAAAAAQBNAEkg
+          bm8gbG9uZ2VyIHJlcXVpcmUgeW91IHRvIHJldmlldyB0aGlzIGRvY3VtZW50LiAgVGhhbmsgeW91IGZv
+          ciB5b3VyIGVmZm9ydHMuAIoAAAAAAAAAAAAAQGQCIgIFAA4AdG1wQ3VycmVudFVzZXIiAooAAAAAAAAA
+          AAAAQGQCIgIFAAcAU3ViamVjdAAiAgEAAwA6ICAAIgICAB8AAAAAAAAAAgAnAAAAAAAAAB8CsgeuAAwA
+          AQAAAK4ABAC1AwMABwBQAEoACTBSUjRTOFMxMFMxMlMxM1MxNFMxNlMxOFMxOVMyMFMyNFMyNlMyN1My
+          OFMyOVMzM1MzNVMzNlMzN1MzOFM0MFM0MVM0MlM0NVMIAEwAAgANAAAAAAAAAAEAEABEb2N1bWVudCBM
+          aWJyYXJ5AQAiAFRoZSBSZXZpZXcgQ3ljbGUgaGFzIGJlZW4gY2xlYXJlZC6wAwMABwAKAAMACTBSAAgA
+          KACJAK8AHgAKAAEAAACuABQAAgDGCwAAAAAAAO0BrgAEALUDAwAHAA4ACAAJMFJSNFM2UwAAEgACAF4b
+          AAAAAAAA7QEDAAcACgADAAkwUgA=
+        hidewhen: "tmpCurrentUser != @Name([CN]; From) | @Member(Status; StatusList) = 1 : 4 | @IsResponseDoc"
+        hidewhen_opaque: |
+          jgAAAGYABQAOAHRtcEN1cnJlbnRVc2VyAgAGAAAAAAAAAAUABABGcm9ttAILAgUABgBTdGF0dXMFAAoA
+          U3RhdHVzTGlzdHYCAAAAAAAAAADwPwAAAAAAAAAAEEAfAgoCHQJsAB0CAwAHACYAIAAJMVMyUzZTOFM5
+          UzEzUzE1UzE2UzE3UzE4UzE5UzIwUw==
+        title: Clear Review Cycle
+      - type: 0xfff6
+        opaque: |
+          9v9LAAAAAAADABMAKQAAAAAAAAAAAAAAAAAAAAAAAAAAAENsZWFyUmV2aWV3Q3ljbGUuZ2lmfENsZWFy
+          UmV2aWV3Q3ljbGUuZ2lm
+      - type: 0xffbe
+        Flags: 0x00100013
+        FormulaLen: 52
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          FIELD tmpAction := "Complete";
+          FIELD SaveOptions := "1";
+          
+          REM {GoToField causes any active embedded objects to de-activate};
+          @PostedCommand([EditGotoField]; Body);
+          @If(@PostedCommand([FileSave]); @PostedCommand([FileCloseWindow]); "")
+        data_opaque: |
+          DAEDAB4ACQB0bXBBY3Rpb24AAQAIAENvbXBsZXRlAwAHAA4ABwAJMVMyUzNTAAMAGgALAFNhdmVPcHRp
+          b25zAAEAAQAxAAMABwAQAAkACTBSMVMyUzNTAAcAQgA7AEdvVG9GaWVsZCBjYXVzZXMgYW55IGFjdGl2
+          ZSBlbWJlZGRlZCBvYmplY3RzIHRvIGRlLWFjdGl2YXRlAAcADAAGAAkwUlIxUwgAGgACAAYIAAAAAAAA
+          BQAEAEJvZHmxAgMABwAMAAUACTBSNFMAAAAyAAIAxgsAAAAAAACxAa8AHgASAAIA/BEAAAAAAACxAa4A
+          DAABAAAArgAEALUDAwAHAA4ACAAJMFI3UzEyUw==
+        hidewhen: "@IsNotMember(tmpCurrentUser; InProcess)"
+        hidewhen_opaque: NAAAACgABQAOAHRtcEN1cnJlbnRVc2VyBQAJAEluUHJvY2VzcwB1AgMABwAKAAMACTRTAA==
+        title: My Review is Complete
+      - type: 0xfff6
+        opaque: |
+          9v9JAAAAAAADABMAJwAAAAAAAAAAAAAAAAAAAAAAAAAAAE15UmV2SXNDb21wbGV0ZS5naWZ8TXlSZXZJ
+          c0NvbXBsZXRlLmdpZg==
+      - type: 0xffbe
+        Flags: 0x0010001b
+        FormulaLen: 70
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: "@DialogBox(\"OLEChgSubject\";[AutoHorzFit]:[AutoVertFit] : [SizeToTable])"
+        data_opaque: |
+          SgAAADwAAQANAE9MRUNoZ1N1YmplY3QAAgB5AAAAAAAAAAIAeAAAAAAAAAAfAgIAuQAAAAAAAAAfAt8C
+          AwAHAAwABQAJN1M4UwA=
+        hidewhen: " tmpUseOle  != \"1\" | @IsUnavailable($OLEVersion)"
+        hidewhen_opaque: |
+          RgAAADAABQAJAHRtcFVzZU9sZQABAAEAMQALAgUACwAkT0xFVmVyc2lvbgBZAR0CAwAHABQADQAJMFMx
+          UzJFMlMzUzRTAA==
+        title: Properties...
+      - type: 0xfff6
+        opaque: |
+          9v8/AAAAAAADABMAHQAAAAAAAAAAAAAAAAAAAAAAAAAAAHByb3BlcnRpZXMuZ2lmfHByb3BlcnRpZXMu
+          Z2lm
+      - type: 0xffbe
+        Flags: 0x0010009b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 1
+        data: |
+          FIELD SaveOptions := 0;
+          @Command([FileCloseWindow])
+        data_opaque: |
+          SgADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHAA4ABwAJMVMyUzNTAAAAEgACAPwRAAAAAAAA
+          7QEDAAcACgADAAkwUgA=
+        title: Cancel
+      - type: 0xfff6
+        opaque: 9v83AAAAAAADABMAFQAAAAAAAAAAAAAAAAAAAAAAAAAAAGNhbmNlbC5naWZ8Y2FuY2VsLmdpZg==
+remaining: []

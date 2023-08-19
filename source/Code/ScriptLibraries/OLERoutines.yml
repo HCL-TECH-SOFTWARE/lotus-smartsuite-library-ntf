@@ -1,0 +1,891 @@
+---
+class: 512
+flags: 0x2000
+unid: OF4D4F0F26F88ED6D9-ON006355338525647A
+items:
+  - name: $Flags
+    type: text
+    data: s34Q
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $PublicAccess
+    type: text
+    data: "1"
+    signed: true
+  - name: $ScriptLib
+    type: text
+    data: |
+      '++LotusScript Development Environment:2:5:(Options):0:66
+      Option Public
+      
+      '++LotusScript Development Environment:2:5:(Forward):0:1
+      Declare Sub Initialize
+      Declare Sub GetOrCreateOLEObject
+      Declare Sub DocQueryOpen(source As NotesUIDocument, mode As Integer, isnewdoc As Variant, continue As Variant)
+      Declare Sub DocPostOpen(source As NotesUIDocument)
+      Declare Sub DocQueryModeChange(source As NotesUIDocument, continue As Variant)
+      Declare Sub DocPostModeChange(source As NotesUIDocument)
+      Declare Sub DocPostRecalc(source As NotesUIDocument)
+      Declare Sub DocQuerySave(Source As NotesUIDocument, Continue As Variant)
+      Declare Sub DocQueryClose(Source As NotesUIDocument, Continue As Variant)
+      Declare Sub InitializeDocument(source)
+      Declare Sub Postopen(Source As Notesuidocument)
+      Declare Sub RebuildList(InputList As Variant)
+      Declare Sub SetReviewerLists
+      Declare Sub SendNotification
+      Declare Sub InitiateReview(source)
+      Declare Sub GetReviewSequence
+      Declare Sub ResetAuthorNames
+      Declare Sub InitializeStatusList
+      
+      '++LotusScript Development Environment:2:5:(Declarations):0:10
+      '***** OBJECT VARIABLES *****
+      Dim s As NotesSession
+      Dim w As NotesUIWorkspace
+      Dim doc As NotesUIDocument
+      Dim db As NotesDatabase
+      Dim note As NotesDocument
+      Dim tempnote As NotesDocument
+      Dim maildoc As NotesDocument
+      Dim parent As NotesDocument
+      Dim child As NotesDocument
+      Dim children As NotesDocumentCollection
+      Dim item As NotesItem
+      Dim rtitem As NotesRichTextItem
+      Dim dt As NotesDateTime
+      
+      '***** DATA VARIABLES - FIELDS DEFINED ON FORM*****
+      Dim ReviewStyle As Variant
+      Dim ReviewSeq As Variant
+      Dim Reviewers As Variant
+      Dim PreviousReviewers As Variant
+      Dim FutureReviewers As Variant
+      Dim CurrentReviewers As Variant
+      Dim DocumentAuthors As Variant
+      Dim Originator As Variant
+      Dim Versioning As Variant
+      
+      '***** DATA VARIABLE - FIELDS DEFINED IN SCRIPT, NOT DEFINED ON FORM
+      Dim Status As Variant
+      Dim Locked As Variant
+      Dim InProcess As Variant
+      
+      '***** SCRIPT PROCESSING VARIABLES *****
+      Dim ReviewerList() As Variant
+      Dim OldList() As Variant
+      Dim InputList As Variant
+      Dim NewList() As Variant
+      Dim ListMax As Integer
+      Dim tmpList As Variant
+      Dim CompareValue As Variant
+      Dim Elements As Integer
+      Dim DocWasSaved As Integer
+      Dim ParentIsLocked As Integer
+      Dim DocIsLocked As Integer
+      Dim LockedBy As Variant
+      Dim InitiatingReview As Integer
+      Dim CompareValueFound As Integer
+      Dim FinalSave As Variant
+      
+      Dim oleobject As Variant
+      Dim embed As NotesEmbeddedObject
+      
+      '***** TEMP PROCESSING FIELDS - ADDED TO DOC ON OPEN, DELETED ON CLOSE*****
+      Dim CurrentUser As String
+      Dim Action As Variant
+      Dim StatusList(1 To 4) As Variant
+      
+      '++LotusScript Development Environment:2:2:Initialize:1:10
+      Sub Initialize
+      	
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:GetOrCreateOLEObject:1:8
+      Sub GetOrCreateOLEObject
+      	Dim sOleField As String
+      	
+      	If note.hasitem("$OLEObjProgID") Then
+      		sOleField = note.~$OLEObjField(0)
+      		If doc.IsNewDoc Then
+      			note.~$OLEVersion = "46"
+      			doc.RefreshHideFormulas
+      			doc.gotofield(sOleField)
+      			
+      			Call doc.CreateObject("OLEObject",note.~$OLEObjProgID(0),"")
+      		Else
+      			If (doc.InPreviewPane) Then Exit Sub
+                ' If the user is not an author of the document we have to launch out of place
+      			If (db.CurrentAccessLevel > ACLLEVEL_AUTHOR) Or (note.tmpUseOLE(0) = "1") Then doc.EditMode = True
+      			If (note.HasEmbedded) Then
+      				Set rtitem = note.GetFirstItem(sOleField)
+      				Set embed = rtitem.EmbeddedObjects(0)
+                ' see if this is an older document
+      				If note.~$OLEVersion(0) <> "46" Then
+      					Set oleobject = embed.Activate(True)
+      				Else
+      					Set oleobject = doc.GetObject(embed.name)              
+      				End If
+      			Else
+      				If (doc.EditMode) Then
+      					doc.gotofield(sOleField)
+      					Call doc.CreateObject("OLEObject",note.~$OLEObjProgID(0),"")
+      				End If
+      			End If
+      		End If
+      	End If
+      	
+      End Sub
+      
+      
+      
+      '++LotusScript Development Environment:2:2:DocQueryOpen:1:8
+      Sub DocQueryOpen(source As NotesUIDocument, mode As Integer, isnewdoc As Variant, continue As Variant)
+      	
+      'If it is a new doc, there is no note yet, so we cannot initialize it from here
+      	If IsNewDoc Then Exit Sub
+      	
+      	Call InitializeDocument(source)    
+      	
+      	If Mode = 1 Then
+      		If DocIsLocked Then
+      			Messagebox "This document is being edited by " & LockedBy(0) & ".  Please try later.",_
+      			0 + 48, "Document Library"
+      			Continue = False
+      		Else
+      'If this is a Document Reservations review, then lock this doc     
+      			If note.ReviewStyle(0) = "Parallel.NoVersions" Then
+      				note.Locked = CurrentUser
+      				note.DocumentAuthors = CurrentUser
+      				If note.DocumentReaders(0) = "" Then note.RemoveItem("DocumentReaders")
+      				On Error Goto SaveError
+      				note.save True, True
+      			End If
+      		End If 
+      	End If
+      	
+      	Exit Sub
+      	
+      SaveError:
+      	
+      	Messagebox "This document is currently in use.  Please try later.",_
+      	0 + 48, "Document Library"
+      	Continue = False
+      	Exit Sub
+      	
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:DocPostOpen:1:8
+      Sub DocPostOpen(source As NotesUIDocument)
+      	
+      'This allows us to reference the UI Document in areas where source represents a different object     
+      	Set doc = source
+      	
+      'If it is a new doc, we initialize it here.  Existing docs are initialized in Queryopen because it is faster (one less refresh is required)    
+      	If source.IsNewDoc Then
+      		Call InitializeDocument(source)
+      		source.Reload
+      		source.RefreshHideFormulas
+      	Else
+      'If the doc was opened in edit mode, it may be a review initiation (this routine is also executed on mode change)         
+      		If source.EditMode = True Then
+      			Status = note.Status
+      			If Status(0) = StatusList(3) Then Call InitiateReview(source)
+      		End If         
+      	End If
+      	
+      	GetOrCreateOleObject
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:DocQueryModeChange:1:8
+      Sub DocQueryModeChange(source As NotesUIDocument, continue As Variant)
+      	
+      'If the doc is locked, do not allow them to put in in edit mode     
+      	If source.EditMode = False And note.ReviewStyle(0) = "Parallel.NoVersions" Then
+      		If Not DocIsLocked Then
+      			SavedUNID = note.UniversalId
+      			Delete note
+      			Set tempnote = db.GetDocumentByUNID(SavedUNID)
+      			If tempnote.HasItem("Locked") Then 
+      				DocIsLocked = True
+      				LockedBy = tempnote.Locked
+      			End If                   
+      			Delete tempnote
+      			Set note = source.Document
+      		End If
+      		If DocIsLocked Then
+      			Messagebox "This document is being edited by " & LockedBy(0) & ".  Please try later.",_
+      			0 + 48, "Document Library"
+      			Continue = False
+      		Else
+      			note.Locked = CurrentUser
+      			note.DocumentAuthors = CurrentUser
+      			If note.DocumentReaders(0) = "" Then note.RemoveItem("DocumentReaders")
+      			On Error Goto SaveError
+      			note.save True, True
+      		End If
+      	End If
+      	
+      	Exit Sub
+      	
+      SaveError:
+      	
+      	Messagebox "This document is currently in use.  Please try later.",_
+      	0 + 48, "Document Library"
+      	Continue = False
+      	Exit Sub
+      	
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:DocPostModeChange:1:8
+      Sub DocPostModeChange(source As NotesUIDocument)
+      	
+      'Putting the doc in edit mode might be a review initiation (this routine is also executed if the doc is opend in edit mode)
+      	If Source.EditMode = True Then
+      		Status = note.Status
+      		If Status(0) = StatusList(3) Then Call InitiateReview(source)
+      	End If
+      	
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:DocPostRecalc:1:8
+      Sub DocPostRecalc(source As NotesUIDocument)
+      	
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:DocQuerySave:1:8
+      Sub DocQuerySave(Source As NotesUIDocument, Continue As Variant)
+      	
+      	If FinalSave Then Exit Sub
+      	
+      	On Error Resume Next
+      	
+      'All routing logic is driven from here.  The Action buttons set the tmpAction value which drives processing.
+      	Status = note.Status
+      	
+      'If Subject is blank, be sure they enter it here     
+      	Subject = note.Subject
+      	If Subject(0) = "" Then
+      		Subject(0) = Inputbox("Please enter a Title for this document.", "Document Library", "(Untitled)")
+      		If Subject(0) = "" Then
+      			Continue = False
+      			Exit Sub
+      		End If
+      	End If
+      	note.Subject = Subject(0)
+      	
+      'Be sure that versions do not get $Ref stripped off
+      	If note.IsResponse Then Call note.ReplaceItemValue("$RefOptions", "1")
+      	
+      'InitiatingReview means that they are saving in order to generate a new version
+      'Status 1 means there is no review cycle.  In both cases we don't need to execute the rest of the logic here.     
+      	If InitiatingReview Or Status(0) = StatusList(1) Then
+      		source.Reload
+      		Exit Sub
+      	Else
+      		Print "Saving Document"
+      	End If      
+      	
+      'Find out which kind of a review we are doing     
+      	GetReviewSequence
+      	
+      'Get the Action type and the Reviewer list     
+      	Action = note.tmpAction
+      	Reviewers = note.Reviewers
+      	
+      'Decide how to process based on which Action button was pressed
+      	Select Case Action(0)
+      'On Submit - build the current and future reviewer lists and send notification to the appropriate person(s)          
+      	Case "Submit"
+      		note.Status = StatusList(3)
+      		SetReviewerLists        
+      		SendNotification
+      'On Completion of a review - if it is a response, lock the parent because we are going to update it
+      	Case "Complete"
+      		If note.IsResponse Then
+      			parentid = note.ParentDocumentUNID
+      			Set parent = db.GetDocumentByUNID(parentid)
+      			parent.Locked = CurrentUser
+      			ParentIsLocked = True
+      			parent.save True, True
+      		End If
+      'Rebuild the previous, current, and future reviewer lists and send notificationto the appropriate person(s)
+      		SetReviewerLists
+      		SendNotification
+      'Get the name of the person(s) currently reviewing this document (actively reviewing it means they have started
+      'reviewing it, rather than just being on the CurrentReviewer list)          
+      		InProcess = note.InProcess
+      		CompareValue = CurrentUser
+      'Pull CurrentUser out of the InProcess list          
+      		Call RebuildList(InProcess)
+      		Call note.ReplaceItemValue("InProcess", tmpList)
+      		CurrentReviewers = note.CurrentReviewers
+      'If CurrentReviewers = None (already set in the SetReviewerLists routine) then all reviews are complete so reset status
+      		If CurrentReviewers(0) = "None" Then note.Status = StatusList(4)
+      'If the parent is locked then unlock it          
+      		If ParentIsLocked Then
+      			CurrentReviewers = parent.CurrentReviewers
+      			If CurrentReviewers(0) = "None" Then
+      				parent.Status = StatusList(4)
+      				parent.RemoveItem("DueDate")
+      			End If
+      			parent.RemoveItem("Locked")
+      			ParentIsLocked = False
+      			parent.Save True, True
+      		End If
+      	End Select
+      	
+      'Reset $VersionOpt to 0 to prevent further versioning
+      	If note.HasItem("$VersionOpt") Then Call note.ReplaceItemValue("$VersionOpt", "0")
+      	
+      'Set the DocWasSaved flag so the Queryclose event knows about it     
+      	DocWasSaved = True
+      	
+      	source.Reload
+      	
+      	Print
+      	
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:DocQueryClose:1:8
+      Sub DocQueryClose(Source As NotesUIDocument, Continue As Variant)
+      	
+      	On Error Goto ErrorRoutine
+      	
+      'If the doc wasn't saved, we do not need to execute the rest of the logic in this event     
+      	If DocWasSaved Or note.Locked(0) <> "" Then    
+      		Print "Closing Document"
+      	Else
+      		Exit Sub
+      	End If
+      	
+      	Action = note.tmpAction
+      	
+      'A backend save (note.save) saves every field that it knows about, which is every field on the form.  It does not
+      'distinguish between ComputedForDisplay and data fields (the backend classes have no such UI constraints).
+      'Consequently, we delete all ComputedForDisplay and other temporary fields     
+      	itemlist = note.Items
+      	Forall n In itemlist
+      		If Lcase(Left(n.Name, 3)) = "tmp" Then n.Remove
+      	End Forall
+      	Scope = note.Scope
+      	CurrentReviewers = note.CurrentReviewers
+      	Status = note.Status
+      	
+      'We reset the author names here because the UI save has already occurred (so we can).
+      'The new authornames will take effect the next time the doc is accessed.     
+      	If Scope(0) = "Public" Then note.RemoveItem("DocumentReaders")
+      	If Status(0) = StatusList(1) Or Status(0) = StatusList(2) Then
+      		note.DocumentAuthors = Originator(0)
+      	Else
+      		ResetAuthorNames
+      	End If
+      	
+      	If note.HasItem("SaveOptions") Then note.RemoveItem("SaveOptions")
+      	If note.Locked(0) = CurrentUser Then 
+      		note.RemoveItem("Locked")
+      	Else
+      		If DocIsLocked Then Exit Sub         
+      	End If
+      	
+      	FinalSave = True
+      	source.Reload
+      	source.Refresh
+      	source.Save
+      	
+      	w.ViewRefresh
+      	Print
+      	
+      ErrorRoutine:
+      	Exit Sub
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:InitializeDocument:1:8
+      Sub InitializeDocument(source)
+      	
+      'This routine initializes object variables, global variables and some field values     
+      	
+      'Turn off Autoreload to speed up response time (this means we need to do manual reloads and refreshes)
+      	source.AutoReload = False
+      	
+      	Set w = New NotesUIWorkspace
+      	Set s = New NotesSession
+      	Set db = s.CurrentDatabase
+      	Set note = source.Document
+      	
+      	CurrentUser = s.CommonUserName
+      	note.tmpCurrentUser = CurrentUser
+      	Originator = note.From
+      	
+      	InitializeStatusList
+      	If source.IsNewDoc Then
+      		note.Status = StatusList(1)
+      		note.Scope = "Public"
+      	Else
+      		If note.Locked(0) <> "" Then
+      			DocIsLocked = True
+      			LockedBy = note.Locked
+      		End If
+      	End If
+      	
+      'Initialize V3 documents
+      	If Not(note.HasItem("Status")) Then
+      		note.Status = StatusList(1)
+      		note.Scope = "Public"
+      		note.DocumentAuthors = s.CommonUserName
+      		note.From = Evaluate("@Name([CN]; From)", note)
+      	End If
+      	
+      'Clear the status bar     
+      	Print
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:Postopen:1:8
+      Sub Postopen(Source As Notesuidocument)
+      	
+      'This allows us to reference the UI Document in areas where source represents a different object     
+      	Set doc = source
+      	
+      'If it is a new doc, we initialize it here.  Existing docs are initialized in Queryopen because it is faster (one less refresh is required)    
+      	If source.IsNewDoc Then
+      		Call InitializeDocument(source)
+      		source.Reload
+      		source.RefreshHideFormulas
+      	Else
+      'If the doc was opened in edit mode, it may be a review initiation (this routine is also executed on mode change)         
+      		If source.EditMode = True Then
+      			Status = note.Status
+      			If Status(0) = StatusList(3) Then Call InitiateReview(source)
+      		End If         
+      	End If
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:RebuildList:1:8
+      Sub RebuildList(InputList As Variant)
+      	
+      'This routine removes a value from a list (passed by reference)
+      	
+      	ListMax = Ubound(InputList)
+      	
+      'Save original capitalization in OldList then lowercase both InputList and CompareValue     
+      	Redim OldList (ListMax)
+      	For i = 0 To ListMax
+      		OldList(i) = InputList(i)
+      		InputList(i) = Lcase(InputList(i))
+      	Next
+      	CompareValue = Lcase(CompareValue)
+      	
+      	Redim NewList (ListMax)
+      	x = 0 
+      	For y = 0 To ListMax
+      		If InputList(y) <> CompareValue Then
+      			NewList(x) = OldList(y)
+      			x = x + 1
+      		End If
+      	Next
+      	
+      	If x > 0 Then
+      		Redim Preserve NewList(x-1)
+      		tmpList = NewList
+      	Else
+      		tmpList = "None"
+      	End If
+      	
+      	If x = ListMax Then
+      		CompareValueFound = True
+      	Else
+      		CompareValueFound = False
+      	End If
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:SetReviewerLists:1:8
+      Sub SetReviewerLists
+      	
+      	Print "Updating Reviewer Lists"
+      	
+      %REM
+         For a Parallel submit, set CurrentReviewers to the Reviewers field (there are no
+            FutureReviewers - all reviewers are current) and set FutureReviewers to "None".
+         For a Parallel review, remove CurrentUser from CurrentReviewers and add it to
+            PreviousReviewers.
+         For a Serial submit, set CurrentReviewers to the first Reviewer and set FutureReviewers
+            to the Reviewers field minus the first Reviewer
+         For a Serial review remove CurrentUser from FutureReviewers and add it to
+            PreviousReviewers.
+      %ENDREM
+      	
+      	ListMax = 0
+      	Set dt = New NotesDateTime("")
+      	dt.SetNow
+      	If Action(0) = "Complete" Then ReviewerLogEntry = CurrentUser & " on " & Format(dt.LSLocalTime, "Short Date")
+      	
+      	Select Case ReviewSeq
+      	Case "Parallel"
+      'On submit Set future reviewers to None since all reviewers are current          
+      		If Action(0) = "Submit" Then
+      			Reviewers = note.Reviewers            
+      			tmpList = Reviewers
+      			note.FutureReviewers = "None"
+      		Else
+      '(this is for action = Complete)               
+      'For Response Reviews, we maintain the status in the parent               
+      			If note.IsResponse Then
+      				CurrentReviewers = parent.CurrentReviewers
+      				Set item = parent.GetFirstItem("ReviewerLog")
+      			Else
+      				CurrentReviewers = note.CurrentReviewers
+      				Set item = note.GetFirstItem("ReviewerLog")
+      			End If
+      			item.AppendToTextList(ReviewerLogEntry)              
+      			CompareValue = CurrentUser
+      'Remove the CurrentUser from the CurrentReviewers list               
+      			Call RebuildList(CurrentReviewers)
+      		End If
+      		FieldName = "CurrentReviewers"
+      	Case "Serial"
+      'On submit, put all reviewers in the future reviewers list          
+      		If Action(0) = "Submit" Then
+      			Reviewers = note.Reviewers
+      			tmpList = Reviewers
+      			Call note.ReplaceItemValue("FutureReviewers", tmpList)
+      		Else
+      			Set item = note.GetFirstItem("ReviewerLog")
+      			item.AppendToTextList(ReviewerLogEntry)
+      		End If
+      		FutureReviewers = note.FutureReviewers
+      'Put the first person in the future reviewers list in current reviewer
+      'On submit this makes the first one current, on Complet it makes the next one current          
+      		note.CurrentReviewers = FutureReviewers(0)
+      		CompareValue = FutureReviewers(0)
+      		FieldName = "FutureReviewers"
+      'Remove the first element from the FutureReviewers list
+      		Call RebuildList(FutureReviewers)
+      	End Select
+      	
+      'Calculate when the review is due, based upon ReviewTime     
+      	ReviewTime = note.ReviewTime
+      	temp = ReviewTime(0)
+      	Set dt = New NotesDateTime("")
+      	dt.SetNow
+      	If Isnumeric(ReviewTime(0)) Then dt.AdjustDay(temp)
+      	
+      'Update DueDate - If there is a Review time then reset, otherwise delete
+      'Update PreviousReviewers to None if this is a submit, otherwise add CurrentUser to existing list
+      	If note.IsResponse And ReviewSeq = "Parallel" Then
+      		If Isnumeric(ReviewTime(0)) Then
+      			parent.DueDateTime = dt.LSLocalTime
+      		Else
+      			parent.RemoveItem("DueDateTime")
+      		End If
+      		Call parent.ReplaceItemValue(FieldName, tmpList)
+      		PreviousReviewers = parent.PreviousReviewers
+      		If PreviousReviewers(0) = "None" Then
+      			parent.PreviousReviewers = CurrentUser
+      		Else
+      			Set item = parent.GetFirstItem("PreviousReviewers")
+      			item.AppendToTextList (CurrentUser)
+      		End If
+      'In a response review, we remove these because they are stored in the main doc          
+      		note.RemoveItem("PreviousReviewers")
+      		note.RemoveItem("CurrentReviewers")
+      		note.RemoveItem("FutureReviewers")
+      		If Action(0) = "Complete" Then
+      			note.RemoveItem("DueDateTime")
+      			note.Status = StatusList(4)
+      		End If
+      	Else
+      		If Isnumeric(ReviewTime(0)) Then 
+      			note.DueDateTime = dt.LSLocalTime
+      		Else
+      			note.RemoveItem("DueDateTime")
+      		End If
+      		Call note.ReplaceItemValue(FieldName, tmpList)
+      		If Action(0) = "Submit" Then
+      			note.PreviousReviewers = "None"
+      		Else
+      			PreviousReviewers = note.PreviousReviewers
+      			If PreviousReviewers(0) = "None" Then
+      				note.PreviousReviewers = CurrentUser
+      			Else              
+      				Set item = note.GetFirstItem("PreviousReviewers")
+      				item.AppendToTextList (CurrentUser)
+      			End If
+      		End If
+      	End If
+      	
+      End Sub 
+      '++LotusScript Development Environment:2:2:SendNotification:1:8
+      Sub SendNotification
+      	
+      'This routine sets the content of the notification email, based upon values set in SetReviewerLists.     
+      	
+      	If note.IsResponse Then
+      		CurrentReviewers = parent.CurrentReviewers
+      	Else
+      		CurrentReviewers = note.CurrentReviewers
+      	End If
+      	DbTitle = db.Title
+      	DueDateTime = note.DueDateTime
+      	Subject = note.Subject
+      	Recipient = Empty
+      	NotifyAfter = note.NotifyAfter
+      	
+      'If it is a parallel review with only final notification to the originator, 
+      'there is not need to send mail on a normal completion     
+      	If (ReviewSeq = "Parallel") And (CurrentReviewers(0) <> "None") _
+      	And (NotifyAfter(0) = "Final") And (Action(0) <> "Submit") Then
+      		Exit Sub
+      	Else
+      		Print "Sending Notification"
+      	End If
+      	
+      	Set maildoc = New NotesDocument(db)
+      	Set rtitem = New NotesRichTextItem(maildoc, "Body")
+      	
+      	Select Case Action(0)
+      	Case "Submit"
+      		tmpList = CurrentReviewers
+      		tmpSubject = "Document Requires Review:  " & Subject(0)
+      		If note.HasItem("DueDateTime") Then
+      			tmpFlowStatus = "Please take the time to review this document before the due date shown below."              
+      		Else
+      			tmpFlowStatus = "Please take the time to review this document."
+      		End If
+      		tmpMessagebox = "Request for review has been sent to "
+      		If ReviewSeq = "Parallel" Then
+      			tmpRecipient = "All Reviewers"
+      		Else
+      			tmpRecipient = CurrentReviewers(0)         
+      		End If
+      	Case "Complete"
+      		If CurrentReviewers(0) = "None" Then
+      			tmpList = Originator(0)
+      			tmpSubject = "Review is complete for:  " & Subject(0)
+      			tmpFlowStatus = "All reviewers have completed their work on this document."
+      			tmpMessagebox = "Notification that you have completed your review has been sent to the originator: "               
+      		Else
+      			Select Case ReviewSeq
+      			Case "Parallel"     
+      				tmpList = Originator(0)              
+      				tmpFlowStatus = CurrentUser & " is finished reviewing this document."              
+      				tmpSubject = CurrentUser & " has completed review of:  " & Subject(0)
+      				tmpMessagebox = "Notification that you have completed your review has been sent to the originator, "
+      			Case "Serial"
+      				tmpList = CurrentReviewers(0)
+      				tmpSubject = "Document Requires Review:  " & Subject(0)
+      				If note.HasItem("DueDateTime") Then
+      					tmpFlowStatus = Originator(0) & " requests that you review this document before the due date shown below."            
+      				Else
+      					tmpFlowStatus = Originator(0) & " requests that you review this document."              
+      				End If
+      				tmpMessagebox = "Notification that you have completed your review has been sent to "               
+      				If NotifyAfter(0) = "Each" Then 
+      					maildoc.CopyTo = Originator(0)
+      					tmpRecipient = tmpList & " and " & Originator(0)
+      				End If
+      			End Select
+      		End If
+      		If tmpRecipient = "" Then tmpRecipient = tmpList
+      	End Select
+      	
+      	Call maildoc.AppendItemValue("SendTo", tmpList)
+      	
+      	maildoc.Subject = tmpSubject
+      	maildoc.InheritedSubject = Subject(0)
+      	maildoc.InheritedDbTitle = DbTitle
+      	maildoc.FlowStatus = tmpFlowStatus
+      	If note.HasItem("DueDateTime") Then maildoc.DueDateTime = Format(DueDateTime(0), "Short Date")
+      	
+      	If note.IsResponse Then
+      		Call rtitem.AppendDocLink(parent, "DocLink to " & Subject(0))
+      	Else
+      		Call rtitem.AppendDocLink(note, "DocLink to " & Subject(0))
+      	End If
+      	
+      	maildoc.Form = "Bookmark"
+      	
+      	On Error Goto SendError
+      	Call maildoc.Send (False)
+      	
+      	Messagebox tmpMessagebox & tmpRecipient & ".", 0 + 64, "Document Library"
+      	
+      	Exit Sub
+      	
+      SendError:
+      	Messagebox "FYI:  " & tmpRecipient & " could not be notified via email at this time.", 0 + 64, "Document Library"
+      	Exit Sub
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:InitiateReview:1:8
+      Sub InitiateReview(source)
+      	
+      'This routine does the versioning that occurs when a review in initiated (as opposed to on every save)     
+      	InProcess = note.InProcess
+      	Reviewers = note.Reviewers
+      	PreviousReviewers = note.PreviousReviewers
+      	
+      'Check to see if CurrentUser is in the InProcess list.  If they are (or if this is the originator) then do not do versioning     
+      	Redim ReviewerList(0) 
+      	Forall n In InProcess
+      		If CurrentUser = n Then ReviewerList(0) = CurrentUser
+      	End Forall
+      	
+      'Find out what kind of review we are processing     
+      	GetReviewSequence
+      	
+      	If ReviewerList(0) = CurrentUser Or CurrentUser = Originator(0) Then Exit Sub
+      	Print "Initiating Review"
+      	
+      'Set the $VersionOpt appropriately
+      	If (Versioning = "Versions") Then
+      		If ReviewSeq = "Parallel" Then
+      'This doc becomes a response (we are subsequently editting the response doc)
+      			VersionOpt = "1"
+      		Else
+      'Previous versions become response (we are still editing the main doc)               
+      			VersionOpt = "3"
+      		End If
+      	Else
+      'The original doc is saved as a response (for safe keeping)          
+      		If PreviousReviewers(0) = "None" And Not(note.HasItem("$VersionOpt")) Then VersionOpt = "3"
+      	End If
+      	
+      'Reset the field
+      	If (Versioning = "Versions") Or (PreviousReviewers(0) = "None") Then Call note.ReplaceItemValue("$VersionOpt", VersionOpt)
+      	
+      'CurrentUser is now on the InProcess list because they are actively reviewing the doc     
+      	Set item = note.GetFirstItem("InProcess")
+      	If item Is Nothing Then
+      		Call note.AppendItemValue("InProcess", CurrentUser)
+      	Else
+      		item.AppendToTextList(CurrentUser)
+      	End If
+      	
+      'InitiatingReview flag tells the Querysave event how to process, reload from the backend, 
+      'and save from the front end to create the appropriate version     
+      	InitiatingReview = True
+      	source.Reload
+      	If VersionOpt = 1 Or VersionOpt = 3 Then
+      		source.Refresh
+      		source.SaveNewVersion
+      	End If
+      	source.RefreshHideFormulas
+      	InitiatingReview = False
+      	
+      	Print
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:GetReviewSequence:1:8
+      Sub GetReviewSequence
+      	
+      'ReviewSequence is stored in a manner that makes sense to users.  Here it is dealt with as serial or parallel,
+      'with or without versioning.
+      	
+      	ReviewStyle = note.ReviewStyle
+      	
+      	position = Instr(ReviewStyle(0), ".")
+      	ReviewSeq = Left(ReviewStyle(0), position - 1)
+      	Versioning = Mid(ReviewStyle(0), position + 1)    
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:ResetAuthorNames:1:8
+      Sub ResetAuthorNames
+      	
+      	Select Case ReviewSeq
+      	Case "Serial"
+      'Reset author names to CurrentReviewers + Originator (unless CurrentReviewers = "None")
+      		If CurrentReviewers(0) = "None" Then
+      			note.DocumentAuthors = Originator(0)
+      		Else
+      			CompareValue = Empty
+      			Call RebuildList(CurrentReviewers)
+      			Redim Preserve NewList(ListMax+1)
+      			NewList(ListMax+1) = Originator(0)
+      			tmpList = NewList
+      			note.DocumentAuthors = tmpList
+      		End If
+      'If there are versions, remove it from them as well          
+      		If note.HasItem("$VersionOpt") Then
+      			Set children = note.Responses
+      			For c = 1 To children.Count
+      				Set child = children.GetNthDocument(c)
+      				child.DocumentAuthors = Originator(0)
+      				If child.DocumentReaders(0) = "" Then child.RemoveItem("DocumentReaders")
+      'It does not matter if it can not be saved because CurrentUser may not be in the AuthorNames field in all responses
+      				On Error Resume Next
+      				child.Save True, True
+      				Err = 0
+      			Next
+      		End If
+      	Case "Parallel"
+      		If note.IsResponse Then
+      'If all done we are updating the parent and the originator is the only editor
+      'otherwise CurrentUser and originator are the editors of this doc
+      			If Action(0) = "Complete" Then
+      				note.DocumentAuthors = Originator(0)
+      				parentid = note.ParentDocumentUNID
+      				Set parent = db.GetDocumentByUNID(parentid)
+      				DocumentAuthors = parent.DocumentAuthors
+      				CompareValue = CurrentUser
+      				Call RebuildList(DocumentAuthors)
+      				parent.DocumentAuthors = tmpList
+      				If parent.DocumentReaders(0) = "" Then parent.RemoveItem("DocumentReaders")
+      				parent.Save True, True
+      			Else
+      				Redim NewList(1)
+      				NewList(0) = CurrentUser
+      				NewList(1) = Originator(0)
+      				tmpList = NewList
+      				note.DocumentAuthors = tmpList
+      			End If
+      		Else
+      'If we are not versioning - then all current reviewers and the originator are editors (unless CurrentReviewer = "None")
+      			If CurrentReviewers(0) = "None" Then
+      				note.DocumentAuthors = Originator(0)
+      			Else
+      				CompareValue = Empty
+      				Call RebuildList(CurrentReviewers)
+      				Redim Preserve NewList(ListMax+1)
+      				NewList(ListMax+1) = Originator(0)
+      				tmpList = NewList
+      				note.DocumentAuthors = tmpList
+      			End If
+      'If there are versions, remove it from them as well          
+      			If note.HasItem("$VersionOpt") Then
+      				Set children = note.Responses
+      				For c = 1 To children.Count
+      					Set child = children.GetNthDocument(c)
+      					child.DocumentAuthors = Originator(0)
+      					If child.DocumentReaders(0) = "" Then child.RemoveItem("DocumentReaders")
+      					child.RemoveItem("Locked")
+      'It does not matter if it can not be saved because CurrentUser may not be in the AuthorNames field in all responses
+      					On Error Resume Next
+      					child.Save True, True
+      					Err = 0
+      				Next
+      			End If
+      		End If
+      	End Select
+      	
+      End Sub
+      '++LotusScript Development Environment:2:2:InitializeStatusList:1:8
+      Sub InitializeStatusList
+      	
+      'Statuses are referred to positionally.  If you want the works to display differently in the view (like if you want the first
+      'status to be None instead of New) you would change them here.     
+      	StatusList(1) = "New"
+      	StatusList(2) = "Ready for Review"
+      	StatusList(3) = "In Review"
+      	StatusList(4) = "Review Complete"
+      	
+      	note.StatusList = StatusList
+      	
+      End Sub
+    signed: true
+    nonsummary: true
+  - name: $TITLE
+    type: text
+    data: OLERoutines
+    signed: true
+remaining: []

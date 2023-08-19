@@ -1,0 +1,1059 @@
+---
+class: 4
+flags: 0x0000
+unid: OF9A44FD204E2AC91E-ON004F3A6285256207
+items:
+  - name: $$ScriptName
+    type: text
+    data: Response to Response
+    signed: true
+    nonsummary: true
+  - name: $DesignerVersion
+    type: text
+    data: "7"
+    signed: true
+  - name: $Fields
+    type: text
+    data:
+      - ImmediateParentSubject
+      - OriginalSubject
+      - Body
+      - Categories
+      - Subject
+      - TimeCreated
+      - Date
+      - Scope
+      - From
+      - AltLang
+      - AltFrom
+      - formname
+  - name: $Flags
+    type: text
+    data: w
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $SubForm_RepIDs
+    type: text
+    data: "0000000000000000"
+    signed: true
+  - name: $SubForms
+    type: text
+    data: ResponseBanner
+    signed: true
+  - name: $TITLE
+    type: text
+    data:
+      - Response to Response
+      - Response to Response
+  - name: $WindowTitle
+    type: formula
+    data: |
+      NewDocTitle := "New Response to \"" + Subject + "\"";
+      StandardTitle := "Response to \"" + ImmediateParentSubject + "\"";
+      @If(@IsNewDoc; NewDocTitle; StandardTitle)
+    opaque: |
+      AAEBAEAACwBOZXdEb2NUaXRsZQABABEATmV3IFJlc3BvbnNlIHRvICIABQAHAFN1YmplY3QAIgIBAAEA
+      IgAiAgMABwAUAA0ACTFTMlMzUzRTNVM2UwABAEwADQBTdGFuZGFyZFRpdGxlAAEADQBSZXNwb25zZSB0
+      byAiAAUAFgBJbW1lZGlhdGVQYXJlbnRTdWJqZWN0IgIBAAEAIgAiAgMABwAWAA8ACTBSMVMyUzNTNFM1
+      UzZTAAAAOgCJAK8AMAAWAAUACwBOZXdEb2NUaXRsZQCuABoABQANAFN0YW5kYXJkVGl0bGUArgAEALUD
+      AwAHAA4ABwAJMFI0UzZTAA==
+    signed: true
+    nonsummary: true
+  - name: AltFrom
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: AltLang
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: Body
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: Categories
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: Date
+    type: time
+    signed: true
+    nonsummary: true
+  - name: From
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: ImmediateParentSubject
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: OriginalSubject
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: Scope
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: Subject
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: TimeCreated
+    type: time
+    signed: true
+    nonsummary: true
+  - name: formname
+    type: iou
+    type_num: 0
+    nonsummary: true
+    ph: true
+  - name: $ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 211
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x09000002
+        HeightSpc: 5
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x00000041
+      - type: 0xffbe
+        Flags: 0x0000008c
+        FormulaLen: 0
+        IconIndex: 5
+        ShareId: 0
+        Type: 5
+        opaque: AQACCg==
+        title: _Edit Document
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AgBOfA==
+        title: Categori_ze
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AwADCg==
+        title: Send Docu_ment
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BAAECg==
+        title: _Forward
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BQA9fA==
+        title: _Move to Folder...
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BgA+fA==
+        title: _Remove from Folder
+      - type: 0xffbe
+        Flags: 0x0001408b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 7
+        Type: 1
+        data: "@Command([EditDocument])"
+        data_opaque: IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+        title: Edit Document
+      - type: 0xffbe
+        Flags: 0x00014093
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 8
+        Type: 1
+        data: |
+          @If(@IsValid;
+          @Do(@Command([FileSave]); @Command([FileCloseWindow])); "")
+        data_opaque: |
+          SAAAADYA5ACvACwAIAACAMYLAAAAAAAA7QECAPwRAAAAAAAA7QGzAq4ADAABAAAArgAEALUDAwAHABAA
+          CQAJNFIxMVMxN1MA
+        title: Save & Close
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 44
+        IconIndex: 0
+        ShareId: 10
+        Type: 1
+        data: |
+          FIELD Scope := "Private";
+          @Command([ViewRefreshFields])
+        data_opaque: |
+          RgADABoABQBTY29wZQABAAcAUHJpdmF0ZQADAAcADgAHAAkxUzJTM1MAAAASAAIAixMAAAAAAADtAQMA
+          BwAKAAMACTBSAA==
+        hidewhen: "Scope = \"Private\""
+        hidewhen_opaque: LAAAAB4ABQAFAFNjb3BlAAEABwBQcml2YXRlAAoCAwAHAAwABQAJMVMyUwA=
+        title: Mark Private
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 42
+        IconIndex: 0
+        ShareId: 11
+        Type: 1
+        data: |
+          FIELD Scope := "Public";
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          RAADABgABQBTY29wZQABAAYAUHVibGljAwAHAA4ABwAJMVMyUzNTAAAAEgACAF4bAAAAAAAA7QEDAAcA
+          CgADAAkwUgA=
+        hidewhen: "Scope = \"Public\""
+        hidewhen_opaque: KgAAABwABQAFAFNjb3BlAAEABgBQdWJsaWMKAgMABwAMAAUACTFTMlMA
+        title: Mark Public
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 9
+        Type: 1
+        data: |
+          FIELD SaveOptions := 0;
+          @Command([FileCloseWindow])
+        data_opaque: |
+          SgADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHAA4ABwAJMVMyUzNTAAAAEgACAPwRAAAAAAAA
+          7QEDAAcACgADAAkwUgA=
+        title: Cancel
+  - name: $Body
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x6130
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 23
+          - 1440
+          - 10
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 1
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 1
+      - type: 0x00dd
+        Signature: 0xfffb
+        Version: 1
+      - type: 0xfffb
+        opaque: +/8sAAEAAAABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAA=
+      - type: 0xff5c
+        opaque: |
+          XP8+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAQAACgAAAAABAAAA
+          AAA=
+      - type: 0x00de
+        Signature: 0xfffb
+        Version: 1
+      - type: 0x00a3
+        opaque: ow6gBSgAPAAAAAAAAwA=
+      - type: 0x00a4
+        opaque: pBIAAKAF0BpAOFUCEREBAQAA
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1506
+        Flags: 0x61b6
+        Flags2: 0x84a8
+        JustifyMode: 0
+        LeftMargin: 1506
+        LineSpacing: 0
+        PABID: 2
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 6864
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 1
+          - 0
+          - 1
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 2
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x90f0001
+        data: form name (used in RespBanner subform)
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xc0c0c0
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00a4
+        opaque: pBIAAdAaADBAOFUCEREBAQAA
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 6930
+        Flags: 0x61b6
+        Flags2: 0x84a8
+        JustifyMode: 0
+        LeftMargin: 6930
+        LineSpacing: 0
+        PABID: 3
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 12288
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 1
+          - 0
+          - 1
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 3
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x90f0001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xc0c0c0
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv9qAIgBAAUAMAIAAAAAAAACAQAPCT4AAAAAAAAACAAAAAAAPgAHAAoAAwBETlQABwAKAAMACTFTAAAA
+          HgABABQAUmVzcG9uc2UgdG8gUmVzcG9uc2UDAAcACgADAAkwUgBmb3JtbmFtZQ==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x90f0001
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xc0c0c0
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00a5
+        opaque: pQYAAAAA
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x8100
+        Flags2: 0x8695
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 4
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0xa000101
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 4
+      - type: 0xff85
+        FontID: 0xa000101
+      - type: 0x00dd
+        Signature: 0xffad
+        Version: 0
+      - type: 0xff71
+        opaque: cf8wAAAAAAADABgADgAAAAAAAAAAAAAAAAAAAAAAAAAAAFJlc3BvbnNlQmFubmVy
+      - type: 0xffad
+        opaque: rf8bAA4ACAAAAA8AUmVzcG9uc2VCYW5uZXIA
+      - type: 0x00ae
+        opaque: rgI=
+      - type: 0x00de
+        Signature: 0x00ae
+        Version: 0
+      - type: 0xff85
+        FontID: 0xa000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8694
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 5
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 5
+      - type: 0xff85
+        FontID: 0xa000101
+        data: "Content:"
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x0100
+        Flags2: 0x8794
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 6
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 6
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv9IAIIAAQAEMAIAAAAAAAADAQAACgAAAAAAAAAABAAfAAAAQm9keUVudGVyIHRoZSB0ZXh0IG9mIHlv
+          dXIgcmVzcG9uc2UA
+      - type: 0xff7a
+        Title: Text of the response
+        reserved: AAAAAAAAAAAAAA==
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9000001
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 1440
+        Flags: 0x6130
+        Flags2: 0x8494
+        JustifyMode: 0
+        LeftMargin: 1440
+        LineSpacing: 0
+        PABID: 7
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 2018
+          - 0
+          - 0
+          - 0
+          - 0
+          - 768
+          - 0
+          - 3072
+          - 92
+          - 0
+          - 0
+          - 0
+          - 11
+          - 0
+          - 92
+          - 0
+          - 90
+          - 108
+          - 1
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 1440
+          - 10
+          - 1440
+          - 10
+          - 0
+          - 0
+          - 0x00000001
+          - 0x00000004
+      - type: 0x0083
+        PABID: 7
+      - type: 0xff85
+        FontID: 0x9000005
+        data: "-------------------------------------------------------------------------------------------------------------------------------------------------"
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020005
+        data: "Hidden Fields:\t"
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv+6AIIAAAUAMAIAAAAAAAADBQACCVoAAAAAAAAADwAsAAAAWgAAAEwABQAPAE9yaWdpbmFsU3ViamVj
+          dABoAa8ALgAaAAUADwBPcmlnaW5hbFN1YmplY3QArgAUAAUABwBTdWJqZWN0AK4ABAC1AwMABwAMAAUA
+          CTdTOVMAT3JpZ2luYWxTdWJqZWN0SGlkZGVuIGZpZWxkIHRvIHN0b3JlIHRvcGljIG9mIE1haW4gRG9j
+          dW1lbnQA
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020005
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xfffe
+        opaque: |
+          /v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+          AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+      - type: 0xff8a
+        opaque: |
+          iv+MAIAAAAUAMAIAAAAAAAACBQACCVIAAAAAAAAAFgAAAAAAUgAAAEQABQAHAFN1YmplY3QAaAGvAC4A
+          EgAFAAcAU3ViamVjdACuABwABQAPAE9yaWdpbmFsU3ViamVjdACuAAQAtQMDAAcADAAFAAk3UzlTAElt
+          bWVkaWF0ZVBhcmVudFN1YmplY3Q=
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020005
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+      - type: 0x0081
+      - type: 0x0083
+        PABID: 7
+      - type: 0x00dd
+        Signature: 0xff85
+        Version: 0
+      - type: 0xff85
+        FontID: 0x9020005
+      - type: 0x00d2
+        Color:
+          Flags: 0x0001
+          rgb: 0xff0000
+      - type: 0x00de
+        Signature: 0xff85
+        Version: 0
+  - name: $Fonts
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: i/8oAAEABSJNUyBTYW5zIFNlcmlmAAAAAAAAAAAAAAAAAAAAAAAAAA==
+  - name: $HTMLCode
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: X/8QAAIADwAHAAAAAAAAAA==
+  - name: $HTMLDocumentStyles
+    signed: true
+    type: opaque
+    type_num: 1
+    opaque: 0ggBAAAA/wDSCAEA/wAAANIIAQCAAIAA
+  - name: $Info
+    signed: true
+    nonsummary: true
+    type: opaque
+    type_num: 1
+    opaque: hhgBAIUAAAAAgAAAAQABAP///wAAAAAA
+  - name: $V5ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 211
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x09000002
+        HeightSpc: 5
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x00000041
+      - type: 0xff79
+        BackColor:
+          Flags: 0x0001
+          rgb: 0xbba58b
+        BtnBorderDisplay: 3
+        BtnTextJustify: 0
+        BtnWidthStyle: 0
+        ButtonColor:
+          Flags: 0x0001
+          rgb: 0xd4c9ba
+        FontColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        LineColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        Spare:
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+        barFontID: 0x09000002
+        barHeight:
+          Flags: 0x0000
+          Length:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 19
+            - 64
+          Reserved: 0
+          Units: 5
+        dwFlags: 0x00000003
+        wAppletHeight: 38
+        wBarBackgroundRepeat: 0
+        wBtnInternalMargin: 0
+        wBtnWidthAbsolute: 0
+        wSpare: 0x0000
+        wThemeSetting: 0
+      - type: 0xfffc
+        BorderFlags: 0
+        BorderStyle: 0
+        BorderWidthBottom: 1
+        BorderWidthLeft: 0
+        BorderWidthRight: 0
+        BorderWidthTop: 0
+        Color:
+          Flags: 0x0001
+          rgb: 0x000000
+        DropShadowWidth: 0
+        Flags: 0x00000000
+        InnerWidthBottom: 0
+        InnerWidthLeft: 0
+        InnerWidthRight: 0
+        InnerWidthTop: 0
+        OuterWidthBottom: 0
+        OuterWidthLeft: 0
+        OuterWidthRight: 0
+        OuterWidthTop: 0
+        dwSpare: 0x00000000
+        wSpares:
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+      - type: 0xffbe
+        Flags: 0x0000008c
+        FormulaLen: 0
+        IconIndex: 5
+        ShareId: 0
+        Type: 5
+        opaque: AQACCg==
+        title: _Edit Document
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AgBOfA==
+        title: Categori_ze
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AwADCg==
+        title: Send Docu_ment
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BAAECg==
+        title: _Forward
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BQA9fA==
+        title: _Move to Folder...
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BgA+fA==
+        title: _Remove from Folder
+      - type: 0xffbe
+        Flags: 0x0001408b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 7
+        Type: 1
+        data: "@Command([EditDocument])"
+        data_opaque: IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQA=
+        title: Edit Document
+      - type: 0xffbe
+        Flags: 0x00014093
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 8
+        Type: 1
+        data: |
+          @If(@IsValid;
+          @Do(@Command([FileSave]); @Command([FileCloseWindow])); "")
+        data_opaque: |
+          SAAAADYA5ACvACwAIAACAMYLAAAAAAAA7QECAPwRAAAAAAAA7QGzAq4ADAABAAAArgAEALUDAwAHABAA
+          CQAJNFIxMVMxN1MA
+        title: Save & Close
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 44
+        IconIndex: 0
+        ShareId: 10
+        Type: 1
+        data: |
+          FIELD Scope := "Private";
+          @Command([ViewRefreshFields])
+        data_opaque: |
+          RgADABoABQBTY29wZQABAAcAUHJpdmF0ZQADAAcADgAHAAkxUzJTM1MAAAASAAIAixMAAAAAAADtAQMA
+          BwAKAAMACTBSAA==
+        hidewhen: "Scope = \"Private\""
+        hidewhen_opaque: LAAAAB4ABQAFAFNjb3BlAAEABwBQcml2YXRlAAoCAwAHAAwABQAJMVMyUwA=
+        title: Mark Private
+      - type: 0xffbe
+        Flags: 0x00014013
+        FormulaLen: 42
+        IconIndex: 0
+        ShareId: 11
+        Type: 1
+        data: |
+          FIELD Scope := "Public";
+          @Command([RefreshHideFormulas])
+        data_opaque: |
+          RAADABgABQBTY29wZQABAAYAUHVibGljAwAHAA4ABwAJMVMyUzNTAAAAEgACAF4bAAAAAAAA7QEDAAcA
+          CgADAAkwUgA=
+        hidewhen: "Scope = \"Public\""
+        hidewhen_opaque: KgAAABwABQAFAFNjb3BlAAEABgBQdWJsaWMKAgMABwAMAAUACTFTMlMA
+        title: Mark Public
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 9
+        Type: 1
+        data: |
+          FIELD SaveOptions := 0;
+          @Command([FileCloseWindow])
+        data_opaque: |
+          SgADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHAA4ABwAJMVMyUzNTAAAAEgACAPwRAAAAAAAA
+          7QEDAAcACgADAAkwUgA=
+        title: Cancel
+remaining: []

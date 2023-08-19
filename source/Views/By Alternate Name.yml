@@ -1,0 +1,435 @@
+---
+class: 8
+flags: 0x0000
+unid: OF63A85BA9C4DEDCD9-ON00656A78882568AC
+items:
+  - name: $Collation
+    type_num: 2
+    type: opaque
+    opaque: JAADAABECGYHAAADAABmBwMAAwABZgAGAAMAJDM1JDMzJDE0
+  - name: $Collation1
+    type_num: 2
+    type: opaque
+    opaque: EAABAABEAGYAAAADACQxNA==
+  - name: $Comment
+    type: text
+    data: ""
+    signed: true
+  - name: $DesignerVersion
+    type: text
+    data: "7"
+    signed: true
+  - name: $Flags
+    type: text
+    data: Yw
+  - name: $Formula
+    type: formula
+    data: "  AltFrom != \"\" & AltLang != \"\" & form != \"Interest Profile\" & !@Contains(@LowerCase(form); \"archive\")"
+    opaque: |
+      jAMKAAQAAgAmAAMAJDM1AAIAzgAAAAAAAAAFAAcAQWx0TGFuZwD7AhMBAwACACQAAwAkMzMAAgAFAAAA
+      AAAAAAUABwBBbHRGcm9tALQCAwACAA4AAwAkMTQjaQADAAEAKgATAFByaXZhdGVUeHQANkBXAB1vJQAA
+      AQAJAFBSSVZBVEU6IAADAAEAKgATAEV4cGlyZWRUeHQAN0BXAB1vJQAAAQAJAEVYUElSRUQ6IAADAAEA
+      fAAPAEF1dGhvcgA4QFcAHW8lAAoFAAQARm9ybQEACQBNYWluVG9waWMACgIFAAcAU3ViamVjdAABAAAA
+      CgIcAq8ANgAqAAEAAgAgKAIABgAAAAAAAAAFAAQARnJvbbQCIgIBAAEAKQAiAq4ADAABAAAArgAEALUD
+      AwABAKAAEwB1c2VTdWJqZWN0ADlAVwAdbyUAAAUABABmb3JtAQAUAFJlc3BvbnNlIHRvIFJlc3BvbnNl
+      CgKvAGAAIAAFABYASW1tZWRpYXRlUGFyZW50U3ViamVjdK4AQAAFAAQAZm9ybQEACABSZXNwb25zZQoC
+      rwAmABoABQAPAE9yaWdpbmFsU3ViamVjdACuAAwAAQAAAK4ABAC1BQMAAgD+AAMAJDM0AAUABwByZWFk
+      ZXJzAAEAAAALAq8AYAAeAAUAEwBQcml2YXRlVHh0ADZAVwAdbyUAYq4AQgAFAAoARXhwaXJlRGF0ZQEA
+      AAALAq8AKgAeAAUAEwBFeHBpcmVkVHh0ADdAVwAdbyUAYq4ADAABAAAArgAEALUFBQAHAFN1YmplY3QA
+      IgIFABMAdXNlU3ViamVjdAA5QFcAHW8lAGIBAAAACwKvAE4AMgABAAYAIChSRTogBQATAHVzZVN1Ympl
+      Y3QAOUBXAB1vJQBiIgIBAAEAKQAiAq4AHAAFAA8AQXV0aG9yADhAVwAdbyUAAq4ABAC1AyICAwAFACgA
+      IwAFAAMAAwADAAMACQAkMzUkMzMkMTQkMzQkQ29uZmxpY3QABAAEAAAAaAAFAAcAQWx0RnJvbQABAAAA
+      CwIFAAcAQWx0TGFuZwABAAAACwIcAgUABABmb3JtAQAQAEludGVyZXN0IFByb2ZpbGULAhwCBQAEAGZv
+      cm1hAQEABwBhcmNoaXZlAEcCHgEcAgMABwAsACUACUwxUzJFMlMzUzRTNVM2UzdTOFM5UzEwUzExUzEy
+      UzEzUzIxUwA=
+    signed: true
+  - name: $FormulaClass
+    type: text
+    data: "1"
+    signed: true
+  - name: $Index
+    type: text
+    data: /C
+    signed: true
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $TITLE
+    type: text
+    data: By Alternate Name|By Alternate Name
+    signed: true
+  - name: $VIEWFORMAT
+    type_num: 5
+    type: opaque
+    opaque: |
+      AQAEACMAj0wAAFZDAwQDAAAANgAAABgAAQENCQABAAAAAAAAAAICAAAAVkODBAMAAQAwAAAAEAABAQ0J
+      AAAAAAAAAAAAAAIAACBWQwUBAwAEABAAAABIAAEADgkAAAEAiAAEAQAAAQAAIFZDAAADAAUAcgMAABYB
+      AQAOCQAAAgAAAAAAAAACAAAgJDM1NgAKAAQAAgAmAAMAJDM1AAIAzgAAAAAAAAAFAAcAQWx0TGFuZwD7
+      AhMBAwAHAAoAAwAJNFMAJDMzIDAAAgAkAAMAJDMzAAIABQAAAAAAAAAFAAcAQWx0RnJvbQC0AgMABwAK
+      AAMACTRTACQxNERhdGUQAAIADgADACQxNCNpAAMAJDM0VGl0bGVyAwcAHAAWAFZhcmlhYmxlcyB0byB0
+      cmFuc2xhdGUHAAoAAwAJMVMAAQAqABMAUHJpdmF0ZVR4dAA2QFcAHW8lAAABAAkAUFJJVkFURTogAAMA
+      BwAOAAcACTBSMVMyUwABACoAEwBFeHBpcmVkVHh0ADdAVwAdbyUAAAEACQBFWFBJUkVEOiAAAwAHAA4A
+      BwAJMFIxUzJTAAcAIAAaAEVuZCB2YXJpYWJsZXMgdG8gdHJhbnNsYXRlBwAMAAUACTBSMVMAAQB8AA8A
+      QXV0aG9yADhAVwAdbyUACgUABABGb3JtAQAJAE1haW5Ub3BpYwAKAgUABwBTdWJqZWN0AAEAAAAKAhwC
+      rwA2ACoAAQACACAoAgAGAAAAAAAAAAUABABGcm9ttAIiAgEAAQApACICrgAMAAEAAACuAAQAtQMDAAcA
+      MAApAAkwUjFTMlM1UzZTN1M4UzlTMTBTMTJTMTNTMTRTMThTMjBTMjFTMjNTAAEAoAATAHVzZVN1Ympl
+      Y3QAOUBXAB1vJQAABQAEAGZvcm0BABQAUmVzcG9uc2UgdG8gUmVzcG9uc2UKAq8AYAAgAAUAFgBJbW1l
+      ZGlhdGVQYXJlbnRTdWJqZWN0rgBAAAUABABmb3JtAQAIAFJlc3BvbnNlCgKvACYAGgAFAA8AT3JpZ2lu
+      YWxTdWJqZWN0AK4ADAABAAAArgAEALUFAwAHACIAHAAJMFIxUzJSNVM2UzhTMTBTMTFTMTJTMTRTMTZT
+      AgD+AAMAJDM0AAUABwByZWFkZXJzAAEAAAALAq8AYAAeAAUAEwBQcml2YXRlVHh0ADZAVwAdbyUAYq4A
+      QgAFAAoARXhwaXJlRGF0ZQEAAAALAq8AKgAeAAUAEwBFeHBpcmVkVHh0ADdAVwAdbyUAYq4ADAABAAAA
+      rgAEALUFBQAHAFN1YmplY3QAIgIFABMAdXNlU3ViamVjdAA5QFcAHW8lAGIBAAAACwKvAE4AMgABAAYA
+      IChSRTogBQATAHVzZVN1YmplY3QAOUBXAB1vJQBiIgIBAAEAKQAiAq4AHAAFAA8AQXV0aG9yADhAVwAd
+      byUAAq4ABAC1AyICAwAHAEIAOwAJMFJSM1M0UzZTOFM5UzEwUzEyUzE0UzE2UzE3UzE4UzE5UzIyUzIz
+      UzI1UzI2UzI3UzI4UzI5UzMxUwAmAAEAAAABAQAJAQAICgEBBAoAAD8ArSsEAAEAAQAAAAAAAAAAAFdD
+      AQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAA
+      AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      //8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAA
+      AABCAEAAAAABAP///wABAO/v7wABAAAAAAAAAAAAAAABAAEA////AAEA1Mm6AAAAAQCAAAAAAQAAAP8A
+      AAAAAAAAAAAIAAAAAAABAA==
+    signed: true
+    nonsummary: true
+  - name: $WebFlags
+    type: text
+    data: YwB
+    signed: true
+  - name: $ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 211
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x09000002
+        HeightSpc: 5
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x000000c1
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AQBOfA==
+        title: Categori_ze
+      - type: 0xffbe
+        Flags: 0x0000419c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AgADCg==
+        title: Send Docu_ment
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AwA9fA==
+        title: _Move to Folder...
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BAA+fA==
+        title: _Remove from Folder...
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BQAECg==
+        title: _Forward
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BgACCg==
+        title: _Edit Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 4
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: New Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 12
+        Type: 1
+        data: "@Command([Compose]; \"1-2-3Workbook Document\")"
+        data_opaque: OAAAACwAAgDoAwAAAAAAAAEAFgAxLTItM1dvcmtib29rIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 13
+        Type: 1
+        data: "@Command([Compose]; \"Paintbrush Document\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAEwBQYWludGJydXNoIERvY3VtZW50AO0CAwAHAAoAAwAJNFMA
+        title: "New Lotus SmartSuite Document\\Paintbrush Picture"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 14
+        Type: 1
+        data: "@Command([Compose]; \"Freelance Document\")"
+        data_opaque: NAAAACgAAgDoAwAAAAAAAAEAEgBGcmVlbGFuY2UgRG9jdW1lbnTtAgMABwAKAAMACTRTAA==
+        title: "New Lotus SmartSuite Document\\Freelance Presentation"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 15
+        Type: 1
+        data: "@Command([Compose]; \"WordPro Document\")"
+        data_opaque: MgAAACYAAgDoAwAAAAAAAAEAEABXb3JkUHJvIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\Word Pro Document"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+  - name: $V5ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 211
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x09000002
+        HeightSpc: 5
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x000000c1
+      - type: 0xff79
+        BackColor:
+          Flags: 0x0001
+          rgb: 0xbba58b
+        BtnBorderDisplay: 3
+        BtnTextJustify: 0
+        BtnWidthStyle: 0
+        ButtonColor:
+          Flags: 0x0001
+          rgb: 0xd4c9ba
+        FontColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        LineColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        Spare:
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+        barFontID: 0x09000002
+        barHeight:
+          Flags: 0x0000
+          Length:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 19
+            - 64
+          Reserved: 0
+          Units: 5
+        dwFlags: 0x00000003
+        wAppletHeight: 38
+        wBarBackgroundRepeat: 0
+        wBtnInternalMargin: 0
+        wBtnWidthAbsolute: 144
+        wSpare: 0x0000
+        wThemeSetting: 0
+      - type: 0xfffc
+        BorderFlags: 0
+        BorderStyle: 0
+        BorderWidthBottom: 1
+        BorderWidthLeft: 0
+        BorderWidthRight: 0
+        BorderWidthTop: 0
+        Color:
+          Flags: 0x0001
+          rgb: 0x000000
+        DropShadowWidth: 0
+        Flags: 0x00000000
+        InnerWidthBottom: 0
+        InnerWidthLeft: 0
+        InnerWidthRight: 0
+        InnerWidthTop: 0
+        OuterWidthBottom: 0
+        OuterWidthLeft: 0
+        OuterWidthRight: 0
+        OuterWidthTop: 0
+        dwSpare: 0x00000000
+        wSpares:
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AQBOfA==
+        title: Categori_ze
+      - type: 0xffbe
+        Flags: 0x0000419c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AgADCg==
+        title: Send Docu_ment
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AwA9fA==
+        title: _Move to Folder...
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BAA+fA==
+        title: _Remove from Folder...
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BQAECg==
+        title: _Forward
+      - type: 0xffbe
+        Flags: 0x0000419d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BgACCg==
+        title: _Edit Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 4
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: New Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 12
+        Type: 1
+        data: "@Command([Compose]; \"1-2-3Workbook Document\")"
+        data_opaque: OAAAACwAAgDoAwAAAAAAAAEAFgAxLTItM1dvcmtib29rIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 13
+        Type: 1
+        data: "@Command([Compose]; \"Paintbrush Document\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAEwBQYWludGJydXNoIERvY3VtZW50AO0CAwAHAAoAAwAJNFMA
+        title: "New Lotus SmartSuite Document\\Paintbrush Picture"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 14
+        Type: 1
+        data: "@Command([Compose]; \"Freelance Document\")"
+        data_opaque: NAAAACgAAgDoAwAAAAAAAAEAEgBGcmVlbGFuY2UgRG9jdW1lbnTtAgMABwAKAAMACTRTAA==
+        title: "New Lotus SmartSuite Document\\Freelance Presentation"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 15
+        Type: 1
+        data: "@Command([Compose]; \"WordPro Document\")"
+        data_opaque: MgAAACYAAgDoAwAAAAAAAAEAEABXb3JkUHJvIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\Word Pro Document"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+remaining: []

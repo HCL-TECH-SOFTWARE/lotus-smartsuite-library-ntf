@@ -1,0 +1,281 @@
+---
+class: 512
+flags: 0x0000
+unid: OF3225729D2F148269-ON007108DE8525625A
+items:
+  - name: $AssistAction
+    type: action
+    code_type: 65413
+    data: |
+      '++LotusScript Development Environment:2:5:(Options):0:66
+      Option Public
+      
+      '++LotusScript Development Environment:2:5:(Forward):0:1
+      Declare Sub Initialize
+      Declare Sub SendReminder(EmailType)
+      Declare Sub MoveToNextReviewer
+      
+      '++LotusScript Development Environment:2:5:(Declarations):0:10
+      Dim s As NotesSession
+      Dim db As NotesDatabase
+      Dim view As NotesView
+      Dim documents As NotesDocumentCollection
+      Dim note As NotesDocument
+      Dim parent As NotesDocument
+      Dim emaildoc As NotesDocument
+      Dim dt As NotesDateTime
+      Dim item As NotesItem
+      Dim rtitem As NotesRichTextItem
+      Dim CurrentReviewers As Variant
+      Dim FutureReviewers As Variant
+      Dim ReviewSeq As Variant
+      Dim ReviewWindow As Variant
+      Dim NewList() As Variant
+      Dim ListMax As Integer
+      Dim NextReviewer As Variant
+      Dim OldDueDate As Variant
+      '++LotusScript Development Environment:2:2:Initialize:1:10
+      Sub Initialize
+           
+           Set s = New NotesSession    
+           Set db = s.CurrentDatabase
+           Set dt = New NotesDateTime("")
+           dt.SetNow
+           Set documents = db.Search("@Today => @Date(DueDateTime) & Status = ""In Review""", Nothing, 0)
+           If documents.Count = 0 Then Exit Sub
+           
+           For d = 1 To documents.Count
+                Set note = documents.GetNthDocument(d)
+                ReviewWindow = note.ReviewWindow      
+                Select Case ReviewWindow(0)
+                Case "MoveOn"
+                     MoveToNextReviewer
+                     SendReminder("WindowExpired")
+                     If ReviewSeq = "Serial" Then
+                          If FutureReviewers(0) <> "None" Then SendReminder("NotifyNextReviewer")
+                     End If
+                Case "Reminder"
+                     CurrentReviewers = note.CurrentReviewers
+                     SendReminder("Reminder")
+                End Select
+                If note.IsResponse Then
+                     note.RemoveItem("DueDateTime")
+                     note.Save True, True
+                End If
+           Next
+           
+      End Sub
+      
+      '++LotusScript Development Environment:2:2:SendReminder:1:8
+      Sub SendReminder(EmailType)
+           
+           If note.IsResponse Then Exit Sub
+           
+           Set maildoc = New NotesDocument(db)
+           Set rtitem = New NotesRichTextItem(maildoc, "Body")
+           maildoc.InheritedSubject = note.Subject
+           maildoc.InheritedDbTitle = db.Title
+           
+           Select Case EmailType
+           Case "Reminder"
+                maildoc.SendTo = CurrentReviewers
+                maildoc.Subject = "Overdue Document Review"
+                maildoc.FlowStatus = "Please complete your review of this document.  You will continue to receive these notifications until it is complete."
+                Call rtitem.AppendDocLink(note, "DocLink to Overdue Document")
+                maildoc.DueDateTime = OldDueDate
+           Case "WindowExpired"
+                maildoc.SendTo = CurrentReviewers
+                maildoc.Subject = "Document Review Period has Expired"
+                maildoc.FlowStatus = "The time limit for your review of this document has expired."
+                Call rtitem.AppendDocLink(note, "DocLink to Overdue Document")
+                maildoc.DueDateTime = OldDueDate
+           Case "NotifyNextReviewer"
+                maildoc.SendTo = note.CurrentReviewers
+                maildoc.Subject = "Document Requires Review"
+                maildoc.FlowStatus = "Please take the time to review this document before the date shown below."
+                Call rtitem.AppendDocLink(note, "DocLink to Document requiring review")
+                maildoc.DueDateTime = note.DueDateTime
+           End Select
+           
+           maildoc.Form = "Bookmark"
+           On Error Resume Next
+           Call maildoc.Send (False)
+           
+      End Sub
+      '++LotusScript Development Environment:2:2:MoveToNextReviewer:1:8
+      Sub MoveToNextReviewer
+           
+           ListMax = 0
+           Set dt = New NotesDateTime("")
+           dt.SetNow
+           ReviewStyle = note.ReviewStyle
+           position = Instr(ReviewStyle(0), ".")
+           ReviewSeq = Left(ReviewStyle(0), position - 1)
+           Versioning = Mid(ReviewStyle(0), position + 1)
+           OldDueDate = Datevalue(note.DueDateTime(0))
+           dt.LSLocalTime = OldDueDate
+           ReviewerLogEntry = "Review period ended on " & Format(dt.LSLocalTime, "Short Date") & " without a completed review by "
+           dt.SetNow
+           
+           Select Case ReviewSeq
+           Case "Parallel"
+      'For Response Reviews, we maintain the status in the parent so remove these
+                If note.IsResponse Then 
+                     note.RemoveItem("PreviousReviewers")
+                     note.RemoveItem("CurrentReviewers")
+                     note.RemoveItem("FutureReviewers")
+                Else
+      'If it is a parent, move CurrentReviewers to PreviousReviewers and set CurrentReviewers to "None"               
+                     CurrentReviewers = note.CurrentReviewers
+                     LateReviewers = Evaluate("@Implode(CurrentReviewers; "", "")", note)
+                     Set item = note.GetFirstItem("ReviewerLog")
+                     item.AppendToTextList(ReviewerLogEntry & LateReviewers(0))
+                     PreviousReviewers = note.PreviousReviewers
+                     If PreviousReviewers(0) = "None" Then
+                          note.PreviousReviewers = CurrentReviewers
+                     Else
+                          Set item = note.GetFirstItem("PreviousReviewers")
+                          item.AppendToTextList(CurrentReviewers)
+                     End If
+                     note.CurrentReviewers = "None"    
+                End If
+                note.InProcess = "None"
+                note.Status = "Review Complete"
+                note.RemoveItem("DueDateTime")
+                note.DocumentAuthors = note.From
+           Case "Serial"
+                CurrentReviewers = note.CurrentReviewers         
+                Set item = note.GetFirstItem("ReviewerLog")
+                item.AppendToTextList(ReviewerLogEntry & CurrentReviewers(0))
+                PreviousReviewers = note.PreviousReviewers
+                If PreviousReviewers(0) = "None" Then
+                     note.PreviousReviewers = CurrentReviewers(0)
+                Else              
+                     Set item = note.GetFirstItem("PreviousReviewers")
+                     item.AppendToTextList(CurrentReviewers(0))
+                End If
+                FutureReviewers = note.FutureReviewers
+      'Put the first person in the future reviewers list in current reviewer and remove that person from future reviewers list
+                note.CurrentReviewers = FutureReviewers(0)
+                If Ubound(FutureReviewers) = 0 Then
+                     note.FutureReviewers = "None"
+                Else
+                     ListMax = Ubound(FutureReviewers) - 1
+                     Redim NewList (ListMax)
+                     x = 0 
+                     For y = 1 To ListMax
+                          NewList(x) = FutureReviewers(y)
+                          x = x + 1
+                     Next
+                     note.FutureReviewers = NewList
+                End If
+      'Calculate when the review is due, based upon ReviewTime     
+                If FutureReviewers(0) = "None" Then
+                     note.RemoveItem("DueDateTime")
+                     note.Status = "Review Complete"
+                     note.DocumentAuthors = note.From
+                Else
+                     ReviewTime = note.ReviewTime
+                     dt.SetNow
+                     If Isnumeric(ReviewTime(0)) Then
+                          dt.AdjustDay(ReviewTime(0))
+                          note.DueDateTime = dt.LSLocalTime
+                     Else
+                          note.RemoveItem("DueDateTime")
+                     End If
+                     Redim NewList(1)
+                     Originator = note.From
+                     NextReviewer = note.CurrentReviewers
+                     NewList(0) = Originator(0)
+                     NewList(1) = NextReviewer(0)
+                     note.DocumentAuthors = NewList
+                End If
+           End Select
+           
+           note.Save True, True
+           
+      End Sub
+    dwFlags: 0x00000000
+    signed: true
+    nonsummary: true
+  - name: $AssistDocCount
+    type: number
+    data: 0
+    signed: true
+  - name: $AssistFlags
+    type: text
+    data: ""
+    signed: true
+  - name: $AssistInfo
+    type_num: 17
+    type: opaque
+    opaque: |
+      AQABAAEAAgABAEB+BQDAV34AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+    signed: true
+    nonsummary: true
+  - name: $AssistLastRun
+    type: time
+    signed: true
+  - name: $AssistQuery
+    type_num: 15
+    type: opaque
+    opaque: gQYAAAAA
+    signed: true
+    nonsummary: true
+  - name: $AssistRunInfo
+    type: object
+    obj_type: 0x0008
+    obj_class: 0x0200
+    obj_privs: 0x0000
+    opaque: |
+      AAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      ZqUQAEBoJYioVFcAOWglhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+      qqqqqqqqqqqqqqqq
+  - name: $AssistTrigger
+    type: text
+    data: "1"
+    signed: true
+  - name: $AssistType
+    type: number
+    data: 65413
+    signed: true
+  - name: $Comment
+    type: text
+    data: "Selects those documents which are in review and have due dates which have passed.  Based upon the review style of the document, it then either moves it along to the next reviewer, marks it as complete, or simply notifies the current reviewer(s) that their review is overdue."
+    signed: true
+  - name: $DesignerVersion
+    type: text
+    data: "5"
+    signed: true
+  - name: $Flags
+    type: text
+    data: SfL3
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $MachineName
+    type: text
+    data: "*"
+    signed: true
+  - name: $TITLE
+    type: text
+    data: Process Late Reviews
+    signed: true
+remaining: []

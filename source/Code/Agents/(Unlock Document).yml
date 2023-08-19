@@ -1,0 +1,47 @@
+---
+class: 512
+flags: 0x0000
+unid: OF426EB2B96BD8C228-ON005D3947852562AE
+items:
+  - name: $Comment
+    type: text
+    data: Use if a doc is accidentally left in a locked state.  Can be accessed by designers and managers from the Review Status view.
+    signed: true
+  - name: $Flags
+    type: text
+    data: ""
+  - name: $Formula
+    type: formula
+    data: |
+      FIELD Locked := @DeleteField;
+      FIELD DocumentAuthors := @Trim(@Replace(From : CurrentReviewers; "None"; ""));@All
+    opaque: |
+      lAADABAABgBMb2NrZWS+AAMABwAOAAcACTFTMlMzUwADAEYADwBEb2N1bWVudEF1dGhvcnMABQAEAEZy
+      b20FABAAQ3VycmVudFJldmlld2Vycx8CAQAEAE5vbmUBAAAAjQNeAQMABwAaABMACTBSMVMyUzNTOFM5
+      UzExUzEzUwAAAAgAZgADAAcADAAFAAkwUzBFAA==
+    signed: true
+    nonsummary: true
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $LeftToDo
+    type: object
+    obj_type: 0x0003
+    obj_class: 0x0200
+    obj_privs: 0x0000
+    opaque: BAAAAAAAAAABAAAAAAAAAAAAQApxALNiJYUUA3EAmWIlhQ==
+  - name: $Operation
+    type: text
+    data: "0"
+  - name: $Scan
+    type: text
+    data: "3"
+  - name: $TITLE
+    type: text
+    data: (Unlock Document)
+    signed: true
+  - name: $TYPE
+    type: text
+    data: "0"
+remaining: []

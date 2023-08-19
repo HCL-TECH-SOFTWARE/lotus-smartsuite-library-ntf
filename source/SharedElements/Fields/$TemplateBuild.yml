@@ -1,0 +1,110 @@
+---
+class: 1024
+flags: 0x0000
+unid: OFCF382ABE209E9BB0-ON006C1D6485256C70
+items:
+  - name: $Fields
+    type: text
+    data: $TemplateBuild
+  - name: $Flags
+    type: text
+    data: ""
+  - name: $Info
+    type: text
+    data: $TemplateBuild
+    signed: true
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $Revisions
+    type: time
+    data:
+      - data: "2008-07-21T10:34:10.38-04:00"
+        dst: true
+        anyday: false
+        allday: false
+      - data: "2020-11-03T11:11:08.56-06:00"
+        dst: false
+        anyday: false
+        allday: false
+  - name: $TITLE
+    type: text
+    data: $TemplateBuild
+  - name: $TemplateBuild
+    type: text
+    data: "12.0"
+    signed: true
+  - name: $TemplateBuildDate
+    type: time
+    data: "2020-11-03T11:15:43.00-06:00"
+    signed: true
+  - name: $TemplateBuildName
+    type: text
+    data: StdSmartSuiteR7DocLib
+    signed: true
+  - name: $TemplateBuildTool
+    type: text
+    data: CICO
+    signed: true
+  - name: $Body
+    type: composite
+    signed: true
+    data:
+      - type: 0x0081
+      - type: 0xff82
+        FirstLineLeftMargin: 0
+        Flags: 0x0100
+        Flags2: 0x0000
+        JustifyMode: 0
+        LeftMargin: 0
+        LineSpacing: 0
+        PABID: 1
+        ParagraphSpacingAfter: 0
+        ParagraphSpacingBefore: 0
+        RightMargin: 0
+        Tab:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        TabTypes: 0x00000000
+        Tabs: 0
+        data:
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+      - type: 0x0083
+        PABID: 1
+      - type: 0xff85
+        FontID: 0x0000
+      - type: 0x00dd
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xff8a
+        opaque: iv8yAIoAAAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAJFRlbXBsYXRlQnVpbGQ=
+      - type: 0x00de
+        Signature: 0xff8a
+        Version: 0
+      - type: 0xff85
+        FontID: 0x0000
+remaining: []

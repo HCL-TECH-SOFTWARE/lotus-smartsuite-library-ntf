@@ -1,0 +1,441 @@
+---
+class: 8
+flags: 0x0000
+unid: OF11B6095847BB098F-ON004F45A685256207
+items:
+  - name: $Collation
+    type_num: 2
+    type: opaque
+    opaque: GgACAABEAGYHAAADAABmAAMAAwAkNDUkMzY=
+  - name: $Collation1
+    type_num: 2
+    type: opaque
+    opaque: GgACAABEAWYAAAADAABmAAMAAwAkMzYkNDM=
+  - name: $Collation2
+    type_num: 2
+    type: opaque
+    opaque: EAABAABEAGYAAAADACQ0Mw==
+  - name: $Comment
+    type: text
+    data: ""
+    signed: true
+  - name: $DesignerVersion
+    type: text
+    data: "6.5"
+    signed: true
+  - name: $Flags
+    type: text
+    data: Yw
+  - name: $Formula
+    type: formula
+    data: "!@Contains(@LowerCase(form); \"archive\")"
+    opaque: |
+      xgMCACAAAwAkNDUAAgAGAAAAAAAAAAUABABGcm9ttAIDAAIAdAADACQ0MgAFAAUAU2NvcGUAAQAHAFBy
+      aXZhdGUACgKvAE4AEAAAAAAAAAAAAE9ArgA+AAUACgBFeHBpcmVEYXRlAQAAAAsCrwAmABAAAAAAAAAA
+      AABQQK4AFgAFAAkAX1ZpZXdJY29uAK4ABAC1BQMAAgAOAAMAJDM2AKQAAwABAE4ADwB0bXBleHAAY1gF
+      AGBpJQAABQAKAEV4cGlyZURhdGUBAAAACwKvACAAFAABAAkARVhQSVJFRDogAK4ADAABAAAArgAEALUD
+      AwACAH4CAwAkNDMABQAEAEZvcm0BAAgARG9jdW1lbnRHAq8AWgKcAQUABgBTdGF0dXMBAAMATmV3AAoC
+      BQAGAFN0YXR1c1kBHQKvAHIBKAAFAA8AdG1wZXhwAGNYBQBgaSUAAQUABwBTdWJqZWN0ACICrgBKAQUA
+      CwAkVmVyc2lvbk9wdABZAa8ANAFUAAUADwB0bXBleHAAY1gFAGBpJQABBQAHAFN1YmplY3QAIgIBACUA
+      ICAoT3JpZ2luYWwgZG9jdW1lbnQgaW4gcmV2aWV3IGN5Y2xlKQAiAq4A4AAFAAsAUmV2aWV3U3R5bGUA
+      AQAIAFBhcmFsbGVsRwKvAL4AVgAFAA8AdG1wZXhwAGNYBQBgaSUAAQUABwBTdWJqZWN0ACICAQAPACAg
+      KFJldmlld2VkIGJ5IAAiAgUACgBMYXN0RWRpdG9yIgIBAAEAKQAiAq4AaAAFAA8AdG1wZXhwAGNYBQBg
+      aSUAAQUABwBTdWJqZWN0ACICAQAPACAgKFJldmlld2VkIGJ5IAAiAgUAEQBQcmV2aW91c1Jldmlld2Vy
+      cwABAAIALCCFAiICAQABACkAIgKuAAQAtQeuAL4ABQAEAEZvcm0BAAcAQXJjaGl2ZQBHAq8ApAASAAUA
+      BwBTdWJqZWN0AK4AkgAFAAcAU3ViamVjdAABAAAACgKvAHwANgABAA0AKFJlc3BvbnNlIHRvIAAFAA8A
+      T3JpZ2luYWxTdWJqZWN0ACICAQABACkAIgKuAEYABQAHAFN1YmplY3QAAQAOACAoUmVzcG9uc2UgdG8g
+      IgIFAA8AT3JpZ2luYWxTdWJqZWN0ACICAQABACkAIgKuAAQAtQcDAAUAKAAjAAUAAwADAAMAAwAJACQ0
+      NSQ0MiQzNiQ0MyRDb25mbGljdAAEAAQAAAAgAAUABABmb3JtYQEBAAcAYXJjaGl2ZQBHAh4BAwAHAAoA
+      AwAJOFMA
+    signed: true
+  - name: $FormulaClass
+    type: text
+    data: "1"
+    signed: true
+  - name: $Index
+    type: text
+    data: ""
+    signed: true
+  - name: $LANGUAGE
+    type: text
+    data: en
+    signed: true
+  - name: $TITLE
+    type: text
+    data: By _Author|By Author
+    signed: true
+  - name: $TYPE
+    type: text
+    data: $SUBVIEW
+  - name: $VIEWFORMAT
+    type_num: 5
+    type: opaque
+    opaque: |
+      AQAEAC4AjkwAAFZDgwQDAAAALAAAAAgAAQEMCgAAAgAAAAAAAAACAAAgVkPAAAMAAACQAAAAEAABAAAK
+      AAAAAAAAAAAAAgIAAABWQwESAwAIABAAAABIAAEAAAkAAAIAAAAAAQAAAQAAIFZDAAEDAAUAnAMAAAgB
+      AQAACQAAAgAAAAAAAAACAAAgJDQ1LAACACAAAwAkNDUAAgAGAAAAAAAAAAUABABGcm9ttAIDAAcACgAD
+      AAk0UwAkNDKQAAIAdAADACQ0MgAFAAUAU2NvcGUAAQAHAFByaXZhdGUACgKvAE4AEAAAAAAAAAAAAE9A
+      rgA+AAUACgBFeHBpcmVEYXRlAQAAAAsCrwAmABAAAAAAAAAAAABQQK4AFgAFAAkAX1ZpZXdJY29uAK4A
+      BAC1BQMABwAaABMACTJTM1M0UzZTOFM5UzEyUzE0UwAkMzZNb2RpZmllZBAAAgAOAAMAJDM2AKQAAwAk
+      NDNUaXRsZZwDAQBOAA8AdG1wZXhwAGNYBQBgaSUAAAUACgBFeHBpcmVEYXRlAQAAAAsCrwAgABQAAQAJ
+      AEVYUElSRUQ6IACuAAwAAQAAAK4ABAC1AwMABwAMAAYACThTMTBTAgB+AgMAJDQzAAUABABGb3JtAQAI
+      AERvY3VtZW50RwKvAFoCnAEFAAYAU3RhdHVzAQADAE5ldwAKAgUABgBTdGF0dXNZAR0CrwByASgABQAP
+      AHRtcGV4cABjWAUAYGklAAEFAAcAU3ViamVjdAAiAq4ASgEFAAsAJFZlcnNpb25PcHQAWQGvADQBVAAF
+      AA8AdG1wZXhwAGNYBQBgaSUAAQUABwBTdWJqZWN0ACICAQAlACAgKE9yaWdpbmFsIGRvY3VtZW50IGlu
+      IHJldmlldyBjeWNsZSkAIgKuAOAABQALAFJldmlld1N0eWxlAAEACABQYXJhbGxlbEcCrwC+AFYABQAP
+      AHRtcGV4cABjWAUAYGklAAEFAAcAU3ViamVjdAAiAgEADwAgIChSZXZpZXdlZCBieSAAIgIFAAoATGFz
+      dEVkaXRvciICAQABACkAIgKuAGgABQAPAHRtcGV4cABjWAUAYGklAAEFAAcAU3ViamVjdAAiAgEADwAg
+      IChSZXZpZXdlZCBieSAAIgIFABEAUHJldmlvdXNSZXZpZXdlcnMAAQACACwghQIiAgEAAQApACICrgAE
+      ALUHrgC+AAUABABGb3JtAQAHAEFyY2hpdmUARwKvAKQAEgAFAAcAU3ViamVjdACuAJIABQAHAFN1Ympl
+      Y3QAAQAAAAoCrwB8ADYAAQANAChSZXNwb25zZSB0byAABQAPAE9yaWdpbmFsU3ViamVjdAAiAgEAAQAp
+      ACICrgBGAAUABwBTdWJqZWN0AAEADgAgKFJlc3BvbnNlIHRvICICBQAPAE9yaWdpbmFsU3ViamVjdAAi
+      AgEAAQApACICrgAEALUHAwAHAMIAuwAJMFJSNlM5UlM0RTEyUzEzUzE0UzE1UzIwUlM4RTIxUzIyUzI0
+      UlM0RTI5UlM4RTMwUzMxUzMyUzMzUzM1UlM0RTM5UzQyUlM5RTQzUzQ0UzQ1UzQ2UzQ3UzQ4UzJFNDlT
+      NTBTNTJSUzRFNTNTNTRTNTVTNTZTNTdTNThTNjRTNjVTNjhSNzJTNzVSUzRFNzdSNzhTNzlTODFSUzVF
+      ODJTODNTODRTODdSODhTODlTOTBTOTFTOTJTOTNTACYAAQAAAAEBAAkBAAgKAQEECgAAPwCtKwUBAQAB
+      AAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAA
+      CQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAA
+      AAAAAwAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8A
+      AAAAAAAAAAAAAAAAAEIAQAAAAAEA////AAEA7+/vAAEAAAAAAAAAAAAAAAAAAQD///8AAQDUyboAAAAB
+      AIAAAAABAAAA/wAAAAAAAAAAAAgAAAAAAAEA
+    signed: true
+    nonsummary: true
+  - name: $ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 211
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x09000002
+        HeightSpc: 5
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x00000041
+      - type: 0xffbe
+        Flags: 0x0000009d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AQBOfA==
+        title: Categori_ze
+      - type: 0xffbe
+        Flags: 0x0000009d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AgACCg==
+        title: _Edit Document
+      - type: 0xffbe
+        Flags: 0x0000009c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AwADCg==
+        title: Send Docu_ment
+      - type: 0xffbe
+        Flags: 0x0000009d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BAAECg==
+        title: _Forward
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BQA9fA==
+        title: _Move to Folder...
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BgA+fA==
+        title: _Remove from Folder...
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 4
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: New Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 12
+        Type: 1
+        data: "@Command([Compose]; \"1-2-3Workbook Document\")"
+        data_opaque: OAAAACwAAgDoAwAAAAAAAAEAFgAxLTItM1dvcmtib29rIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 13
+        Type: 1
+        data: "@Command([Compose]; \"Paintbrush Document\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAEwBQYWludGJydXNoIERvY3VtZW50AO0CAwAHAAoAAwAJNFMA
+        title: "New Lotus SmartSuite Document\\Paintbrush Picture"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 14
+        Type: 1
+        data: "@Command([Compose]; \"Freelance Document\")"
+        data_opaque: NAAAACgAAgDoAwAAAAAAAAEAEgBGcmVlbGFuY2UgRG9jdW1lbnTtAgMABwAKAAMACTRTAA==
+        title: "New Lotus SmartSuite Document\\Freelance Presentation"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 15
+        Type: 1
+        data: "@Command([Compose]; \"WordPro Document\")"
+        data_opaque: MgAAACYAAgDoAwAAAAAAAAEAEABXb3JkUHJvIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\Word Pro Document"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+  - name: $V5ACTIONS
+    type: composite
+    signed: true
+    nonsummary: true
+    data:
+      - type: 0x00bd
+        BackColor: 211
+        BorderStyle: 1
+        BorderWidth: 0
+        BtnHeight: 8
+        FontID: 0x09000002
+        HeightSpc: 5
+        LineColor: 0
+        LineStyle: 1
+        ShareID: 0x00000000
+        dwFlags: 0x00000041
+      - type: 0xff79
+        BackColor:
+          Flags: 0x0001
+          rgb: 0xbba58b
+        BtnBorderDisplay: 3
+        BtnTextJustify: 0
+        BtnWidthStyle: 0
+        ButtonColor:
+          Flags: 0x0001
+          rgb: 0xd4c9ba
+        FontColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        LineColor:
+          Flags: 0x0001
+          rgb: 0x000000
+        Spare:
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+          - 0x00000000
+        barFontID: 0x09000002
+        barHeight:
+          Flags: 0x0000
+          Length:
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 0
+            - 19
+            - 64
+          Reserved: 0
+          Units: 5
+        dwFlags: 0x00000003
+        wAppletHeight: 34
+        wBarBackgroundRepeat: 0
+        wBtnInternalMargin: 0
+        wBtnWidthAbsolute: 0
+        wSpare: 0x0000
+        wThemeSetting: 0
+      - type: 0xfffc
+        BorderFlags: 0
+        BorderStyle: 0
+        BorderWidthBottom: 1
+        BorderWidthLeft: 0
+        BorderWidthRight: 0
+        BorderWidthTop: 0
+        Color:
+          Flags: 0x0001
+          rgb: 0x000000
+        DropShadowWidth: 0
+        Flags: 0x00000000
+        InnerWidthBottom: 0
+        InnerWidthLeft: 0
+        InnerWidthRight: 0
+        InnerWidthTop: 0
+        OuterWidthBottom: 0
+        OuterWidthLeft: 0
+        OuterWidthRight: 0
+        OuterWidthTop: 0
+        dwSpare: 0x00000000
+        wSpares:
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+          - 0x0000
+      - type: 0xffbe
+        Flags: 0x0000009d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AQBOfA==
+        title: Categori_ze
+      - type: 0xffbe
+        Flags: 0x0000009d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AgACCg==
+        title: _Edit Document
+      - type: 0xffbe
+        Flags: 0x0000009c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: AwADCg==
+        title: Send Docu_ment
+      - type: 0xffbe
+        Flags: 0x0000009d
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BAAECg==
+        title: _Forward
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BQA9fA==
+        title: _Move to Folder...
+      - type: 0xffbe
+        Flags: 0x0000019c
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 0
+        Type: 5
+        opaque: BgA+fA==
+        title: _Remove from Folder...
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 4
+        Type: 1
+        data: "@Command([Compose]; \"Document\")"
+        data_opaque: KgAAAB4AAgDoAwAAAAAAAAEACABEb2N1bWVudO0CAwAHAAoAAwAJNFMA
+        title: New Document
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 12
+        Type: 1
+        data: "@Command([Compose]; \"1-2-3Workbook Document\")"
+        data_opaque: OAAAACwAAgDoAwAAAAAAAAEAFgAxLTItM1dvcmtib29rIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 13
+        Type: 1
+        data: "@Command([Compose]; \"Paintbrush Document\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAEwBQYWludGJydXNoIERvY3VtZW50AO0CAwAHAAoAAwAJNFMA
+        title: "New Lotus SmartSuite Document\\Paintbrush Picture"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 14
+        Type: 1
+        data: "@Command([Compose]; \"Freelance Document\")"
+        data_opaque: NAAAACgAAgDoAwAAAAAAAAEAEgBGcmVlbGFuY2UgRG9jdW1lbnTtAgMABwAKAAMACTRTAA==
+        title: "New Lotus SmartSuite Document\\Freelance Presentation"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 15
+        Type: 1
+        data: "@Command([Compose]; \"WordPro Document\")"
+        data_opaque: MgAAACYAAgDoAwAAAAAAAAEAEABXb3JkUHJvIERvY3VtZW507QIDAAcACgADAAk0UwA=
+        title: "New Lotus SmartSuite Document\\Word Pro Document"
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 5
+        Type: 1
+        data: |
+          REM {views only};
+          @Command([Compose]; "Response")
+        data_opaque: |
+          RgAHABAACgB2aWV3cyBvbmx5BwAKAAMACTFTAAAAHgACAOgDAAAAAAAAAQAIAFJlc3BvbnNl7QIDAAcA
+          DAAFAAkwUjRTAA==
+        title: New Response
+      - type: 0xffbe
+        Flags: 0x0001409b
+        FormulaLen: 0
+        IconIndex: 0
+        ShareId: 6
+        Type: 1
+        data: "@Command([Compose]; \"Response to Response\")"
+        data_opaque: NgAAACoAAgDoAwAAAAAAAAEAFABSZXNwb25zZSB0byBSZXNwb25zZe0CAwAHAAoAAwAJNFMA
+        title: New Response to Response
+remaining: []

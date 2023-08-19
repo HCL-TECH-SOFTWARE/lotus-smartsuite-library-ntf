@@ -1,0 +1,90 @@
+---
+class: 32784
+flags: 0x0000
+unid: OF582FE50FD1C5BA51-ON004F361885256207
+items:
+  - name: $Daos
+    type: text
+    data: "0"
+  - name: $DefaultFrameset
+    type: text
+    data: BorderFrame
+  - name: $Flags
+    type: text
+    data: RF7
+  - name: $FlagsNoRefresh
+    type: text
+    data: ""
+  - name: $LANGUAGE
+    type: text
+    data: en
+  - name: $LargeSummary
+    type: text
+    data: "0"
+  - name: $Revisions
+    type: time
+    data:
+      - data: "2008-07-21T10:34:10.36-04:00"
+        dst: true
+        anyday: false
+        allday: false
+      - data: "2008-07-21T10:34:10.40-04:00"
+        dst: true
+        anyday: false
+        allday: false
+      - data: "2008-07-21T10:34:10.42-04:00"
+        dst: true
+        anyday: false
+        allday: false
+      - data: "2020-11-03T11:11:08.52-06:00"
+        dst: false
+        anyday: false
+        allday: false
+      - data: "2020-11-03T11:11:08.57-06:00"
+        dst: false
+        anyday: false
+        allday: false
+      - data: "2020-11-03T11:11:08.58-06:00"
+        dst: false
+        anyday: false
+        allday: false
+      - data: "2020-11-03T12:11:13.31-05:00"
+        dst: false
+        anyday: false
+        allday: false
+      - data: "2020-11-03T12:15:07.93-05:00"
+        dst: false
+        anyday: false
+        allday: false
+  - name: $TITLE
+    type: text
+    data: |
+      Lotus SmartSuite Library (12)
+      Lotus SmartSuite Library
+      #1StdSmartSuiteR7DocLib
+  - name: $TemplateFileName
+    type: text
+    data: "c:\\notes4\\data\\doclib4.ntf"
+  - name: $TemplateModTime
+    type: time
+    dst: true
+    data: "1995-09-22T16:47:49.89-04:00"
+  - name: $TemplateServerName
+    type: text
+    data: CN=Catherine Duffy/O=Iris
+  - name: IconBitmap
+    type_num: 6
+    type: opaque
+    opaque: |
+      AiAgAQAA/AD///AAP//gAA//wAAH/8AAAf+AAAD/gAAA/4AAAP8AAAB/AAAAfwAAAD8AAAAfAAAAHwAA
+      AA8AAAAPAAAAB4AAAAfAAAAH4AAAA+AAAAPwAAAD+AAAA/gAAAP8AAAD/gAAA/8AAAP/gAAD/8AAA//g
+      AAf/8AAP//wAD///AD8AAADu4AAO7gAAAAAAAAAAAADqpO4AAADuAAAAAAAAAAAOpP8QH/8AAO4AAAAA
+      AAAA+k9hAeAA//AA4AAAAAAAAOTxEB4f/wAP/wAAAAAAAA7vZgHh/u7/8AD/8AAAAAAORmAeHxEf7u//
+      AA8AAAAABEYB4fERERH+7v/wAAAAAPTwHh8Rf3ERER/u7+AAAAD/AeHxEREX9xEREfAAAAAA8B4fEX9x
+      ERF/cR8PrgAAAAHh8RERF/cRERHwEfrgAAAOHxF/cRERf3EfARH+4AAAAfERERf3ERER8BYRH+4AAA8R
+      f3EREX9xHwZhERH+AAABEREX9xEREfBmEWERH+AAAAARERF/cR8GZmYWERHgAAD+AAERERHwZmZhYRER
+      4AAADvZgABEfBmZmZhYREf4AAA/mZmYAAGZmZmZhYRH+AAAA7mZmZmZmZmZmZhER/gAAAA7mZmZmZmZm
+      ZmFhEf4AAAAOBGZmZmZmZmZmERH+AAAAAODmZmZmZmZmYWER+gAAAAAODmZmZmZmZmYWEfoAAAAAAODm
+      ZmZmZmZmYRHkAAAAAAAOrmZmZmZmZhYfrwAAAAAAAOQOZmZmZmZh+k4AAAAAAAAOqgpmZmZmbqTwAAAA
+      AAAAAOREAO7u4ApPAAAAAAAAAAAA5ERERERE/gAAAAAAAAAAAADvRERP/gAAAA==
+remaining: []
