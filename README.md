@@ -1,5 +1,10 @@
 # Lotus SmartSuite Millennium Edition Document Library
 
+## Info
+Filename : doclbs7.ntf
+Templatename : 
+
+
 ** This template is not intended for Web (browser) use and is not supported on the Macintosh.
 
 ## What does this database do?
