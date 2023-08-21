@@ -1,5 +1,5 @@
 # Using Lotus SmartSuite Millennium Edition Document Library
-
+![Screenshot Lotus SmartSuite Millennium Edition Document Library](assets/images/png/screenshot.png)
 
 **This template is not intended for Web (browser) use and is not supported on the Macintosh
 

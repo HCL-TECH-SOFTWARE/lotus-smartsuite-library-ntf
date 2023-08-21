@@ -35,3 +35,12 @@ Anyone who wishes to create a record of a document or review available documents
 
 ## Important Note
 - The Lotus SmartSuite Library template should only be used to create new applications. Upgrading existing Document Library applications with this template is not supported.
+
+## Issues
+For issues relating specifically to the Dockerfiles and scripts, please use the [GitHub issue tracker](issues)
+
+## Contributing
+We welcome contributions following [our guidelines](CONTRIBUTING.md).
+
+## License
+The files in this repository are licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.html). 
