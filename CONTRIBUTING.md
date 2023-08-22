@@ -6,7 +6,6 @@ Source code contributions are currently welcome for this repository.
 
 - Never store credentials in the source code, always pass in as environment variables.
 
-
 ## Reporting a bug
 
 Please raise any bug reports on the [project issue tracker](issues).
