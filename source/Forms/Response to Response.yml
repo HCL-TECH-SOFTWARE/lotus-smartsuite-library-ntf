@@ -137,7 +137,6 @@ items:
         dwFlags: 0x00000041
       - type: 0xffbe
         Flags: 0x0000008c
-        FormulaLen: 0
         IconIndex: 5
         ShareId: 0
         Type: 5
@@ -145,7 +144,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -153,7 +151,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -161,7 +158,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -169,7 +165,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -177,7 +172,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -185,7 +179,6 @@ items:
         title: _Remove from Folder
       - type: 0xffbe
         Flags: 0x0001408b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 7
         Type: 1
@@ -194,7 +187,6 @@ items:
         title: Edit Document
       - type: 0xffbe
         Flags: 0x00014093
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 8
         Type: 1
@@ -207,7 +199,6 @@ items:
         title: Save & Close
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 5
         Type: 1
@@ -220,7 +211,6 @@ items:
         title: New Response
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 6
         Type: 1
@@ -229,7 +219,6 @@ items:
         title: New Response to Response
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 44
         IconIndex: 0
         ShareId: 10
         Type: 1
@@ -244,7 +233,6 @@ items:
         title: Mark Private
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 42
         IconIndex: 0
         ShareId: 11
         Type: 1
@@ -259,7 +247,6 @@ items:
         title: Mark Public
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 9
         Type: 1
@@ -923,7 +910,6 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0000008c
-        FormulaLen: 0
         IconIndex: 5
         ShareId: 0
         Type: 5
@@ -931,7 +917,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -939,7 +924,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -947,7 +931,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -955,7 +938,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -963,7 +945,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -971,7 +952,6 @@ items:
         title: _Remove from Folder
       - type: 0xffbe
         Flags: 0x0001408b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 7
         Type: 1
@@ -980,7 +960,6 @@ items:
         title: Edit Document
       - type: 0xffbe
         Flags: 0x00014093
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 8
         Type: 1
@@ -993,7 +972,6 @@ items:
         title: Save & Close
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 5
         Type: 1
@@ -1006,7 +984,6 @@ items:
         title: New Response
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 6
         Type: 1
@@ -1015,7 +992,6 @@ items:
         title: New Response to Response
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 44
         IconIndex: 0
         ShareId: 10
         Type: 1
@@ -1030,7 +1006,6 @@ items:
         title: Mark Private
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 42
         IconIndex: 0
         ShareId: 11
         Type: 1
@@ -1045,7 +1020,6 @@ items:
         title: Mark Public
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 9
         Type: 1

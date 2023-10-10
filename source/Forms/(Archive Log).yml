@@ -159,7 +159,6 @@ items:
         dwFlags: 0x00000085
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -167,7 +166,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 5
         ShareId: 0
         Type: 5
@@ -175,7 +173,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -183,7 +180,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -191,7 +187,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -199,7 +194,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -207,7 +201,6 @@ items:
         title: _Remove from Folder
       - type: 0xffbe
         Flags: 0x0001409a
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 9
         Type: 1
@@ -534,9 +527,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/9YAAUAnWELGwAAcOFKAAAAOAAFAAQAZm9ybQEADgBBcmNoaXZlUHJvZmlsZQEADwBBcmNoaXZlIFBy
-          b2ZpbGUAHwIKAgMABwAQAAkACTFTMlMzUzRTAA==
+        PABID: 0x0005
+        Reserverd: nWELGwAAcOE=
+        data: "form = \"ArchiveProfile\" : \"Archive Profile\""
       - type: 0x0083
         PABID: 5
       - type: 0x00dd
@@ -1155,7 +1148,6 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -1163,7 +1155,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 5
         ShareId: 0
         Type: 5
@@ -1171,7 +1162,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -1179,7 +1169,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -1187,7 +1176,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -1195,7 +1183,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -1203,7 +1190,6 @@ items:
         title: _Remove from Folder
       - type: 0xffbe
         Flags: 0x0001409a
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 9
         Type: 1

@@ -112,7 +112,6 @@ items:
         dwFlags: 0x000000c1
       - type: 0xffbe
         Flags: 0x0000009d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -120,7 +119,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000009d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -128,7 +126,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000009c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -136,7 +133,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000009d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -144,7 +140,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -152,7 +147,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -160,7 +154,6 @@ items:
         title: _Remove from Folder...
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 4
         Type: 1
@@ -169,7 +162,6 @@ items:
         title: New Document
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 12
         Type: 1
@@ -178,7 +170,6 @@ items:
         title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 13
         Type: 1
@@ -187,7 +178,6 @@ items:
         title: "New Lotus SmartSuite Document\\Paintbrush Picture"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 14
         Type: 1
@@ -196,7 +186,6 @@ items:
         title: "New Lotus SmartSuite Document\\Freelance Presentation"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 15
         Type: 1
@@ -205,7 +194,6 @@ items:
         title: "New Lotus SmartSuite Document\\Word Pro Document"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 5
         Type: 1
@@ -218,7 +206,6 @@ items:
         title: New Response
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 6
         Type: 1
@@ -319,7 +306,6 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0000009d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -327,7 +313,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000009d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -335,7 +320,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000009c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -343,7 +327,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000009d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -351,7 +334,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -359,7 +341,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -367,7 +348,6 @@ items:
         title: _Remove from Folder...
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 4
         Type: 1
@@ -376,7 +356,6 @@ items:
         title: New Document
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 12
         Type: 1
@@ -385,7 +364,6 @@ items:
         title: "New Lotus SmartSuite Document\\1-2-3 Workbook"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 13
         Type: 1
@@ -394,7 +372,6 @@ items:
         title: "New Lotus SmartSuite Document\\Paintbrush Picture"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 14
         Type: 1
@@ -403,7 +380,6 @@ items:
         title: "New Lotus SmartSuite Document\\Freelance Presentation"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 15
         Type: 1
@@ -412,7 +388,6 @@ items:
         title: "New Lotus SmartSuite Document\\Word Pro Document"
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 5
         Type: 1
@@ -425,7 +400,6 @@ items:
         title: New Response
       - type: 0xffbe
         Flags: 0x0001409b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 6
         Type: 1
