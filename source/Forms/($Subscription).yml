@@ -410,7 +410,6 @@ items:
         dwFlags: 0x00000041
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -418,7 +417,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0010008b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -426,7 +424,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -434,7 +431,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -442,7 +438,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -450,7 +445,6 @@ items:
         title: _Move To Folder...
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -458,7 +452,6 @@ items:
         title: _Remove From Folder
       - type: 0xffbe
         Flags: 0x00100093
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -469,7 +462,6 @@ items:
         title: Save & Close
       - type: 0xffbe
         Flags: 0x0010009b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -1952,7 +1944,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/86ABIAnmHvGwAA8P4sAAAAHgAFAAsAQXV0aG9yTWF0Y2gAAQABADEACwIDAAcADAAFAAkxUzJTAA==
+        PABID: 0x0012
+        Reserverd: nmHvGwAA8P4=
+        data: "AuthorMatch != \"1\""
       - type: 0x0083
         PABID: 18
       - type: 0xff85
@@ -2305,7 +2299,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/86ABYAnmHvGwAAICQsAAAAHgAFAAwAU3ViamVjdE1hdGNoAQABADEACwIDAAcADAAFAAkxUzJTAA==
+        PABID: 0x0016
+        Reserverd: nmHvGwAAICQ=
+        data: "SubjectMatch != \"1\""
       - type: 0x0083
         PABID: 22
       - type: 0xff85
@@ -2610,7 +2606,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/88ABoAnmHvGwAAOOwuAAAAIAAFAA0AQ2F0ZWdvcnlNYXRjaAABAAEAMQALAgMABwAMAAUACTFTMlMA
+        PABID: 0x001a
+        Reserverd: nmHvGwAAOOw=
+        data: "CategoryMatch != \"1\""
       - type: 0x0083
         PABID: 26
       - type: 0xff85
@@ -2797,7 +2795,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/86ABwAnmHvGwAASAIsAAAAHgAFAAsAU3RhdHVzTWF0Y2gAAQABADEACwIDAAcADAAFAAkxUzJTAA==
+        PABID: 0x001c
+        Reserverd: nmHvGwAASAI=
+        data: "StatusMatch != \"1\""
       - type: 0x0083
         PABID: 28
       - type: 0xff85
@@ -3028,7 +3028,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/82AB8AnmHvGwAAcBooAAAAGgAFAAgARG9jTWF0Y2gBAAEAMQALAgMABwAMAAUACTFTMlMA
+        PABID: 0x001f
+        Reserverd: nmHvGwAAcBo=
+        data: "DocMatch != \"1\""
       - type: 0x0083
         PABID: 31
       - type: 0xff85
@@ -3639,7 +3641,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/82ACUAnmHvGwAAAGQoAAAAGgAFAAkAJEhMTUVycm9yAAEAAAAKAgMABwAMAAUACTFTMlMA
+        PABID: 0x0025
+        Reserverd: nmHvGwAAAGQ=
+        data: "$HLMError = \"\""
       - type: 0x0083
         PABID: 37
       - type: 0xff85
@@ -3692,7 +3696,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/82ACYAnmHvGwAAAGQoAAAAGgAFAAkAJEhMTUVycm9yAAEAAAAKAgMABwAMAAUACTFTMlMA
+        PABID: 0x0026
+        Reserverd: nmHvGwAAAGQ=
+        data: "$HLMError = \"\""
       - type: 0x0083
         PABID: 38
       - type: 0xff85
@@ -4629,7 +4635,6 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -4637,7 +4642,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0010008b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -4647,7 +4651,6 @@ items:
         opaque: 9v8qAAAAAAADABMACAAAAAAAAAAAAAAAAAAAAAAAAAAAAGVkaXQuZ2lm
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -4655,7 +4658,6 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -4663,7 +4665,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -4671,7 +4672,6 @@ items:
         title: _Move To Folder...
       - type: 0xffbe
         Flags: 0x0000019d
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -4679,7 +4679,6 @@ items:
         title: _Remove From Folder
       - type: 0xffbe
         Flags: 0x00100093
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -4692,7 +4691,6 @@ items:
         opaque: 9v8oAAAAAAADABMABgAAAAAAAAAAAAAAAAAAAAAAAAAAAG9rLmdpZg==
       - type: 0xffbe
         Flags: 0x0010009b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1

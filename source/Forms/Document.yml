@@ -235,7 +235,6 @@ items:
         dwFlags: 0x00000041
       - type: 0xffbe
         Flags: 0x00000008
-        FormulaLen: 64
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -247,7 +246,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x00000098
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -255,7 +253,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x00000099
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -263,7 +260,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x00000098
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -271,7 +267,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x00000098
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -279,7 +274,6 @@ items:
         title: _Remove from Folder
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -949,9 +943,11 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/9QAAgAnmHTIAAA7IZCAAcACgADAEROVAAHAAoAAwAJMVMAAAAeAAUABQBTY29wZQABAAcAUHJpdmF0
-          ZQALAgMABwAOAAcACTBSMVMyUwA=
+        PABID: 0x0008
+        Reserverd: nmHTIAAA7IY=
+        data: |
+          REM {DNT};
+          Scope != "Private"
       - type: 0x0083
         PABID: 8
       - type: 0xff85
@@ -1020,7 +1016,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/82AAkAnmHTIAAAvIsoAAAAGgAFAAoARXhwaXJlRGF0ZQEAAAAKAgMABwAMAAUACTFTMlMA
+        PABID: 0x0009
+        Reserverd: nmHTIAAAvIs=
+        data: "ExpireDate = \"\""
       - type: 0x0083
         PABID: 9
       - type: 0xff85
@@ -1548,9 +1546,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/9SABEAnmHTIAAAoCdEAAAAMAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAAAEALAmwA
-          HQIDAAcAEgALAAk0UzZTN1M4UzlTAA==
+        PABID: 0x0011
+        Reserverd: nmHTIAAAoCc=
+        data: "@Member(Status; StatusList) != 2 | @IsResponseDoc"
       - type: 0x0083
         PABID: 17
       - type: 0x00dd
@@ -1642,10 +1640,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/+AABIAnmHTIAAA7C5yAAAAUgAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAACEALAmwA
-          HQIFABEAUHJldmlvdXNSZXZpZXdlcnMAAQAEAE5vbmUKAh0CAwAHAB4AFwAJNFM2UzdTOFM5UzEwUzEx
-          UzEyUzEzUwA=
+        PABID: 0x0012
+        Reserverd: nmHTIAAA7C4=
+        data: "@Member(Status; StatusList) != 3 | @IsResponseDoc | PreviousReviewers = \"None\""
       - type: 0x0083
         PABID: 18
       - type: 0x00dd
@@ -1747,9 +1744,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/9SABMAnmHTIAAABDZEAAAAMAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAACEALAmwA
-          HQIDAAcAEgALAAk0UzZTN1M4UzlTAA==
+        PABID: 0x0013
+        Reserverd: nmHTIAAABDY=
+        data: "@Member(Status; StatusList) != 3 | @IsResponseDoc"
       - type: 0x0083
         PABID: 19
       - type: 0x00dd
@@ -1836,10 +1833,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/9+ABQAnmHTIAAAAD1wAAAAUAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAACEALAmwA
-          HQIFAA8ARnV0dXJlUmV2aWV3ZXJzAAEABABOb25lCgIdAgMABwAeABcACTRTNlM3UzhTOVMxMFMxMVMx
-          MlMxM1MA
+        PABID: 0x0014
+        Reserverd: nmHTIAAAAD0=
+        data: "@Member(Status; StatusList) != 3 | @IsResponseDoc | FutureReviewers = \"None\""
       - type: 0x0083
         PABID: 20
       - type: 0x00dd
@@ -1939,10 +1935,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/+IABUAnmHTIAAASER6AAAAWAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAAAEAOAgUA
-          BgBTdGF0dXMFAAoAU3RhdHVzTGlzdHYCAAAAAAAAAAAIQA8CHQJsAB0CAwAHACAAGgAJNFM2UzdTOFM5
-          UzEzUzE1UzE2UzE3UzE4Uw==
+        PABID: 0x0015
+        Reserverd: nmHTIAAASEQ=
+        data: "@Member(Status; StatusList) < 2 | @Member(Status; StatusList) > 3 | @IsResponseDoc"
       - type: 0x0083
         PABID: 21
       - type: 0x00dd
@@ -2266,9 +2261,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: |
-          u/9AABcAnmHTIAAA7FkyAAAAIAAFAAsAUmV2aWV3ZXJMb2cAAQAAAAoCbAAdAgMABwAQAAkACTFTMlMz
-          UzRTAA==
+        PABID: 0x0017
+        Reserverd: nmHTIAAA7Fk=
+        data: "ReviewerLog = \"\" | @IsResponseDoc"
       - type: 0x0083
         PABID: 23
       - type: 0x00dd
@@ -2357,7 +2352,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        opaque: u/84ABgAnmHTIAAAEGEqAAAAHAAFAAsAUmV2aWV3ZXJMb2cAAQAAAAoCAwAHAAwABQAJMVMyUwA=
+        PABID: 0x0018
+        Reserverd: nmHTIAAAEGE=
+        data: "ReviewerLog = \"\""
       - type: 0x0083
         PABID: 24
       - type: 0x00dd
@@ -2694,7 +2691,6 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x00000008
-        FormulaLen: 64
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -2706,7 +2702,6 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x00000098
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -2714,7 +2709,6 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x00000099
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -2722,7 +2716,6 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x00000098
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -2730,7 +2723,6 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x00000098
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -2738,7 +2730,6 @@ items:
         title: _Remove from Folder
       - type: 0xffbe
         Flags: 0x0000019c
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
