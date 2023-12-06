@@ -162,9 +162,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0001
-        Reserverd: nWEYHQAA2Ac=
-        data: "Scope = \"Public\"  | tmpUseOle  = \"1\""
+        opaque: |
+          u/9cAAEAnWEYHQAA2AdOAAAANAAFAAUAU2NvcGUAAQAGAFB1YmxpYwoCBQAJAHRtcFVzZU9sZQABAAEA
+          MQAKAh0CAwAHABgAEQAJMVMyUzNTMkU0UzVTMkU2UwA=
       - type: 0x0083
         PABID: 1
       - type: 0xff85
@@ -214,9 +214,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0002
-        Reserverd: nWEYHQAAFA0=
-        data: "@Member(Status; StatusList) != 2 | @IsResponseDoc"
+        opaque: |
+          u/9SAAIAnWEYHQAAFA1EAAAAMAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAAAEALAmwA
+          HQIDAAcAEgALAAk0UzZTN1M4UzlTAA==
       - type: 0x0083
         PABID: 2
       - type: 0x00dd
@@ -308,9 +308,10 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0003
-        Reserverd: nWEYHQAArBQ=
-        data: "@Member(Status; StatusList) != 3 | @IsResponseDoc | PreviousReviewers = \"None\""
+        opaque: |
+          u/+AAAMAnWEYHQAArBRyAAAAUgAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAACEALAmwA
+          HQIFABEAUHJldmlvdXNSZXZpZXdlcnMAAQAEAE5vbmUKAh0CAwAHAB4AFwAJNFM2UzdTOFM5UzEwUzEx
+          UzEyUzEzUwA=
       - type: 0x0083
         PABID: 3
       - type: 0x00dd
@@ -412,9 +413,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0004
-        Reserverd: nWEYHQAAPBw=
-        data: "@Member(Status; StatusList) != 3 | @IsResponseDoc"
+        opaque: |
+          u/9SAAQAnWEYHQAAPBxEAAAAMAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAACEALAmwA
+          HQIDAAcAEgALAAk0UzZTN1M4UzlTAA==
       - type: 0x0083
         PABID: 4
       - type: 0x00dd
@@ -501,9 +502,10 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0005
-        Reserverd: nWEYHQAAlCM=
-        data: "@Member(Status; StatusList) != 3 | @IsResponseDoc | FutureReviewers = \"None\""
+        opaque: |
+          u/9+AAUAnWEYHQAAlCNwAAAAUAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAACEALAmwA
+          HQIFAA8ARnV0dXJlUmV2aWV3ZXJzAAEABABOb25lCgIdAgMABwAeABcACTRTNlM3UzhTOVMxMFMxMVMx
+          MlMxM1MA
       - type: 0x0083
         PABID: 5
       - type: 0x00dd
@@ -603,9 +605,10 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0006
-        Reserverd: nWEYHQAAVCs=
-        data: "@Member(Status; StatusList) < 2 | @Member(Status; StatusList) > 3 | @IsResponseDoc"
+        opaque: |
+          u/+IAAYAnWEYHQAAVCt6AAAAWAAFAAYAU3RhdHVzBQAKAFN0YXR1c0xpc3R2AgAAAAAAAAAAAEAOAgUA
+          BgBTdGF0dXMFAAoAU3RhdHVzTGlzdHYCAAAAAAAAAAAIQA8CHQJsAB0CAwAHACAAGgAJNFM2UzdTOFM5
+          UzEzUzE1UzE2UzE3UzE4Uw==
       - type: 0x0083
         PABID: 6
       - type: 0x00dd
@@ -983,9 +986,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0009
-        Reserverd: nWEYHQAAAEY=
-        data: "ReviewerLog = \"\" | @IsResponseDoc"
+        opaque: |
+          u/9AAAkAnWEYHQAAAEYyAAAAIAAFAAsAUmV2aWV3ZXJMb2cAAQAAAAoCbAAdAgMABwAQAAkACTFTMlMz
+          UzRTAA==
       - type: 0x0083
         PABID: 9
       - type: 0x00dd
@@ -1074,9 +1077,7 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x000a
-        Reserverd: nWEYHQAAvE0=
-        data: "ReviewerLog = \"\""
+        opaque: u/84AAoAnWEYHQAAvE0qAAAAHAAFAAsAUmV2aWV3ZXJMb2cAAQAAAAoCAwAHAAwABQAJMVMyUwA=
       - type: 0x0083
         PABID: 10
       - type: 0x00dd

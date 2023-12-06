@@ -50,9 +50,11 @@ items:
         dwFlags: 0x00001841
       - type: 0xffbe
         Flags: 0x0000419e
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1
+        opaque: ""
         title: Lotus Smartsuite Library
   - name: $Body
     type: composite
@@ -574,8 +576,10 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0000419e
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1
+        opaque: ""
         title: Lotus Smartsuite Library
 remaining: []

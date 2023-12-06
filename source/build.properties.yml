@@ -1,7 +1,7 @@
 ---
 class: 4
 flags: 0x0000
-unid: OF556BD6D15F56E4AE-ON005E94DD85258615
+unid: OFECB54108AA5B5D73-ON005E965E85258615
 items:
   - name: $DesignerVersion
     type: text
@@ -9,17 +9,17 @@ items:
     signed: true
   - name: $FileNames
     type: text
-    data: ".classpath"
+    data: build.properties
     signed: true
   - name: $Flags
     type: text
     data: ~C4g
   - name: $Revisions
     type: time
-    data: "2020-11-03T12:13:04.98-05:00"
+    data: "2020-11-03T12:13:08.85-05:00"
   - name: $TITLE
     type: text
-    data: ".classpath"
+    data: build.properties
   - name: $FileData
     type: composite
     signed: true
