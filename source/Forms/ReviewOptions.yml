@@ -29,8 +29,8 @@ items:
     signed: true
   - name: $Revisions
     type: time
-    data: "2005-09-15T15:27:30.40-04:00"
     dst: true
+    data: "2005-09-15T15:27:30.40-04:00"
   - name: $TITLE
     type: text
     data:
@@ -84,6 +84,7 @@ items:
         dwFlags: 0x00000000
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -91,6 +92,7 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -98,6 +100,7 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -105,6 +108,7 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -112,6 +116,7 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -119,6 +124,7 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -533,9 +539,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0006
-        Reserverd: EwDSY6JjaB0=
-        data: "ReviewWindow = \"NoLimit\""
+        opaque: |
+          u/9AAAYAEwDSY6JjaB0yAAAAJAAFAAwAUmV2aWV3V2luZG93AQAHAE5vTGltaXQACgIDAAcADAAFAAkx
+          UzJTAA==
       - type: 0x0083
         PABID: 6
       - type: 0xff85
@@ -787,6 +793,7 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -794,6 +801,7 @@ items:
         title: Categori_ze
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -801,6 +809,7 @@ items:
         title: _Edit Document
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -808,6 +817,7 @@ items:
         title: Send Docu_ment
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -815,6 +825,7 @@ items:
         title: _Forward
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5
@@ -822,6 +833,7 @@ items:
         title: _Move to Folder...
       - type: 0xffbe
         Flags: 0x0000019d
+        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 5

@@ -729,9 +729,7 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x0009
-        Reserverd: nWHrGwAAfAw=
-        data: "formname != \"Response\""
+        opaque: u/88AAkAnWHrGwAAfAwuAAAAIAAFAAgAZm9ybW5hbWUBAAgAUmVzcG9uc2ULAgMABwAMAAUACTFTMlMA
       - type: 0x0083
         PABID: 9
       - type: 0x00dd
@@ -792,9 +790,7 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x000a
-        Reserverd: nWHrGwAAxBA=
-        data: "formname = \"Response\""
+        opaque: u/88AAoAnWHrGwAAxBAuAAAAIAAFAAgAZm9ybW5hbWUBAAgAUmVzcG9uc2UKAgMABwAMAAUACTFTMlMA
       - type: 0x0083
         PABID: 10
       - type: 0x00dd
@@ -943,11 +939,9 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x000b
-        Reserverd: nWHrGwAA8CA=
-        data: |
-          REM {DNT};
-          Scope != "Private"
+        opaque: |
+          u/9QAAsAnWHrGwAA8CBCAAcACgADAEROVAAHAAoAAwAJMVMAAAAeAAUABQBTY29wZQABAAcAUHJpdmF0
+          ZQALAgMABwAOAAcACTBSMVMyUwA=
       - type: 0x0083
         PABID: 11
       - type: 0xff85
@@ -1016,9 +1010,7 @@ items:
           - 0x00000001
           - 0x00000004
       - type: 0xffbb
-        PABID: 0x000c
-        Reserverd: nWHrGwAAwCU=
-        data: "ExpireDate = \"\""
+        opaque: u/82AAwAnWHrGwAAwCUoAAAAGgAFAAoARXhwaXJlRGF0ZQEAAAAKAgMABwAMAAUACTFTMlMA
       - type: 0x0083
         PABID: 12
       - type: 0xff85

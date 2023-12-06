@@ -26,15 +26,36 @@ items:
     data:
       - data: "2008-07-21T10:34:10.36-04:00"
         dst: true
+        anyday: false
+        allday: false
       - data: "2008-07-21T10:34:10.40-04:00"
         dst: true
+        anyday: false
+        allday: false
       - data: "2008-07-21T10:34:10.42-04:00"
         dst: true
+        anyday: false
+        allday: false
       - data: "2020-11-03T11:11:08.52-06:00"
+        dst: false
+        anyday: false
+        allday: false
       - data: "2020-11-03T11:11:08.57-06:00"
+        dst: false
+        anyday: false
+        allday: false
       - data: "2020-11-03T11:11:08.58-06:00"
+        dst: false
+        anyday: false
+        allday: false
       - data: "2020-11-03T12:11:13.31-05:00"
+        dst: false
+        anyday: false
+        allday: false
       - data: "2020-11-03T12:15:07.93-05:00"
+        dst: false
+        anyday: false
+        allday: false
   - name: $TITLE
     type: text
     data: |
@@ -46,8 +67,8 @@ items:
     data: "c:\\notes4\\data\\doclib4.ntf"
   - name: $TemplateModTime
     type: time
-    data: "1995-09-22T16:47:49.89-04:00"
     dst: true
+    data: "1995-09-22T16:47:49.89-04:00"
   - name: $TemplateServerName
     type: text
     data: CN=Catherine Duffy/O=Iris
