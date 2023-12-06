@@ -141,7 +141,6 @@ items:
         dwFlags: 0x00000000
       - type: 0xffbe
         Flags: 0x0001408b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 7
         Type: 1
@@ -150,7 +149,6 @@ items:
         title: Edit Document
       - type: 0xffbe
         Flags: 0x00014093
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 8
         Type: 1
@@ -163,7 +161,6 @@ items:
         title: Save & Close
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 44
         IconIndex: 0
         ShareId: 10
         Type: 1
@@ -178,7 +175,6 @@ items:
         title: Mark Private
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 42
         IconIndex: 0
         ShareId: 11
         Type: 1
@@ -193,7 +189,6 @@ items:
         title: Mark Public
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 62
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -231,7 +226,6 @@ items:
         title: Submit for Review
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 114
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -297,7 +291,6 @@ items:
         title: Setup Review Cycle
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 142
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -350,7 +343,6 @@ items:
         title: Clear Review Cycle
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 52
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -372,7 +364,6 @@ items:
         title: My Review is Complete
       - type: 0xffbe
         Flags: 0x0010001b
-        FormulaLen: 70
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -387,7 +378,6 @@ items:
         title: Properties...
       - type: 0xffbe
         Flags: 0x0010009b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -798,7 +788,6 @@ items:
           - 0x0000
       - type: 0xffbe
         Flags: 0x0001408b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 7
         Type: 1
@@ -807,7 +796,6 @@ items:
         title: Edit Document
       - type: 0xffbe
         Flags: 0x00014093
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 8
         Type: 1
@@ -820,7 +808,6 @@ items:
         title: Save & Close
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 44
         IconIndex: 0
         ShareId: 10
         Type: 1
@@ -835,7 +822,6 @@ items:
         title: Mark Private
       - type: 0xffbe
         Flags: 0x00014013
-        FormulaLen: 42
         IconIndex: 0
         ShareId: 11
         Type: 1
@@ -850,7 +836,6 @@ items:
         title: Mark Public
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 62
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -892,7 +877,6 @@ items:
           Rm9yUmV2aWV3LmdpZg==
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 114
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -962,7 +946,6 @@ items:
           UmV2aWV3Q3ljbGUuZ2lm
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 142
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -1019,7 +1002,6 @@ items:
           UmV2aWV3Q3ljbGUuZ2lm
       - type: 0xffbe
         Flags: 0x00100013
-        FormulaLen: 52
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -1045,7 +1027,6 @@ items:
           c0NvbXBsZXRlLmdpZg==
       - type: 0xffbe
         Flags: 0x0010001b
-        FormulaLen: 70
         IconIndex: 0
         ShareId: 0
         Type: 1
@@ -1064,7 +1045,6 @@ items:
           Z2lm
       - type: 0xffbe
         Flags: 0x0010009b
-        FormulaLen: 0
         IconIndex: 0
         ShareId: 0
         Type: 1

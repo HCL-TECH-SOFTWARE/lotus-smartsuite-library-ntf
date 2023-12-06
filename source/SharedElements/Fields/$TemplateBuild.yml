@@ -22,12 +22,7 @@ items:
     data:
       - data: "2008-07-21T10:34:10.38-04:00"
         dst: true
-        anyday: false
-        allday: false
       - data: "2020-11-03T11:11:08.56-06:00"
-        dst: false
-        anyday: false
-        allday: false
   - name: $TITLE
     type: text
     data: $TemplateBuild
