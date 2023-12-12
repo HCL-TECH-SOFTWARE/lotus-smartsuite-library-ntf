@@ -1,5 +1,34 @@
-# Using Lotus SmartSuite Millennium Edition Document Library
+---
+layout: default
+title: "Lotus SmartSuite Millennium Edition Document Library"
+nav_order: 1
+description: "Lotus SmartSuite Millennium Edition Document Library"
+has_children: false
+---
+<h1>Lotus SmartSuite Millennium Edition Document Library</h1>
+
+
+<details close markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+
 ![Screenshot Lotus SmartSuite Millennium Edition Document Library](assets/images/png/screenshot.png)
+
+## Info
+
+Property | Value   
+---|---
+Filename | doclbs7.ntf
+Templatename | StdSmartSuiteR7DocLib
+Template version | 12.0 (03.11.2020)
+Signed by | Open Source Template/Domino Development
+Optimized for | Notes Client
 
 **This template is not intended for Web (browser) use and is not supported on the Macintosh
 
