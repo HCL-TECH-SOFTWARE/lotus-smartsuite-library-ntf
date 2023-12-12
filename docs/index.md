@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Lotus SmartSuite Millennium Edition Document Library"
-parent: "Home"
 nav_order: 1
 description: "Lotus SmartSuite Millennium Edition Document Library"
 has_children: false
