@@ -63,7 +63,7 @@ heading_anchors: true
 # Aux links for the upper right navigation
 
 aux_links:
-  View on GitHub:
+  Download from GitHub:
     - https://github.com/HCL-TECH-SOFTWARE/lotus-smartsuite-library-ntf/releases/latest
 
 # Makes Aux links open in a new tab. Default is false
